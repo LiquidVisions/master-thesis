@@ -1,6 +1,10 @@
-# Thesis subjects
+# Possible thesis subjects
 Normalized Systems, antifragile Software Architecure, code generatie
 
-# Problem statement
-- How can Normalized systems be used in a more practicle and agile maner.
-- Is there a relation between Normalized Systems Theorem and Antifragile Software Architecture.
+# Possible problem statements
+- How does NSx impacts scaled agile frameworks
+- What is the impact of NSx on AntiFragile software architecture and visa versa, in the scope of software systems
+
+# Questions
+- Are there any Time-to-market trends when using NSx
+- 
