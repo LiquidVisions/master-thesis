@@ -30,3 +30,18 @@ Normalized Systems, antifragile Software Architecure, code generatie
 - duurzaamheid van software vergroten
 - 2 stromingen, opnieuw beginnen.
 - mithical manmaand (engels) fredirik books -LEZEN
+
+# Notes with Leen Blom
+processen en volordelijkheid van deze processen zijn niet direct in business rules te vangen. 
+vangen van workflow processen en hoe kan je die uit legacy applicaties halen
+zo snel mogelijk en zo goed mogelijk, kunnen die wel samen. waar ligt de gulden middenweg
+over welke assen van de theorie treacy/wiersma de strategie bepaling van een transformatie kunnen.
+operational excelance, customer intimicy.
+
+een model hoe je van legacy naar greenfield wilt, om dat te doen moet je een keuze maken. dus dan kan je een assetment maken om een keuze te maken.
+
+Hoe past dit model in een itteratief process van ontwikkelen.
+
+insteek kan ook zijn dat je alleen op de business rules zit.
+
+joost visser, hoogleraar large systems.
