@@ -45,3 +45,8 @@ Hoe past dit model in een itteratief process van ontwikkelen.
 insteek kan ook zijn dat je alleen op de business rules zit.
 
 joost visser, hoogleraar large systems.
+
+# Onderwerp Titel
+Version transparancy of Restful API's with Normalized Systems and C# - A design science approach
+
+Normalizing Restful services with C# expanders - A design science approach
