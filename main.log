@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.24)  11 FEB 2022 18:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.24)  12 FEB 2022 13:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -885,15 +885,15 @@ Chapter 1.
 
 
 ]
-Overfull \hbox (12.15245pt too wide) in paragraph at lines 72--74
+Overfull \hbox (12.15245pt too wide) in paragraph at lines 90--93
 \T1/ppl/m/n/10.95 site, here: [][]$\T1/cmtt/m/n/10.95 http : / / www . ecs . soton . ac . uk / ~srg / softwaretools / document / templates/$[][] 
  []
 
 [2] [3]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 136.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 176.
  [4] [5]
-Overfull \hbox (8.37132pt too wide) in paragraph at lines 180--181
+Overfull \hbox (8.37132pt too wide) in paragraph at lines 242--245
 \T1/ppl/m/n/10.95 sided print-ing is as sim-ple as un-com-ment-ing the \T1/cmtt/m/it/10.95 oneside \T1/ppl/m/n/10.95 op-tion of the \T1/cmtt/m/n/10.95 documentclass
  []
 
@@ -901,15 +901,15 @@ Overfull \hbox (8.37132pt too wide) in paragraph at lines 180--181
 <Figures/Electron.pdf, id=304, 398.3386pt x 284.52756pt>
 File: Figures/Electron.pdf Graphic file (type pdf)
 <use Figures/Electron.pdf>
-Package pdftex.def Info: Figures/Electron.pdf  used on input line 262.
+Package pdftex.def Info: Figures/Electron.pdf  used on input line 354.
 (pdftex.def)             Requested size: 398.33762pt x 284.52686pt.
  [8 <./Figures/Electron.pdf>]
-Overfull \hbox (0.90797pt too wide) in paragraph at lines 308--309
+Overfull \hbox (0.90797pt too wide) in paragraph at lines 410--412
 \T1/ppl/m/n/10.95 au-to-mat-i-cally builds a ta-ble of Con-tents by look-ing at all the [][]\T1/cmtt/m/n/10.95 \chapter{}[]\T1/ppl/m/n/10.95 , [][]\T1/cmtt/m/n/10.95 \section{}
  []
 
 
-Overfull \hbox (0.45015pt too wide) in paragraph at lines 310--311
+Overfull \hbox (0.45015pt too wide) in paragraph at lines 413--417
 []\T1/ppl/m/n/10.95 The Ta-ble of Con-tents should only list the sec-tions to three (3) lev-els. A [][]\T1/cmtt/m/n/10.95 chapter{}
  []
 
@@ -996,13 +996,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  28933 strings out of 478287
  635067 string characters out of 5850749
- 1218705 words of memory out of 5000000
+ 1218706 words of memory out of 5000000
  46600 multiletter control sequences out of 15000+600000
  531356 words of font info for 134 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 96i,21n,93p,1928b,1824s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 96i,21n,93p,1928b,1820s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfit1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfst1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (31 pages, 286828 bytes).
+Output written on main.pdf (31 pages, 286681 bytes).
 PDF statistics:
  485 PDF objects out of 1000 (max. 8388607)
  418 compressed objects within 5 object streams

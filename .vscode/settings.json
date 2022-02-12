@@ -1,0 +1,17 @@
+{
+    "editor.rulers": [150],
+    "files.exclude": {
+        "**/*.aux": true,
+        "**/*.blg": true,
+        "**/*.fls": true,
+        "**/*.lof": true,
+        "**/*.out": true,
+        "**/*.toc": true,
+        "**/*.lot": true,
+        "**/*.log": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.run.xml": true,
+        "**/*.synctex.gz": true,
+        "**/*.bbl": true
+      }
+}
