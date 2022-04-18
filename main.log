@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.24)  18 APR 2022 20:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.24)  18 APR 2022 20:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -616,7 +616,7 @@ Package csquotes Info: ... found 'babel' package.
 LaTeX Font Info:    Trying to load font information for T1+ppl on input line 12.
  (c:/texlive/2021/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
-) (./main.aux (./Contents/title.aux) (./Contents/declaration.aux) (./Contents/quotations.aux) (./Contents/abstract.aux) (./Contents/acknowledgements.aux) (./Contents/contents.aux) (./Contents/abbreviations.aux) (./Chapters/propblem_statement.aux) (./Chapters/research_questions.aux) (./Chapters/theoretical_foundation.aux) (./Chapters/research_approach.aux) (./Appendices/AppendixA.aux) (./Appendices/AppendixB.aux))
+) (./main.aux (./Contents/title.aux) (./Contents/declaration.aux) (./Contents/quotations.aux) (./Contents/abstract.aux) (./Contents/acknowledgements.aux) (./Contents/contents.aux) (./Contents/abbreviations.aux) (./Chapters/ProblemStatement.aux) (./Chapters/ResearchQuestions.aux) (./Chapters/TheoreticalFoundation.aux) (./Chapters/ResearchApproach.aux) (./Appendices/AppendixA.aux) (./Appendices/AppendixB.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -869,9 +869,9 @@ No file Contents/abstract.tex.
 
 ]
 1: section
-\openout2 = `Chapters/propblem_statement.aux'.
+\openout2 = `Chapters/ProblemStatement.aux'.
 
-(./Chapters/propblem_statement.tex
+(./Chapters/ProblemStatement.tex
 Chapter 1.
 )
 1: section
@@ -879,9 +879,9 @@ Chapter 1.
 
 
 ]
-\openout2 = `Chapters/research_questions.aux'.
+\openout2 = `Chapters/ResearchQuestions.aux'.
 
- (./Chapters/research_questions.tex [2
+ (./Chapters/ResearchQuestions.tex [2
 
 
 
@@ -891,9 +891,9 @@ Chapter 2.
 )
 1: section
 [3]
-\openout2 = `Chapters/theoretical_foundation.aux'.
+\openout2 = `Chapters/TheoreticalFoundation.aux'.
 
- (./Chapters/theoretical_foundation.tex [4
+ (./Chapters/TheoreticalFoundation.tex [4
 
 
 
@@ -903,9 +903,9 @@ Chapter 3.
 )
 1: section
 [5]
-\openout2 = `Chapters/research_approach.aux'.
+\openout2 = `Chapters/ResearchApproach.aux'.
 
- (./Chapters/research_approach.tex [6
+ (./Chapters/ResearchApproach.tex [6
 
 
 
@@ -945,7 +945,7 @@ Appendix B.
 
 LaTeX Warning: Empty bibliography on input line 52.
 
-(./main.aux (./Contents/title.aux) (./Contents/declaration.aux) (./Contents/quotations.aux) (./Contents/abstract.aux) (./Contents/acknowledgements.aux) (./Contents/contents.aux) (./Contents/abbreviations.aux) (./Chapters/propblem_statement.aux) (./Chapters/research_questions.aux) (./Chapters/theoretical_foundation.aux) (./Chapters/research_approach.aux) (./Appendices/AppendixA.aux) (./Appendices/AppendixB.aux))
+(./main.aux (./Contents/title.aux) (./Contents/declaration.aux) (./Contents/quotations.aux) (./Contents/abstract.aux) (./Contents/acknowledgements.aux) (./Contents/contents.aux) (./Contents/abbreviations.aux) (./Chapters/ProblemStatement.aux) (./Chapters/ResearchQuestions.aux) (./Chapters/TheoreticalFoundation.aux) (./Chapters/ResearchApproach.aux) (./Appendices/AppendixA.aux) (./Appendices/AppendixB.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 682A6F947C48E39050C5F9DC56F27C00;1576.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -954,7 +954,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  28485 strings out of 478287
- 626608 string characters out of 5850749
+ 626468 string characters out of 5850749
  1202638 words of memory out of 5000000
  46226 multiletter control sequences out of 15000+600000
  502645 words of font info for 78 fonts, out of 8000000 for 9000

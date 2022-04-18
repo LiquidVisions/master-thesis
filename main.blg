@@ -9,10 +9,10 @@ A level-1 auxiliary file: Contents/abstract.aux
 A level-1 auxiliary file: Contents/acknowledgements.aux
 A level-1 auxiliary file: Contents/contents.aux
 A level-1 auxiliary file: Contents/abbreviations.aux
-A level-1 auxiliary file: Chapters/propblem_statement.aux
-A level-1 auxiliary file: Chapters/research_questions.aux
-A level-1 auxiliary file: Chapters/theoretical_foundation.aux
-A level-1 auxiliary file: Chapters/research_approach.aux
+A level-1 auxiliary file: Chapters/ProblemStatement.aux
+A level-1 auxiliary file: Chapters/ResearchQuestions.aux
+A level-1 auxiliary file: Chapters/TheoreticalFoundation.aux
+A level-1 auxiliary file: Chapters/ResearchApproach.aux
 A level-1 auxiliary file: Appendices/AppendixA.aux
 A level-1 auxiliary file: Appendices/AppendixB.aux
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
@@ -37,7 +37,7 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 1 entry,
             6393 wiz_defined-function locations,
-            1214 strings with 9284 characters,
+            1214 strings with 9279 characters,
 and the built_in function-call counts, 1522 in all, are:
 = -- 72
 > -- 70
