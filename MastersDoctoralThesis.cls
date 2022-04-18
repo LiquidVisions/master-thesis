@@ -56,8 +56,8 @@
 \LoadClass{\baseclass}
 
 %  Simple interface for the user  to customize the chapter titles 
-\ProvideDocumentCommand{\abovechapterskip}{}{\vspace*{20pt}}
-\ProvideDocumentCommand{\chapterbelowskip}{}{\vspace*{40pt}}
+\ProvideDocumentCommand{\abovechapterskip}{}{\vspace*{0pt}}
+\ProvideDocumentCommand{\chapterbelowskip}{}{\vspace*{30pt}}
 \ProvideDocumentCommand{\chapterinbetweenskip}{}{\vspace*{20pt}}
 \ProvideDocumentCommand{\autodot}{}{}
 \ProvideDocumentCommand{\mdtChapapp}{}{}
@@ -69,13 +69,7 @@
 	{\parindent \z@ \chapteralign \normalfont
 		\ifnum \c@secnumdepth >\m@ne
 		\if@mainmatter
-		\ifbool{chapteroneline}{%
-			\chapterfont \mdtChapapp\thechapter\autodot\enspace
-		}{%
-			\chapterprefixfont \@chapapp\space \thechapter
-			\par\nobreak
-			\chapterinbetweenskip
-		}%
+		\chapterfont \mdtChapapp\thechapter\autodot\enspace
 		\fi
 		\fi
 		\interlinepenalty\@M%
