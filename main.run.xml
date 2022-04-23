@@ -84,6 +84,7 @@
       <file>main-blx.bib</file>
     </requires>
     <requires type="editable">
+      <file>bibliography.bib</file>
       <file>example.bib</file>
     </requires>
     <requires type="static">
