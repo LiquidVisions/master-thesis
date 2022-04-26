@@ -16,5 +16,43 @@
   {}
 \endgroup
 
-\datalist[entry]{nyt/global//global/global}\enddatalist
+\datalist[entry]{nty/global//global/global}
+  \entry{lehman_programs_1980}{article}{}
+    \name{author}{1}{}{%
+      {{hash=LM}{%
+         family={Lehman},
+         familyi={L\bibinitperiod},
+         given={M.M.},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LM1}
+    \strng{fullhash}{LM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \verb{doi}
+    \verb 10.1109/PROC.1980.11805
+    \endverb
+    \field{issn}{0018-9219}
+    \field{number}{9}
+    \field{pages}{1060\bibrangedash 1076}
+    \field{shortjournal}{Proc. IEEE}
+    \field{title}{Programs, Life Cycles, and Laws of Software Evolution}
+    \verb{url}
+    \verb http://ieeexplore.ieee.org/document/1456074/
+    \endverb
+    \field{volume}{68}
+    \verb{file}
+    \verb C\:\\Users\\gkoks\\Zotero\\storage\\KXYZEMV7\\Lehman - 1980 - Program
+    \verb s, life cycles, and laws of software evolut.pdf
+    \endverb
+    \field{journaltitle}{Proceedings of the IEEE}
+    \field{year}{1980}
+    \field{urlday}{25}
+    \field{urlmonth}{04}
+    \field{urlyear}{2022}
+  \endentry
+\enddatalist
 \endinput

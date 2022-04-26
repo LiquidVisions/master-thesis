@@ -36,3 +36,5 @@
 \contentsline {chapter}{\numberline {A}Frequently Asked Questions}{7}{appendix.27}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {A.1}How do I change the colors of links?}{7}{section.28}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{9}{appendix*.29}%
