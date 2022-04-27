@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.24)  25 APR 2022 19:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.24)  27 APR 2022 10:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -607,7 +607,7 @@ Package csquotes Info: ... found 'babel' package.
 LaTeX Font Info:    Trying to load font information for T1+ppl on input line 69.
  (c:/texlive/2021/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
-) (./main.aux (./Title.aux) (./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux) (./Chapters/Chapter3.aux) (./Appendices/AppendixA.aux))
+) (./main.aux (./Title.aux) (./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux) (./Chapters/Chapter3.aux) (./Chapters/NoChapter.aux) (./Appendices/AppendixA.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
@@ -805,21 +805,28 @@ File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 1: section
 [9] [10
 
-] (./main.toc)
+] (./main.toc
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 60.
+ (c:/texlive/2021/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 60.
+
+1: section
+[11])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
-
-1: section
-[11] [12
-
-] (./main.lof)
+ [12] (./main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
 
 1: section
-[13] [14
+[13
+
+] [14
 
 ] (./main.lot)
 \tf@lot=\write7
@@ -884,46 +891,83 @@ Chapter 3.
 )
 1: section
 [5]
+\openout2 = `Chapters/NoChapter.aux'.
+
+ (./Chapters/NoChapter.tex [6
+
+
+
+
+]
+Chapter 4.
+1: section
+[7]
+Overfull \hbox (12.15245pt too wide) in paragraph at lines 112--117
+\T1/ppl/m/n/10.95 site, here: [][]$\T1/cmtt/m/n/10.95 http : / / www . ecs . soton . ac . uk / ~srg / softwaretools / document / templates/$[][] 
+ []
+
+[8] [9]
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 225.
+ [10] [11]
+Overfull \hbox (8.37132pt too wide) in paragraph at lines 315--320
+\T1/ppl/m/n/10.95 sided print-ing is as sim-ple as un-com-ment-ing the \T1/cmtt/m/it/10.95 oneside \T1/ppl/m/n/10.95 op-tion of the \T1/cmtt/m/n/10.95 documentclass
+ []
+
+[12] [13]
+<Figures/Electron.pdf, id=434, 398.3386pt x 284.52756pt>
+File: Figures/Electron.pdf Graphic file (type pdf)
+<use Figures/Electron.pdf>
+Package pdftex.def Info: Figures/Electron.pdf  used on input line 449.
+(pdftex.def)             Requested size: 398.33762pt x 284.52686pt.
+ [14 <./Figures/Electron.pdf>]
+Overfull \hbox (0.90797pt too wide) in paragraph at lines 514--517
+\T1/ppl/m/n/10.95 au-to-mat-i-cally builds a ta-ble of Con-tents by look-ing at all the [][]\T1/cmtt/m/n/10.95 \chapter{}[]\T1/ppl/m/n/10.95 , [][]\T1/cmtt/m/n/10.95 \section{}
+ []
+
+
+Overfull \hbox (0.45015pt too wide) in paragraph at lines 518--524
+[]\T1/ppl/m/n/10.95 The Ta-ble of Con-tents should only list the sec-tions to three (3) lev-els. A [][]\T1/cmtt/m/n/10.95 chapter{}
+ []
+
+[15]) [16]
 \openout2 = `Appendices/AppendixA.aux'.
 
- (./Appendices/AppendixA.tex [6
-
-
-
-
-]
+ (./Appendices/AppendixA.tex
 Appendix A.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 11.
-(c:/texlive/2021/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-))
+)
 1: section
-[7] [8
+[17
+
+
+
+
+] [18
 
 
 
 ]
 1: section
-[9] (./main.aux (./Title.aux) (./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux) (./Chapters/Chapter3.aux) (./Appendices/AppendixA.aux))
+[19] (./main.aux (./Title.aux) (./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux) (./Chapters/Chapter3.aux) (./Chapters/NoChapter.aux) (./Appendices/AppendixA.aux))
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 97E83683447F7243514CD8DE9D88615A;2679.
+(rerunfilecheck)             Checksum: A63C167AA3A7C14B95548A3293F87EE7;6671.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28065 strings out of 478287
- 610781 string characters out of 5850749
- 1087120 words of memory out of 5000000
- 45842 multiletter control sequences out of 15000+600000
- 508574 words of font info for 91 fonts, out of 8000000 for 9000
+ 28275 strings out of 478287
+ 615243 string characters out of 5850749
+ 1098184 words of memory out of 5000000
+ 45992 multiletter control sequences out of 15000+600000
+ 530863 words of font info for 136 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 96i,21n,93p,1839b,1734s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (33 pages, 172935 bytes).
+ 96i,21n,93p,1839b,2491s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{c:/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfit1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfst1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2021/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (43 pages, 312212 bytes).
 PDF statistics:
- 322 PDF objects out of 1000 (max. 8388607)
- 266 compressed objects within 3 object streams
- 64 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 619 PDF objects out of 1000 (max. 8388607)
+ 535 compressed objects within 6 object streams
+ 106 named destinations out of 1000 (max. 500000)
+ 350 words of extra memory for PDF output out of 10000 (max. 10000000)
 
