@@ -10,8 +10,8 @@ singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespac
 %parskip, % Uncomment to add space between paragraphs
 %nohyperref, % Uncomment to not load the hyperref package
 headsepline, % Uncomment to get a line under the header
-%chapterinoneline, % Uncomment to place the chapter title next to the number on one line
-%consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
+chapterinoneline, % Uncomment to place the chapter title next to the number on one line
+consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
 ]{MastersDoctoralThesis} % The class file specifying the document structure
 \usepackage{url}
 \usepackage[utf8]{inputenc} % Required for inputting international characters
@@ -196,6 +196,8 @@ $\omega$ & angular frequency & \si{\radian} \\
 
 % Include the chapters of the thesis as separate files from the Chapters folder
 % Uncomment the lines as you write the chapters
+\RenewDocumentCommand{\abovechapterskip}{}{\vspace*{0pt}}
+\RenewDocumentCommand{\chapterbelowskip}{}{\vspace*{20pt}}
 
 \include{Chapters/Chapter1}
 \include{Chapters/Chapter2} 
