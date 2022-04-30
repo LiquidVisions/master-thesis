@@ -12,7 +12,8 @@
         "**/*.fdb_latexmk": true,
         "**/*.run.xml": true,
         "**/*.synctex.gz": true,
-        "**/*.bbl": true
+        "**/*.bbl": true,
+        "**/*-blx.bib": true
       },
     "rewrap.autoWrap.enabled": true,
     "rewrap.autoWrap.notification": "icon",
