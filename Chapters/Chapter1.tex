@@ -1,8 +1,11 @@
+% ----------------------------------------------------------------------------------------
+%--- CHAPTER INTRODUCTION ----------------------------------------------------------------
+% ----------------------------------------------------------------------------------------
 \chapter{Introduction} \label{introduction}
 
 \enquote{\emph{Pantha Rhei}} is, according to \emph{Plato}, one of the famous
 philosophical statements first described by the Greek philosopher
-\emph{Heraclitus}.\footnote[1]{\url{https://plato.stanford.edu/entries/process-philosophy/}}
+\emph{Heraclitus}.\footnote{\url{https://plato.stanford.edu/entries/process-philosophy/}}
 Translated as \enquote{everything flows} this statement is an unambiguous commitment to
 ubiquitous dynamics of everything that exists. \enquote{Life is flux}, one of the
 constants in life is change and its best we act accordingly.
@@ -27,37 +30,80 @@ attempting to cope with this trend by adopting agility and maturing its agile pr
 contemporary organizations to adept to new environments and to cope with rapid change
 \parencite[]{neumann_strategic_1994}.
 
-The subjects discussed in previous paragraphs depict the current challenges of software
-evolvability
+% ----------------------------------------------------------------------------------------
+%--- SECTION INTRODUCING SOFTWARE EVOLVABILITY -------------------------------------------
+% ----------------------------------------------------------------------------------------
+\section{Introducing Software evolvability}
+<<To-do: Link software evolvability to first part of the introduction>>\\
+<<To-do: Link combinatorial effects to a measure to determine software evolvability>>
 
+% ----------------------------------------------------------------------------------------
+%--- SECTION INTRODUCING NORMALIZED SYSTEMS THEOREMS -------------------------------------
+% ----------------------------------------------------------------------------------------
+\section{Introducing Normalized Systems Theorems}
+<<To-do: Link normalized systems as a measure to create software evolvability>>
+
+% ----------------------------------------------------------------------------------------
+%--- SECTION INTRODUCING CLEAN ARCHITECTURE ___-------------------------------------------
+% ----------------------------------------------------------------------------------------
+\section{Introducing Clean Architecture}
+<<To-do: Link normalized systems as a measure to create software evolvability>>
+
+% ----------------------------------------------------------------------------------------
+%--- SECTION PROBLEM STATEMENT -----------------------------------------------------------
+% ----------------------------------------------------------------------------------------
 \section{Problem statement} \label{problem_statement}
 
-\subsection{Normalized Systems Theorems}
-<<To-do: Link Normalized Systems to thesis and content problem statement>>//
-
-\lipsum[1-1]
-
-\subsection{Clean Architecture}
-<<To-do: Link Clean Architecture to thesis and content problem statement>>//
-\lipsum[1-1]
-%3. evolvable systems
-%normalized systems als oplossing
-%wat is normalized systems
-
-\subsection{Normalized Systems}
 Companies that apply the Normalized Systems Theory research into their products are
-primarily using Java EE as a programming language. The company NSX for example has
-implemented their generation tools, modelling suite (Prime Radiant) and expander using
-this programming language. Java EE is still a very popular programming language for
-enterprise-, and IT organizations. Many software solutions are created and maintained
-using this programming language. The Normalized Systems Theorem is not only applicable to
-Java EE. The principles and design patterns that derive from the Normalized Systems
-Theorem are in fact applicable for any object-oriented programming languages. 
+primarily using Java EE as a programming language. The company NSX
+\footnotetext{\url{https://normalizedsystems.org/}} for example has implemented their
+generation tools, modelling suite (Prime Radiant) and expander using this programming
+language. Java EE is still a very popular programming language for enterprise-, and IT
+organizations. Many software solutions are created and maintained using this programming
+language. The Normalized Systems Theorem is not only applicable to Java EE. The principles
+and design patterns that derive from the Normalized Systems Theorem are in fact applicable
+for any object-oriented programming languages. 
 
 Another example of a popular programming language in enterprise-, and IT organizations is
 C\#. There is however no documented research, or proof of experiences on C\# software
-projects using Normalized Systems Theory with the aspects of integration, expansion and
+projects using Normalized Systems Theory with the aspects of expansion and harvesting \&
 rejuvenation.
 
+% ----------------------------------------------------------------------------------------
+%--- SECTION RESEARCH SUBJECT -----------------------------------------------------------
+% ----------------------------------------------------------------------------------------
+\section{Conceptual framework} \label{conceptual_framework}
+Figure \ref{fig:overall_conceptual_framework} depicts the conceptual research framework.
+It describes the hypothesis that Normalized Systems Theorems have a positive impact on the
+total amount of combinatorial effects on C\# based information systems.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=1\textwidth]{Figures/overall_conceptual_framework}
+    \caption[Overall conceptual framework]{Overall conceptual framework.}
+    \label{fig:overall_conceptual_framework}
+\end{figure}
+\newpage
+% ----------------------------------------------------------------------------------------
+%--- SECTION RESEARCH QUESTION -------------------------------------------------------------------
+% ----------------------------------------------------------------------------------------
 \section{Research questions} \label{research_questions}
-The goal of this research is to determine if the design of 
+Considering the hypothesis described in \ref{conceptual_framework} the following research
+is determined:
+
+\begin{center}
+    \enquote*{\textit{What is the applicability of Normalized Systems Theorems
+    on restful API's designed based on the Clean Architecture principles and build with
+    C\#/.NET}}
+\end{center}
+
+The following sub-questions can be formulated that support the research on the main
+research question:
+\begin{itemize}
+    \item What is the literature stating about evolvable software systems.
+    \item What is the literature stating about combinatorial effects on software changes in software systems.
+    \item What is the literature stating on how one can measure combinatorial effects of a change on a software system.
+    \item Which principles of Clean Architecture contribute to a reduction of
+    combinatorial effects, in a way that they complement the theorems of normalized
+    systems.
+\end{itemize}
