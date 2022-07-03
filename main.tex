@@ -46,23 +46,20 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \NewDocumentCommand{\coproone}{m}{\newcommand{\firstco}{#1}}
 \NewDocumentCommand{\coprotwo}{m}{\newcommand{\secondco}{#1}}
 
- % Your thesis title, this is used in the title and abstract,print it elsewhere with \ttitle
-\thesistitle{On the convergence of Clean Architecture and the Normalized Systems.}
-\subject{A Design Science approach with C\#.NET Restful API artifacts.}
+\thesistitle{On the convergence of Clean Architecture and the Normalized Systems.} % \ttitle
+\subject{A Design Science approach with C\#.NET Restful API artifacts.} % \subjectname
 
-\promo{Prof. Dr. Ing. Hans Mulder} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
-\coproone{Dr. Ing. Geert Haerens} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
-\coprotwo{Frans Verstreken, Mcs} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
-\degree{Master of Enterprise IT Architecture} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
-\author{Gerco Koks} % Your name, this is used in the title page and abstract, print it elsewhere with \authorname
-%\addresses{} % Your address, this is not currently used anywhere in the template, print it elsewhere with \addressname
+\promo{Prof. Dr. Ing. Hans Mulder}
+\coproone{Dr. Ing. Geert Haerens}
+\coprotwo{Frans Verstreken, Mcs}
+\degree{Master of Enterprise IT Architecture}
+\author{Gerco Koks}
 
-% \subject{Biological Sciences} % Your subject area, this is not currently used anywhere in the template, print it elsewhere with \subjectname
 \keywords{} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
-\university{Antwerpen Management School} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
-\department{\href{http://department.university.com}{Department or School Name}} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
-\group{\href{http://researchgroup.university.com}{Research Group Name}} % Your research group's name and URL, this is used in the title page, print it elsewhere with \groupname
-\faculty{Master of Enterprise IT Architecture} % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
+\university{Antwerpen Management School}
+\department{\href{http://department.university.com}{Department or School Name}}
+\group{\href{http://researchgroup.university.com}{Research Group Name}}
+\faculty{Master of Enterprise IT Architecture}
 
 \AtBeginDocument{
 \hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
@@ -75,9 +72,9 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 
 \begin{document}
 
-\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+\frontmatter % Use roman page numbering style (i, ii, iii, iv) for the pre-content pages
 
-\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+\pagestyle{plain}
 
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
@@ -116,7 +113,7 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 
 \vspace*{0.2\textheight}
 
-\noindent\enquote{\itshape Thanks to my solid academic training, today I can write hundreds of words on virtually any topic without possessing a shred of information, which is how I got a good job in journalism.}\bigbreak
+\noindent\enquote{\itshape Thanks to my solid academic training, I can write hundreds of words on virtually any topic without possessing a shred of information, which is how I got a good job in journalism.}\bigbreak
 
 \hfill Dave Barry
 
@@ -125,8 +122,7 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 %----------------------------------------------------------------------------------------
 
 \begin{abstract}
-\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
-The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
+\addchaptertocentry{\abstractname}
 \end{abstract}
 
 %----------------------------------------------------------------------------------------
@@ -134,7 +130,7 @@ The Thesis Abstract is written here (and usually kept to just this page). The pa
 %----------------------------------------------------------------------------------------
 
 \begin{acknowledgements}
-\addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
+\addchaptertocentry{\acknowledgementname} % Add the acknowledgments to the table of contents
 The acknowledgments and the people to thank go here, don't forget to include your project advisor\ldots
 \end{acknowledgements}
 
@@ -164,8 +160,6 @@ The acknowledgments and the people to thank go here, don't forget to include you
 %----------------------------------------------------------------------------------------
 
 %\begin{constants}{lr@{${}={}$}l} % The list of physical constants is a three column table
-
-% The \SI{}{} command is provided by the siunitx package, see its documentation for instructions on how to use it
 
 %Speed of Light & $c_{0}$ & \SI{2.99792458e8}{\meter\per\second} (exact)\\
 %Constant Name & $Symbol$ & $Constant Value$ with units\\
@@ -198,7 +192,7 @@ The acknowledgments and the people to thank go here, don't forget to include you
 %	THESIS CONTENT - CHAPTERS
 %----------------------------------------------------------------------------------------
 
-\mainmatter % Begin numeric (1,2,3...) page numbering
+\mainmatter % Begin numeric (1,2,3) page numbering
 
 \pagestyle{thesis} % Return the page headers back to the "thesis" style
 
