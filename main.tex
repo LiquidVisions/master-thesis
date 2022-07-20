@@ -22,7 +22,7 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 
 \addbibresource{bibliography.bib} % The filename of the bibliography
-\AtBeginDocument{\hypersetup{colorlinks=false, citecolor=., linkcolor=., urlcolor=.}}
+
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
@@ -65,6 +65,7 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
 \hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
 \hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
+\hypersetup{citecolor=., linkcolor=., urlcolor=.}
 }
 \pdfinfo{
 	/title=\ttitle
@@ -121,7 +122,7 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
 
-\printbibliography[heading=bibintoc]
+\include{Pages/Bibliography.tex}
 
 %----------------------------------------------------------------------------------------
 
