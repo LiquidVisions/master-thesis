@@ -23,5 +23,6 @@
         "language": "latex",
         "scheme": "file"
       }
-    ]
+    ],
+    "grammarly.files.exclude": ["**/main.tex"]
 }
