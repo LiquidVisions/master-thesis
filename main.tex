@@ -19,6 +19,9 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \usepackage{lipsum}
 \usepackage{mathpazo} % Use the Palatino font by default
 \usepackage{fltrace}
+\usepackage{float}
+\usepackage[font=scriptsize]{caption}
+\usepackage[colorinlistoftodos]{todonotes}
 \usepackage[backend=biber,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 \addbibresource{bibliography.bib} % The filename of the bibliography
 
@@ -45,8 +48,9 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \NewDocumentCommand{\coproone}{m}{\newcommand{\firstco}{#1}}
 \NewDocumentCommand{\coprotwo}{m}{\newcommand{\secondco}{#1}}
 
-\thesistitle{On the convergence of Clean Architecture and the Normalized Systems.} % \ttitle
-\subject{A Design Science approach with C\#.NET Restful API artifacts.} % \subjectname
+\thesistitle{Converging the philosophy of Clean Argitecture with the  Normalized Systems Theorems} % \ttitle
+\subject{A Design Science approach of modulairity, stability and evolvability of a C\#
+software artifact.} % \subjectname
 
 \promo{Prof. Dr. Ing. Hans Mulder}
 \coproone{Dr. Ing. Geert Haerens}
