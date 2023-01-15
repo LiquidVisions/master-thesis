@@ -6,20 +6,51 @@
 
 \subsection{Design Theorems of Normalized Systems} \label{subsec:ns_desing_theorems}
 
+The theorems of Normalized Systems described in the following paragraphs are all
+considered to be scientifically proven theorems \parencite{mannaert_normalized_2016}. The
+authors of the book claim that the theories, when implemented correctly increase
+the stability, and therefore the evolvability of software systems. The theorems are proven
+mathematically followed by simple examples of describing them by \textit{reductio ad absurdum} 
+\footnote{\url{https://en.wikipedia.org/wiki/Reductio_ad_absurdum}}.
 
 \subsubsection{Separation of Concerns}
-\begin{itemize}
-    \item Toelichting op SoC
-\end{itemize}
+Since the early years, 'Separation of Concerns (SoC)' has been one of the most fundamental
+software development principles. According to Wikipedia
+\footnote{\url{https://en.wikipedia.org/wiki/Separation_of_concerns}} the principle has
+first been mentioned by \citeauthor{dijkstra_selected_1982} as the crucial principle to
+design modular software architecture \parencite[]{dijkstra_selected_1982}. The concept
+itself was introduced by \citeauthor{broy_criteria_1972} in his book
+\citetitle*{broy_criteria_1972}.
+
+According to \citeauthor{dijkstra_selected_1982}, this principle promotes the idea that a
+program should be divided into distinct sections, each addressing a separate concern or
+aspect of the problem. This allows for a more organized and maintainable program, as
+changes to one concern do not affect the others. Dijkstra also emphasized that the
+separation of concerns should be applied at the level of individual modules or functions,
+rather than at the level of the entire program.
+
+Normalized Systems have a more specific definition of this principle. 
+In the book of
+\citeauthor{mannaert_normalized_2016} it is described as \textit{A processing function can
+only contain a single task to achieve stability}. There are a couple of 
+manifestation examples described like the application of an integration service bus. The
+manifestation of external workflows is another example. One example of an external
+workflow in the prototype of this research project is the
+\citetitle*{koks_seedingboundary_2023}. \todo{add hyperlink}This class is responsible for the provision of
+the initial data to the model, based on the elements of the meta-model itself. It
+'seeds' the data by orchestrating individual entity seeders to execute in the correct
+order. Another example is the segregation of the \citetitle*{koks_entity_2023} where each
+CRUD operation is separated in its own interface.\todo{add hyperlink}\todo{Question:
+should I add examples of the prototype in the chapter of theoretical background?}
 
 \subsubsection{Data version transparancy}
 \begin{itemize}
-    \item Toelichting op data version transparancy
+    \item Toelichting op data version transparency
 \end{itemize}
 
 \subsubsection{Action version transparancy}
 \begin{itemize}
-    \item Toelichting op action version transparancy
+    \item Toelichting op action version transparency
 \end{itemize}
 
 \subsubsection{Separation of state}

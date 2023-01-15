@@ -19,10 +19,14 @@
     "rewrap.autoWrap.notification": "icon",
     "rewrap.wrappingColumn": 90,
     "grammarly.selectors": [
+
       {
         "language": "latex",
         "scheme": "file"
       }
     ],
-    "grammarly.files.exclude": ["**/main.tex"]
+    "grammarly.files.exclude": [
+      "**/main.tex"
+    ],
+    "grammarly.config.documentDomain": "academic"
 }
