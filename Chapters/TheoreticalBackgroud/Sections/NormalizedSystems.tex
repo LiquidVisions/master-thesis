@@ -1,4 +1,5 @@
-\section{The Theoretical background of Normalized Systems} \label{ns_theory}
+\section{The Theoretical background of Normalized Systems} 
+\label{ns_theory}
 \begin{itemize}
     \item Inleiding
 \end{itemize}
@@ -14,8 +15,8 @@ mathematically followed by simple examples of describing them by \textit{reducti
 \footnote{\url{https://en.wikipedia.org/wiki/Reductio_ad_absurdum}}.
 
 \subsubsection{Separation of Concerns}
-Since the early years, 'Separation of Concerns (SoC)' has been one of the most fundamental
-software development principles. According to Wikipedia
+Since the early years of software engineering, 'Separation of Concerns (SoC)' has been one
+of the most fundamental software engineering principles. According to Wikipedia
 \footnote{\url{https://en.wikipedia.org/wiki/Separation_of_concerns}} the principle has
 first been mentioned by \citeauthor{dijkstra_selected_1982} as the crucial principle to
 design modular software architecture \parencite[]{dijkstra_selected_1982}. The concept
@@ -29,24 +30,60 @@ changes to one concern do not affect the others. Dijkstra also emphasized that t
 separation of concerns should be applied at the level of individual modules or functions,
 rather than at the level of the entire program.
 
-Normalized Systems have a more specific definition of this principle. 
-In the book of
-\citeauthor{mannaert_normalized_2016} it is described as \textit{A processing function can
-only contain a single task to achieve stability}. There are a couple of 
-manifestation examples described like the application of an integration service bus. The
-manifestation of external workflows is another example. One example of an external
-workflow in the prototype of this research project is the
-\citetitle*{koks_seedingboundary_2023}. \todo{add hyperlink}This class is responsible for the provision of
-the initial data to the model, based on the elements of the meta-model itself. It
-'seeds' the data by orchestrating individual entity seeders to execute in the correct
-order. Another example is the segregation of the \citetitle*{koks_entity_2023} where each
-CRUD operation is separated in its own interface.\todo{add hyperlink}\todo{Question:
-should I add examples of the prototype in the chapter of theoretical background?}
+The SoC had its effect on later versions of software engineering principles like SOLID.
+The principles of 'Single Responsibility' and 'Interface Segregation' are directly derived
+from Soc. It also affected the theorems of Normalized Systems, although it has a more
+strict definition of this principle. In the book of \citeauthor{mannaert_normalized_2016}
+it is described as followed: 
+
+\textit{A processing function can only contain a single task to achieve stability.}
+
+There are a couple of manifestation examples described like the application of
+an integration service bus. The manifestation of external workflows is another example.
+One example of an external workflow in the prototype of this research project is the
+\citetitle*{koks_seedingboundary_2023}. \todo{add hyperlink}This class is responsible for
+the provision of the initial data to the model, based on the elements of the meta-model
+itself. It 'seeds' the data by orchestrating individual entity seeders to execute in the
+correct order. Another example is the segregation of the \citetitle*{koks_entity_2023}
+where each CRUD operation is separated in its interface.\todo{add
+hyperlink} \todo{Question: should I add examples of the prototype in the chapter on the
+theoretical background?}
 
 \subsubsection{Data version transparancy}
-\begin{itemize}
-    \item Toelichting op data version transparency
-\end{itemize}
+Data Version Transparency (DvT) is the act of encapsulation of data entities for specific
+tasks at hand. This results in the fact that data structures can have multiple versions
+often mentioned as Data Transfer Objects in modern software engineering projects. In other
+words, it should be possible to update the data entity without affecting the processing
+functions \parencite{mannaert_normalized_2016}. This leads to the following description of
+the theorem:
+
+\textit{A data structure that is passed through the interface of a processing
+function needs to exhibit version transparency in order to achieve stability.}
+
+DvT is widely used in various technological applications. Every web service currently known
+supports some type of versioning. In restful APIs for example, it is common practice to
+support versioning over the URI. It is best practice to encapsulate breaking changes in a
+new version of the endpoint/service so that the consumers are not (directly) affected by
+the change. In modern Object Oriented languages, DvT is also supported by the ability to
+determine the scope of visibility of the modifiers of the various programming constructs
+like fields, properties, interfaces and classes. Also known as information hiding
+\parencite{broy_criteria_1972,mannaert_normalized_2016}.
+
+The prototype also uses information hiding very strictly. In order to seal implementations
+to the intended layers, concrete implementations always have internal visibility, making
+them impossible to use. The interfaces on the other hand are publically exposed. The
+dependent layers are now restricted to the appointed dependency injection container of the
+specific layer. Alternatively, it is also possible to implement a custom implementation of
+the specific interface. 
+
+Another example from the prototype is the use of ViewModels for the queries, and
+CommandModels for the commands. Depending on the context of the operation, the containing
+fields of the Model may differ. A CommandModel for deleting a data entity will only
+contain the key of the entity that needs to be deleted. The CommandModel for creating the
+same type of entity will probably contain all the required fields of the data entities,
+except the key field as this key is often auto-generated by the database or
+domain layer of the application. \todo{Question: should I add examples of the prototype in the chapter on the
+theoretical background?}
 
 \subsubsection{Action version transparancy}
 \begin{itemize}
