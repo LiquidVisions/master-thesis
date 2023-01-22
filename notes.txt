@@ -8,3 +8,31 @@ combinatorische effecten obv CA
 seperation of state past niet in NS
 keuze is gevallen op de vaagheid van de anticipated changes
 stukken die ik  er uit haal later terug laten komen in conclusie hoofdstuk
+
+20 pager comments:
+------------------
+Comments
+1. Understanding the main concepts
+- Very interesting topic and great excecution!
+- Really good, you actually build an artefact in code! impressive
+2. Project organization & communication with network (promotor, customers, experts)
+- already a very good progress
+- How do you validate the results? Is it only you or with other experts?
+- Very good progress.
+3. Feasibility of relevant conclusions and recommendations
+- Seems nice to already have the artifact 100%
+- March is feasible, however writing the report will be the next phase in your research.
+- great the Artifact is there, so focus can be on writing and validating the Artifcats
+persistence to change
+4. Problem statement, research questions and theory
+- What is the relevance of the artifact ?
+- Maybe focus a little more on the problem you try to solve with your wonderfull artefact
+5. Methodology
+- How do you ensure that changes made to the artefact are documented (traceable by the
+jury and reader)
+
+Mijn research project:
+----------------------
+- volg ik wieringa? wat is mijn aanpak? Een artifact om een probleem context te verbeteren
+of een vraag tbv het beantwoorden van de artifact in context.
+https://learning.antwerpmanagementschool.be/d2l/le/content/10746/viewContent/49424/View
