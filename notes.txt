@@ -1,1 +1,10 @@
 - CA mention of details seems to be similair of the cross cutting concerns of NST
+
+17/01/23 - Feedback
+niet te veel uitleggen wat al beschreven is.
+kort design science aanhalen
+research objectives beschrijven. requirements
+combinatorische effecten obv CA
+seperation of state past niet in NS
+keuze is gevallen op de vaagheid van de anticipated changes
+stukken die ik  er uit haal later terug laten komen in conclusie hoofdstuk
