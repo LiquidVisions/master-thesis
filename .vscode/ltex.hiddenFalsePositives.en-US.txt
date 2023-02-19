@@ -1,3 +1,0 @@
-{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QWhat is the literature stating about combinatorial effects.\\E$"}
-{"rule":"PRP_THE","sentence":"^\\QWhat principles of Clean Architecture contribute to a deduction of combinatorial effects, in a manner that they an addition to the Normalized Systems Theorems.\\E$"}
-{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QWhat principles of Clean Architecture contribute to a deduction of combinatorial effects, in a manner that they an addition to the Normalized Systems Theorems.\\E$"}
