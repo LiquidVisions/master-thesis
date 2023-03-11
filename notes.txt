@@ -36,3 +36,9 @@ Mijn research project:
 - volg ik wieringa? wat is mijn aanpak? Een artifact om een probleem context te verbeteren
 of een vraag tbv het beantwoorden van de artifact in context.
 https://learning.antwerpmanagementschool.be/d2l/le/content/10746/viewContent/49424/View
+
+24/2/2022
+schendingen van de design principles is ook een combinatorische effect.
+solid zegt niks over seperation of state
+
+11.2 - NS requirements
