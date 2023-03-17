@@ -1,11 +1,16 @@
-\section{Research Problem: The plethora of proposed solutions}
+\section{Research Problem: The plethora of proposed design principles}
 \label{sec:research_problem}
 
-There is a wide variety of proposed solutions available for the challenges that occur in
-modular and evolvable software architecture. There are plentiful experiences documented
-throughout professional and personal blog posts on the internet. Many of those experiences
-have mixed outcomes, some are opinionated and results are sometimes based on improper
-interpretations of the proposed solutions.
+Design principles, patterns and theorems are, on top of all additional measures to enhance
+the modularity, stability and evolvability of software artifacts. This thesis focuses on
+two prevalent approaches in order to research the hypothesized convergence that are
+introduced in \ref{sec:into_ca} and \ref{sec:inro_ns}. 
+
+There is a wide variety of proposed design principles available for the challenges that
+occur in modular and evolvable software architecture. There are plentiful experiences
+documented throughout professional and personal blog posts on the internet. Many of those
+experiences have mixed outcomes, some are opinionated and results are sometimes based on
+improper interpretations of the proposed solutions.
 
 Deciding on the best fit for one of the solutions is a recurring and often difficult task
 for software architects. A popular and widely accepted solution from software engineering
@@ -14,37 +19,8 @@ solutions move toward architectures that have similarities with the Clean Archit
 approach. 
 
 An architecture that derives from science and empirical evidence is Normalized Systems
-\parencite*{mannaert_normalized_2009,mannaert_normalized_2016}. Deciding between the two
+\parencite{mannaert_normalized_2009,mannaert_normalized_2016}. Deciding between the two
 approaches can be a challenging task on which there is very little documentation and
 research. Could it even be the case that combining the two approaches can be an approach
 that leads to a highly modular and evolvable software artifact? Let's start with a small
-introduction of both approaches.
-
-\subsection{On Normalized Systems Theorems} \label{subsec:intro_to_ns}
-
-The Normalized Systems theorems are a scientific approach to creating software systems
-based on the laws for software evolvability. These theorems have resulted in a documented
-track record of achieving software stability, in a scientific environment. Effectively, it
-prevents the accumulation of combinatorial effects on anticipated change drivers. This
-prevents the positive feedback loop and prevents the degradation of the software artifact.
-Preventing positive feedback loops has a positive effect on the evolvability of software
-artifacts.\parencite[]{mannaert_normalized_2009}. 
-
-\citeauthor[]{mannaert_normalized_2009} have formulated the theorem of Normalized Systems
-as prescriptive structures (elements) that lead to a modular architecture with low
-coupling and high cohesion. The resulting software architecture will be designed to cope
-with future change \parencites[]{mannaert_normalized_2009}.
-
-\subsection{On Clean Architecture} \label{subsec:into_to_ca}
-
-Clean Architecture is the accumulation of more than half a century of coding, designing,
-and architecting software systems by \citeauthor*[]{martin_clean_2018}. He published his
-experience in his book \citetitle*[]{martin_clean_2018} in \citeyear[]{martin_clean_2018}.
-In this book, he states that creating a software artifact does not require that much skill
-and knowledge. However, creating stable and evolvable software artifacts is a skill that
-requires a lot of knowledge, skill, dedication, and time.
-
-The book's goal is to have a software architecture that minimizes the human resources
-required to build and maintain the information system. Just like Normalized Systems, it
-has a prescribed design of software classes that will lead to a modular architecture with
-low coupling and high cohesion \parencite{martin_clean_2018}.
+introduction to both approaches.

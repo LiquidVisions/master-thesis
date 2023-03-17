@@ -13,3 +13,8 @@
 *.toc
 *-blx.bib
 *.pdf
+*.acn
+*.acr
+*.glo
+*.ist
+*.glsdefs

@@ -1,33 +1,47 @@
 \chapter{Introduction} \label{introduction}
 
+\section{Preamble} \label{sec:preamble}
 \enquote{\emph{Pantha Rhei}} is, according to \emph{Plato}, one of the famous
 philosophical statements first described by the Greek philosopher
 \emph{Heraclitus}\footnote{\url{https://plato.stanford.edu/entries/process-philosophy/}}.
 His statement unambiguously describes the dynamics of everything that exists. The
-\enquote{flux of life} is one of the constants in life and can be applied to contemporary
-corporate environments where change is continuously introduced at an ever-increasing pace.
-These changes lead to an evolution of requirements impacting the evolvability,
-maintainability and quality of Software artifacts.
+\enquote{flux}, or \emph{change} is one of the constants in life. It can also be applied
+to contemporary corporate environments where change is continuously introduced at an
+ever-increasing pace. These changes lead to an evolution of requirements impacting the
+evolvability, stability and quality of software artifacts like Information Systems.
 
 The \enquote{laws of software evolution} \parencite[]{lehman_programs_1980} refers to a
-series of laws that have a deteriorating effect on the evolvability of software.
-\citeauthor{lehman_programs_1980} describes the balance between the forces driving new
-requirements on the one hand, and the forces that slow down progress on the other hand.
-Changing software leads to deterioration of the maintainability, impacting the
-evolvability and possibly also the quality of these software systems. More than a half of
-century of software engineering-, and architecture practices show that the complexity of
-these software artifacts gradually increases over time. Eventually, this will render most
-of the software artifacts obsolete, according to \citeauthor{lehman_programs_1980}
-\parencite[]{lehman_programs_1980}.
+series of laws described by \citeauthor{lehman_programs_1980}. He describes the balance
+between the forces driving new requirements on the one hand, and the forces that slow down
+progress on the other hand. In other words: changing software leads to deterioration of
+stability and evolvability, possibly with a negative effect on the desired quality
+of these software systems. 
+
+More than a half of century of software engineering-, and architecture practices show that
+the complexity of these software artifacts gradually increases over time. Eventually, this
+will render most of the software artifacts obsolete, according to
+\citeauthor{lehman_programs_1980} \parencite[]{lehman_programs_1980}.
 
 Over time there have been many attempts to solve the deterioration of Software Artifact,
 some of which with scientific backgrounds. Even before the publication of
-\citeauthor{lehman_programs_1980} laws of evolution, McIlroy proposed a vision where
-the systematic reuse of software building blocks leads to negative programming practices
-where software changes eventually lead to a reduction of complexity. Parnas continued with
-the principle of information hiding that is the foundation of modular software architectures 
+\citeauthor{lehman_programs_1980} laws of evolution, McIlroy proposed a vision where the
+systematic reuse of software building blocks leads to negative programming practices where
+software changes eventually lead to a reduction of complexity. Parnas continued with the
+principle of information hiding which can be considered to be the foundation of modular
+software architectures.
+
+Over the last decades, several programming paradigms had had a significant effect on the
+modularity, stability and evolvability of software systems. Procedural programming was one
+of the first paradigms to emerge that supported modularity in its constructs. This was
+then followed by object-oriented with support for encapsulation and polymorphism.
+functional programming. All of which had a significant impact on modern programming
+languages like Java and C\#. The constructs of these programming languages significantly
+enhanced the capabilities of modular and evolvable software architectures. 
 
 \input{Chapters/Introduction/Sections/ResearchProblem.tex}
+\input{Chapters/Introduction/Sections/IntroCleanArchitecture.tex}
+\input{Chapters/Introduction/Sections/IntroNormalizedSystems.tex}
 \input{Chapters/Introduction/Sections/Hypotesis.tex}
+\input{Chapters/Introduction/Sections/ResearchObjectives.tex}
 \input{Chapters/Introduction/Sections/ResearchQuestion.tex}
-\input{Chapters/Introduction/Sections/ResearchModel.tex}
+\input{Chapters/Introduction/Sections/ResearchMethod.tex}
