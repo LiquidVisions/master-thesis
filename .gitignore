@@ -12,7 +12,7 @@
 *.synctex.gz
 *.toc
 *-blx.bib
-*.pdf
+main.pdf
 *.acn
 *.acr
 *.glo
