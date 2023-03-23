@@ -1,52 +1,47 @@
 \chapter{Introduction} \label{chap:introduction}
 
-\section{Preamble} \label{sec:preamble}
+\section{Background} \label{sec:background}
 
-One of the constants in life is the notion that everything in life is constantly in
-motion, nothing ever stays the same. Plato states that \enquote*{Patha Rhei} is one of the
-famous philosophical statements first described by the Greek philosopher
-\emph{Heraclitus}\footnote{\url{https://plato.stanford.edu/entries/process-philosophy/}}.
-His statement unambiguously describes the dynamics of everything that exists. The
-\enquote{flux}, or \emph{change} is one of the constants in life. 
+There is this notion that everything is always in motion, a constant state of flux. This
+has been recognized for centuries and is famously described by the Greek philosopher
+\emph{Heraclitus}\footnote{\url{https://plato.stanford.edu/entries/process-philosophy/}}
+with his statement \emph{Pantha Rhei} (Everything flows). This notion is particularly
+relevant in the context of software engineering, as software systems must be able to
+evolve and adapt to changing business requirements.
 
-According to most scholars, this most certainly also applies to modern corporate
-environments where change is continuously introduced at an ever-increasing pace. These
-changes lead to an evolution of requirements impacting the evolvability, stability and
-quality of software artifacts like Information Systems.
+The field of software engineering is constantly evolving too, as new technologies,
+methodologies, and best practices are developed to meet the demands of modern corporate
+environments. In this context, the concept of software stability is a constant reality.
+Software systems must be able to evolve and adapt to changing business requirements over
+time. However, this evolution must be managed in a way that maintains the stability of
+software artifacts.
 
-The laws of software evolution refer to a series of laws that describes the balance
-between the forces driving new requirements on the one hand, and the forces that slow down
-progress on the other hand. In other words: changing software leads to the deterioration of
-stability and evolvability, possibly with a negative effect on the desired quality of
-these software systems. \citeauthor*{lehman_programs_1980}
+The laws of software evolution describe the balance between the forces driving new
+requirements and those that slow down progress \citeauthor*{lehman_programs_1980}.
+Changing software can lead to deterioration in stability and evolvability, which can
+negatively impact the quality of these systems. This challenge has been recognized by
+scholars for decades, and much research has been conducted to address it.
 
-More than a half of century of software engineering-, and architecture practices show that
-the complexity of these software artifacts gradually increases over time. Eventually, this
-will render most of the software artifacts obsolete, according to
-\citeauthor{lehman_programs_1980}.
+\section{Related work} \label{sub:related_work}
 
-Historically, a lot of research has been done to solve the problem of the deterioration of
-Software Artifact. McIlroy proposed a vision where the systematic reuse of software
-building blocks leads to negative programming practices where software changes eventually
-lead to a reduction of complexity \parencite{p_naur_nato_1968}. 
+Early pioneers in software engineering recognized the importance of modular, structured
+programming practices to improve code clarity and maintainability. James Edwin McIlroy
+proposed a vision where the systematic reuse of software building blocks leads to negative
+programming-practices where software changes eventually lead to a reduction of complexity
+\parencite{p_naur_nato_1968}. 
 
 Dijkstra argued against the use of unstructured control flow in programming and advocated
 for the use of structured programming constructs to improve the clarity and
-maintainability of code \parencite{dijkstra_letters_1968}. Later in his career, he
-advocated structured programming techniques that improved the modularity and evolvability
-of software artifacts.
+maintainability of code \parencite{dijkstra_letters_1968}. He advocated structured
+programming techniques that improved the modularity and evolvability of software
+artifacts. Parnas continued with the principle of information hiding. He stated that
+design decisions that are used multiple times by a software artifact should be modularized
+in order to reduce complexity \parencite{parnas_criteria_1972}. 
 
-Parnas continued with the principle of information hiding. He stated that design decisions
-that are used multiple times by a software artifact should be modularized in order to
-reduce complexity \parencite{parnas_criteria_1972}. 
-
-Over the last decades, several programming paradigms had had a significant effect on the
-modularity, stability and evolvability of software systems. Procedural programming was one
-of the first paradigms to emerge that supported modularity in its constructs. This was
-then followed by object-oriented introducing the support for encapsulation and
-polymorphism. functional programming. All of which had a significant impact on modern
-programming languages like Java and C\#. The constructs of these programming languages
-significantly enhanced the capabilities of modular and evolvable software architectures. 
+Various programming paradigms, including procedural, object-oriented, and functional
+programming, have emerged to enhance software programming capabilities. These paradigms
+have impacted modern programming languages, such as Java and C\#, enabling the development
+of more modular and evolvable software architectures. 
 
 \input{Chapters/Introduction/Sections/ResearchProblem.tex}
 \input{Chapters/Introduction/Sections/IntroCleanArchitecture.tex}
