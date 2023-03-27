@@ -1,4 +1,11 @@
-\section{On modularisation} \label{sec:on_modules}
+\section{Towards evolvable software architectures} \label{sec:on_modules}
+
+There are a couple of aspects concerning evolvable software architectures. One of which is
+stability, as described in chapter \ref{sec:on_stability} \nameref{sec:on_stability}.
+Another factor that impacts evolvability is the modularity of the architecture. There is a
+wide consensus about two fundamental rules when thinking of-, and designing modularity:
+\emph{high cohesion} and \emph{low coupling} \autocite[22]{mannaert_normalized_2016}.
+These will
 
 Software modules can be defined as self-contained units of code that perform specific
 tasks or sets of tasks within a larger system. A software module is designed to operate
@@ -12,6 +19,85 @@ contained in a Dynamic Link Library (DLL) or Application Programming Interface (
 also be considered a module of an even bigger system. 
 
 An important part of the design of a software system is to identify the possible different
-modules and their interaction interfaces. There is a wide consensus about two fundamental
-rules when thinking of-, and designing modules: \emph{high cohesion} and \emph{low
-coupling} \autocite[22]{mannaert_normalized_2016}.
+modules and their interaction interfaces.
+
+\subsection{Cohesion: The beauty of Software Desing} \label{subsec:on_modularity}
+
+The term cohesion denotes the extent to which the various structural components of a
+software system operate cohesively towards a singular and well-defined objective or goal.
+Empirical studies in software engineering have extensively demonstrated the significance
+of cohesion, linking higher levels of cohesion with reduced defects, enhanced
+maintainability, and greater openness to change. Consequently, achieving high cohesion has
+been associated with an overall improvement in software quality attributes such as
+reliability, maintainability, reusability, and evolvability.
+
+Cohesion facilitates the reduction of complexity and interdependence among the components
+of a system, thereby contributing to a more efficient, maintainable, and reliable system.
+By organizing components around a shared purpose or function, or by standardizing their
+interfaces, data structures, and protocols, cohesion can offer the following benefits:
+
+\begin{itemize}
+    \item \textbf{Reduce redundancy and duplication of effort}: \\
+    Cohesion ensures that components are arranged around a common purpose or function,
+    reducing duplicates or redundant code. This simplifies system comprehension,
+    maintenance, and modification.
+    \item \textbf{Promoting code reuse:}\\
+    Cohesion facilitates code reuse by making it easier to extract and reuse components
+    designed for specific functions. This saves time and effort during development and
+    enhances overall system quality.
+    \item \textbf{Enhance maintainability:}\\
+    Cohesion decreases the complexity and interdependence of system components, making it
+    easier to identify and rectify bugs or errors in the code. This improves system
+    maintainability and reduces the risk of introducing new errors during maintenance.
+    \item \textbf{Increase scalability:}\\
+    Cohesion improves a system's scalability by enabling it to be extended or modified
+    effortlessly to accommodate changing requirements or conditions. By designing
+    well-organized and well-defined components, developers can easily add or modify
+    functionality as needed without disrupting the rest of the system.  
+\end{itemize}
+
+\subsection{Coupling: The beast of Software Desing} \label{subsec:on_coupling}
+
+Coupling is a central concept in software engineering that pertains to the degree of
+interdependence among software modules or components. The level of coupling between
+modules denotes the strength of their relationship, whereby a high level of coupling
+implies a significant degree of interdependence. Conversely, low coupling signifies a
+weaker relationship between modules, where modifications in one module are less likely to
+impact others.
+
+The negative impacts of excessive coupling on software systems are considerable. High
+coupling can render software systems difficult to maintain, modify, or evolve. It can
+impede the identification and resolution of errors within a system, leading to prolonged
+debugging periods. Additionally, it can cause fragility in the system, where slight
+modifications in one module can trigger cascading failures throughout the entire system.
+Therefore, it is crucial for software engineers to minimize coupling between modules while
+maintaining a cohesive design. By developing systems with low coupling, software engineers
+can construct more maintainable, scalable, and adaptable systems that are easier to evolve
+over time.
+
+Coupling, in software engineering, can take several forms, including content, common,
+control, stamp, and data coupling. Content coupling occurs when one module accesses or
+modifies the internal data or logic of another module, leading to high interdependence and
+difficulty in isolating errors. Common coupling occurs when several modules access and use
+the same global data, increasing their interdependence and reducing modularity. Control
+coupling occurs when one module controls the execution flow of another module, making it
+difficult to modify or reuse the controlled module. Stamp coupling arises when two modules
+share a common data structure, leading to tight coupling and high interdependence.
+Finally, data coupling exists when two modules share data, which can lead to coupling
+between them.
+
+To avoid the negative impacts of coupling on software systems, software engineers should
+aim to minimize the degree of coupling between modules. This can be achieved by designing
+cohesive, loosely coupled modules with well-defined interfaces. Loose coupling enables
+each module to operate independently, reducing the impact of modifications made to other
+modules. By implementing modular design principles, such as high cohesion and low
+coupling, software engineers can develop systems that are easier to maintain, test, and
+evolve.
+
+In conclusion, coupling is a critical concept in software engineering that can have a
+considerable impact on the maintainability, flexibility, and scalability of software
+systems. By minimizing coupling between modules, software engineers can develop more
+robust, adaptable systems that are easier to modify and evolve. Adopting modular design
+principles can also facilitate the development of cohesive, loosely coupled modules that
+enable the independent operation and reduce the impact of modifications made to other
+modules.
