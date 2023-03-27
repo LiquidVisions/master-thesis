@@ -13,8 +13,9 @@
 *.toc
 *-blx.bib
 main.pdf
-*.acn
 *.acr
 *.glo
 *.ist
 *.glsdefs
+*.acn
+*.ist
