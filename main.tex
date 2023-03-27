@@ -23,16 +23,94 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \usepackage{hyperref}
 \usepackage[font=scriptsize]{caption}
 \usepackage[colorinlistoftodos,textwidth=30mm,textsize=tiny]{todonotes}
-\usepackage[style=authoryear-icomp,maxbibnames=9,maxcitenames=2,uniquelist=false,backend=biber]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+\usepackage[style=authoryear,maxbibnames=9,maxcitenames=2,uniquelist=false,backend=biber]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 \addbibresource{bibliography.bib} % The filename of the bibliography
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 \usepackage[acronym, toc]{glossaries}
+
 \makeglossaries
 \loadglsentries{Pages/Abbreviations.tex}
+\let\cleardoublepage=\clearpage
+
+%----------------------------------------------------------------------------------------
+%  code listings
+%----------------------------------------------------------------------------------------
+\usepackage{listings}
+\usepackage{etoolbox}
+\usepackage{color}
+
+\definecolor{base0}{RGB}{131,148,150}
+\definecolor{base01}{RGB}{88,110,117}
+\definecolor{base2}{RGB}{238,232,213}
+\definecolor{sgreen}{RGB}{133,153,0}
+\definecolor{sblue}{RGB}{38,138,210}
+\definecolor{scyan}{RGB}{42,161,151}
+\definecolor{smagenta}{RGB}{211,54,130}
+\definecolor{mygray}{gray}{0.98}
+
+
+\newcommand\digitstyle{\color{smagenta}}
+\newcommand\symbolstyle{\color{base01}}
+\makeatletter
+\newcommand{\ProcessDigit}[1]
+{%
+  \ifnum\lst@mode=\lst@Pmode\relax%
+   {\digitstyle #1}%
+  \else
+    #1%
+  \fi
+}
+\makeatother
+
+
+\lstdefinestyle{solarizedcsharp} {
+  language=[Sharp]C,
+  frame=lr,
+  linewidth=160mm,
+  breaklines=true,
+  tabsize=2,
+  numbers=left,
+  numbersep=5pt,
+  firstnumber=auto,
+  numberstyle=\tiny\ttfamily\color{base0},
+  rulecolor=\color{base2},
+  backgroundcolor=\color{mygray},
+  basicstyle=\scriptsize\ttfamily,
+  commentstyle=\color{base01},
+  morecomment=[s][\color{base01}]{/*+}{*/},
+  morecomment=[s][\color{base01}]{/*-}{*/},
+  morekeywords={  abstract, event, new, struct,
+                as, explicit, null, switch,
+                base, extern, object, this,
+                bool, false, operator, throw,
+                break, finally, out, true,
+                byte, fixed, override, try,
+                case, float, params, typeof,
+                catch, for, private, uint,
+                char, foreach, protected, ulong,
+                checked, goto, public, unchecked,
+                class, if, readonly, unsafe,
+                const, implicit, ref, ushort,
+                continue, in, return, using,
+                decimal, int, sbyte, virtual,
+                default, interface, sealed, volatile,
+                delegate, internal, short, void,
+                do, is, sizeof, while,
+                double, lock, stackalloc,
+                else, long, static,
+                enum, namespace, string, var},
+  keywordstyle=\bfseries\color{sgreen},
+  showstringspaces=false,
+  stringstyle=\color{scyan},
+  identifierstyle=\color{sblue},
+  extendedchars=true,
+  captionpos=b,
+}
+
+\lstset{style=solarizedcsharp}
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
 %----------------------------------------------------------------------------------------
- 
 \geometry{
 	paper=a4paper, % Change to letterpaper for US letter
 	inner=2.5cm, % Inner margin
@@ -78,7 +156,6 @@ software artifact.} % \subjectname
 }
 
 \begin{document}
-
 \frontmatter % Use roman page numbering style (i, ii, iii, iv) for the pre-content pages
 
 \pagestyle{plain}
