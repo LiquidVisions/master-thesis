@@ -1,0 +1,47 @@
+\subsubsection{Action version Transparancy}
+\gls{avt} is the property of a system to modify existing processing functions without
+affecting the existing ones. It should be possible to upgrade a function without affecting
+the callers of those functions. This description leads to the following theorem
+\parencite[282]{mannaert_normalized_2016}.
+
+\begin{center}
+    \textbf{Theorem III}\\
+    \textit{A processing function that is called by another processing function, needs to exhibit version transparency in order to achieve stability.}
+\end{center}
+
+Most of the modern technology environments support some form of \gls{avt}. Polymorphism is
+a widely used technique in order to support this theorem. Specifically, parametric
+polymorphism \footnote{\url{https://en.wikipedia.org/wiki/Parametric_polymorphism}} allows
+for a processing function to have multiple input parameters. There are also quite some
+design patterns supporting this theorem. Some random examples are the state pattern
+\footnote{\url{https://en.wikipedia.org/wiki/State_pattern}}, facade pattern
+\footnote{\url{https://en.wikipedia.org/wiki/Facade_pattern}} and observer pattern
+\footnote{\url{https://en.wikipedia.org/wiki/Observer_pattern}}.
+
+Manifestations in the artifacts are abundant. One example is the
+\citetitle{koks_icommandlineinteractor_2023} \parencite{koks_icommandlineinteractor_2023}.
+There are multiple signatures of the processing function Start, each of them allowing a
+slightly different behavior when executed.
+
+In specific situations \enquote{Dependency Injection} can be viewed as an application of
+\gls{avt}. The \citetitle{koks_logger_2023} \parencite{koks_logger_2023} is currently an
+implementation of the NLOG framework \footnote{\url{https://nlog-project.org/}}. It is
+fairly simple to implement a new logging framework as a replacement for NLOG when the
+consuming implementations only use the ILogger interface, instead of the concrete NLOG
+wrapper implementation. A warning is in order though. Dependency Injection does not remove
+the dependency. It moves the dependency to a different class. When implemented incorrectly
+this could even violate the \gls{avt} principle \parencite[213]{mannaert_normalized_2016}.
+Therefore it is recommended only to use Dependency Injection in combination with an
+\enquote{Inversion Of Control Container} where the dependencies from the viewpoint of a
+module are managed centrally.
+
+The use of Generics is another use of Polyphormismadhering to the \gls{avt} theorem.
+Consider code snippet \ref{SnipICreateGateway} \nameref{SnipICreateGateway} which is a
+generic implementation of the Create repository. This allows consumer code to create
+entities without having dependencies on the entity itself, or without having to know the
+concrete class.
+
+\lstinputlisting[
+    caption={\citetitle{koks_icreategateway_2023}},
+    label={SnipICreateGateway}]
+    {Snippets/ICreateGateway.cs}
