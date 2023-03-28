@@ -1,20 +1,21 @@
-\subsection{Coupling: The bad} \label{subsec:on_coupling}
+\subsubsection{Coupling} \label{subsec:on_coupling}
 
-Coupling is a central concept in software engineering that pertains to the degree of
-interdependence among software modules or components. The level of coupling between
+Coupling is an important concept in software engineering that pertains to the degree of
+interdependence among software modules and components. The level of coupling between
 modules denotes the strength of their relationship, whereby a high level of coupling
 implies a significant degree of interdependence. Conversely, low coupling signifies a
 weaker relationship between modules, where modifications in one module are less likely to
-impact others.
+impact others. Although not always possible, the level of coupling between the various
+modules of the system should be kept to a bare minimum.
 
-The negative impacts of excessive coupling on software systems are considerable. High
-coupling can render software systems difficult to maintain, modify, or evolve. It can
-impede the identification and resolution of errors within a system, leading to prolonged
-debugging periods. Additionally, it can cause fragility in the system, where slight
-modifications in one module can trigger cascading failures throughout the entire system.
-Therefore, it is crucial for software engineers to minimize coupling between modules while
-maintaining a cohesive design. By developing systems with low coupling, software engineers
-can construct more maintainable, scalable, and adaptable systems that are easier to evolve.
+The negative impact of excessive coupling on software systems is considerable. High
+coupling can render software systems difficult to maintain, modify, or evolve. It can make
+it considerably more difficult to find the root cause of potential bugs. Additionally, it
+causes fragility in the system, where slight modifications in one module can trigger
+cascading failures throughout the entire system. Therefore, it is crucial for software
+engineers to minimize coupling between modules while maintaining a cohesive design. By
+developing systems with low coupling, software engineers can construct more maintainable,
+scalable, and adaptable systems that are easier to evolve.
 
 Coupling, in software engineering, can take several forms, including content, common,
 control, stamp, and data coupling. Content coupling occurs when one module accesses or
@@ -27,18 +28,15 @@ share a common data structure, leading to tight coupling and high interdependenc
 Finally, data coupling exists when two modules share data, which can lead to coupling
 between them.
 
-To avoid the negative impacts of coupling on software systems, software engineers should
-aim to minimize the degree of coupling between modules. This can be achieved by designing
-cohesive, loosely coupled modules with well-defined interfaces. Loose coupling enables
-each module to operate independently, reducing the impact of modifications made to other
-modules. By implementing modular design principles, such as high cohesion and low
-coupling, software engineers can develop systems that are easier to maintain, test, and
-evolve.
+One attempt to lower coupling in the expanded artifact is to prefer stamp coupling over
+data coupling through the API interface. This is done by making use of RequestModels and
+ViewModels, instead of the actual data element (see example in Listings \ref{SnipModelExamples}).
+Depending on the use case only the required data is passed down to the view, or in the
+case of a command accepted as an input parameter.
 
-In conclusion, coupling is a critical concept in software engineering that can have a
-considerable impact on the maintainability, flexibility, and scalability of software
-systems. By minimizing coupling between modules, software engineers can develop more
-robust, adaptable systems that are easier to modify and evolve. Adopting modular design
-principles can also facilitate the development of cohesive, loosely coupled modules that
-enable the independent operation and reduce the impact of modifications made to other
-modules.
+\lstinputlisting[
+    caption={The ViewModel \parencite{koks_componentviewmodel_2023} and RequestModel
+    \parencite{koks_deletecomponentcommand_2023} of the Entity 'Component'
+    \parencite{koks_gc_component_2023}},
+    label={SnipModelExamples}]
+    {Snippets/ModelExamples.cs}

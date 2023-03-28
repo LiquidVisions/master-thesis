@@ -31,7 +31,8 @@
       }
     ],
     "grammarly.files.exclude": [
-      "**/main.tex"
+      "**/main.tex",
+      "**/*.cs",
     ],
     "grammarly.config.documentDomain": "academic",
     "latex-workshop.latex.tools": [
