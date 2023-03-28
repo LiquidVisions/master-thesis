@@ -1,22 +1,22 @@
 \subsubsection{Separation of Concerns}
-Since the early years of software engineering, \gls{soc} has been one of the most
-fundamental software engineering principles. The principle has first been mentioned by
+
+Since the early years of software engineering, \gls{soc} has been one of the fundamental
+software design principles. The concept itself was introduced by
+\citeauthor{parnas_criteria_1972} with his introduction of Information Hiding
+\parencite{parnas_criteria_1972}. \gls{soc} as a principle has first been mentioned by
 \citeauthor{dijkstra_selected_1982}\footnote{\url{https://en.wikipedia.org/wiki/Separation_of_concerns}}
 as the crucial principle to design modular software architecture
-\parencite[]{dijkstra_selected_1982}. The concept itself was introduced by
-\citeauthor{parnas_criteria_1972} in his book \citetitle*{parnas_criteria_1972}.
+\parencite[]{dijkstra_selected_1982}. 
 
-This principle promotes the idea that a program should be divided into distinct sections,
-each addressing a separate concern or aspect of the problem. This allows for a more
-organized and maintainable source code, as changes to one concern do not affect the
-others. \gls{soc} should be applied at the level of individual modules, rather that the level
-of an entire program.
+\gls{soc} promotes the idea that a program should be divided into distinct sections, each
+addressing a separate concern or aspect of a design problem. This allows for a more
+organized and maintainable source code. When implemented correctly, a change to one
+concern does not affect the others. \gls{soc} should be applied at the level of individual
+modules, rather that the level of an entire program.
 
-The \gls{soc} had its effect on later versions of software engineering principles like SOLID.
-The principles of 'Single Responsibility' and 'Interface Segregation' are directly derived
-from \gls{soc}. It also affected the theorems of Normalized Systems, although it has a more
-strict definition of this principle. In the book of \citeauthor{mannaert_normalized_2016}
-it is described as followed: 
+The \gls{soc} had its effect on later versions of software design principles like SOLID.
+It also influenced \gls{ns}, although it has a more strict definition of this principle.
+In the book of \citeauthor{mannaert_normalized_2016} it is described as followed: 
 
 \begin{center}
     \textbf{Theorem I}\\
@@ -24,7 +24,18 @@ it is described as followed:
 \end{center}
 
 There are various manifestations of \gls{soc} observable in the artifacts. One of which is
-the separation of each task that is needed in order to generate the Clean Architecture
-Expander. In total there are 19 tasks performed in order to fully expand the expanded
-artifact. Most of them are concerned with generating templates based on the model of the
-expanded artifact. Each of those tasks
+already mentioned in Figure \ref{fig:modulair_components}, where \gls{soc} is applied to
+separate the domain logic from the application, infrastructure and presentation logic.
+
+Another example is the separation of handlers as part of the Clean Architecture Expander.
+Each of those handlers executes an isolated part of the expanding process. Consider the
+\citetitle{koks_expandentitieshandlerinteractor_2023}
+\parencite{koks_expandentitieshandlerinteractor_2023} for example. This Handler is solely
+responsible for the generation of Data Entities. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Figures/expander_handlers.pdf}
+    \caption[handlers]{All expander handlers. Each of them handles an isolated part of the expanding process.}
+    \label{fig:handlers}
+\end{figure}

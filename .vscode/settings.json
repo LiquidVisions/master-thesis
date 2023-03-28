@@ -1,4 +1,5 @@
-{
+{   "omnisharp.autoStart": false,
+    "omnisharp.analyzeOpenDocumentsOnly": true,
     "files.exclude": {
         "**/*.aux": true,
         "**/*.blg": true,
@@ -32,7 +33,7 @@
     ],
     "grammarly.files.exclude": [
       "**/main.tex",
-      "**/*.cs",
+      "**/**.cs",
     ],
     "grammarly.config.documentDomain": "academic",
     "latex-workshop.latex.tools": [
