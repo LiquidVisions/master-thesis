@@ -18,10 +18,12 @@ The \gls{soc} had its effect on later versions of software design principles lik
 It also influenced \gls{ns}, although it has a more strict definition of this principle.
 In the book of \citeauthor{mannaert_normalized_2016} it is described as followed: 
 
-\begin{center}
-    \textbf{Theorem I}\\
-    \textit{A processing function can only contain a single task to achieve stability.}    
-\end{center}
+\begin{tcolorbox}
+    \begin{center}
+        \textbf{Theorem I}\\
+        \textit{A processing function can only contain a single task to achieve stability.}    
+    \end{center}        
+\end{tcolorbox}
 
 There are various manifestations of \gls{soc} observable in the artifacts. One of which is
 already mentioned in Figure \ref{fig:modulair_components}, where \gls{soc} is applied to
@@ -36,6 +38,6 @@ responsible for the generation of Data Entities.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{Figures/expander_handlers.pdf}
-    \caption[handlers]{All expander handlers. Each of them handles an isolated part of the expanding process.}
+    \caption[handlers]{Each of the handlers handles an isolated part of the expanding process.}
     \label{fig:handlers}
 \end{figure}

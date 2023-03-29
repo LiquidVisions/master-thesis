@@ -6,20 +6,23 @@ Data Transfer Objects in modern software engineering projects. In other words, i
 be possible to update the data entity without affecting the processing functions. This
 leads to the following description of the theorem \parencite[280]{mannaert_normalized_2016}.
 
-\begin{center}
-    \textbf{Theorem II}\\
-    \textit{A data structure that is passed through the interface of a processing function 
-    needs to exhibit version transparency in order to achieve stability.}
-\end{center}
+\begin{tcolorbox}
+    \begin{center}
+        \textbf{Theorem II}\\
+        \textit{A data structure that is passed through the interface of a processing function 
+        needs to exhibit version transparency in order to achieve stability.}
+    \end{center}    
+\end{tcolorbox}
 
-\gls{dvt} is widely used in various technological applications. Every web service
-currently known supports some type of versioning. In restful APIs for example, it is
-common practice to support versioning over the URI. It is best practice to encapsulate
-breaking changes in a new version of the endpoint/service so that the consumers are not
-(directly) affected by the change. In modern Object Oriented languages, gls{dtv} is also
-supported by the ability to determine the scope of visibility of the modifiers of the
-various programming constructs like fields, properties, interfaces and classes. Also known
-as information hiding \parencites{parnas_criteria_1972}[278]{mannaert_normalized_2016}.
+\gls{dvt} is widely used in various technological applications. practically every web
+service currently known supports some type of versioning. In restful APIs for example, it
+is common practice to support versioning over the URI. It is considered a best practice
+to encapsulate breaking changes in a new version of the endpoint/service so that the
+consumers are not (directly) affected by the change. In modern Object Oriented languages,
+gls{dtv} is also supported by the ability to determine the scope of visibility of the
+modifiers of the various programming constructs like fields, properties, interfaces and
+classes. Also known as information hiding
+\parencites{parnas_criteria_1972}[278]{mannaert_normalized_2016}.
 
 The prototype also uses information hiding very strictly. In order to seal implementations
 to the intended layers, concrete implementations always have internal visibility, making
