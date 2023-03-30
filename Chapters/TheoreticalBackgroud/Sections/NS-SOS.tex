@@ -1,4 +1,4 @@
-\subsubsection{Separation of State}
+\subsubsection*{Separation of State}
 
 \gls{sos} is a theorem that is based on the idea that processing functions should not
 contain any state information but instead should rely on external data structures to store
@@ -8,32 +8,6 @@ structures can be updated or replaced without affecting the processing functions
 themselves, which greatly reduces the change of unwanted ripple effects. This theorem is
 described as followed: \parencite[258]{mannaert_normalized_2016}.
 
-\begin{center}
-    \textbf{Theorem IV}\\
-    \textit{Calling a processing function within another processing function, needs to exhibit state keeping in order to achieve stability.}
-\end{center}
-
-\gls{sos} fits very well in distributed information systems with asynchronous calls. The
-expanded artifact is designed in a manner that all external process functions are executed
-asynchronously. \todo{snippet toevoegen.}.
-
-A simpler manifestation of the \gls{sos} theorem involves the use of Resources as an
-integral part solution
-\footnote{url{https://learn.microsoft.com/en-us/dotnet/core/extensions/resources}}. In
-addition to enabling the localization of strings, this approach offers the advantage of
-centralized management, thereby exhibiting \gls{sos}. For instance, when the functional
-requirements evolve, the name of a template in the expander artifact is likely to change.
-As the name of the template is used in multiple class instances, a centralized approach to
-managing the template name can mitigate the risk of excessive modifications when a name
-change is mandated.
-
-Another example. The state of the model (see chapter \ref{sec:artifact_model}) is
-currently persisted in an Azure SQL Database.
-
-\lstinputlisting[
-    caption={The \citetitle{koks_genericrepository_2023} \parencite{koks_genericrepository_2023}}]
-    {Snippets/GenericRepository.cs}
-
-The state of of the expander artifact model as described in \ref{sec:artifact_model} for the expander in the 
-voorbeeld met seerders...
-voorbeeld met repositories....
+\begin{tcolorbox}[boxrule=0.1pt, colback=mygray, title=Theorem IV,colbacktitle=gray]
+        \textit{Calling a processing function within another processing function, needs to exhibit state keeping in order to achieve stability.}
+\end{tcolorbox}
