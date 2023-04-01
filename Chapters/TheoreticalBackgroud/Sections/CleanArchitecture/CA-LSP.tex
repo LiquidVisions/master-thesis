@@ -1,0 +1,46 @@
+\subsubsection{The Liskov Substitution Principle} \label{subsubsec:lsp}
+
+
+The \gls{lsp} is a fundamental concept in object-oriented programming that deals with the
+behavior of subtype objects when used in place of their base type. It is named after
+Barbara Liskov. She first introduced the principle in a paper she co-authored with
+Jeannette Wing in 1987. Barbara Liskov wrote the following statement as a way of defining
+subtypes \parencite{robert_c_martin_clean_2018}.
+
+\mycolorbox{If for each	object o1 of type S there is an	object o2 of type T such that for
+all programs P defined in terms of T, the behavior of P	is unchanged when o1 is
+substituted for	o2 then S is a subtype of T.1}{\acrlong{lsp}}
+
+The principle is based on the idea that a subtype should be semantically substitutable for
+its base type. This means that the subtype should behave in a way that is consistent with
+the expectations of the base type and should not introduce any new behaviors or violate
+any of the constraints imposed by the base type.
+
+The practical implications of \gls{lsp} are many. In software design, it means that we
+should strive to create subtypes that are as similar as possible to their base types in
+terms of their behavior and the constraints they impose. In testing, it means that we
+should test subtypes to ensure that they behave correctly when used in place of their base
+types.
+
+Considered the implementation of the \citecode{koks_ilogger_2023} interface. This is
+currently implemented in \citecode{koks_logger_2023} using the NLog framework.
+Implementations that use logging only make use of the \code{koks_ilogger_2023} by making
+proper use of the \acrlong{dip}. In the future, it might be needed to replace the NLog
+framework with an arbitrary logging framework. This would be rather simple by just
+replacing the \code{koks_logger_2023} implementation.
+
+The \citecode{koks_icreategateway_2023} in Listing \ref{SipICreateGateway} is another
+example. The artifact has two implementations of this interface. The data of the entities
+are currently stored in the database, but harvest data is serialized to XML using the same
+\code{koks_icreategateway_2023} interface. With this design decision, it is very easy to adapt
+to a different type of storage mechanism if future requirement demand such a change.
+
+\lstinputlisting[
+    caption={The \citetitle{koks_icreategateway_2023}},
+    label={SipICreateGateway} ]
+    {Snippets/ICreateGateway.cs}
+
+\lstinputlisting[
+    caption={The \citetitle{koks_genericrepository_2023} and \citetitle{koks_harvestrepository_2023}},
+    label={SipICreateGatewayImplementations} ]
+    {Snippets/ICreateGatewayImplementations.cs}

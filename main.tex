@@ -67,7 +67,6 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \lstdefinestyle{solarizedcsharp} {
   language=[Sharp]C,
   frame=lr,
-  linewidth=160mm,
   breaklines=true,
   tabsize=2,
   numbers=left,
@@ -113,6 +112,9 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 
 \newcommand{\code}[1]{\textcolor{sblue}{\textit{\citetitle{#1}}}}
 \newcommand{\citecode}[1]{\textcolor{sblue}{\citetitle{#1} \parencite{#1}}}
+\newcommand{\mycolorbox}[2]{\begin{tcolorbox}[boxrule=0.1pt, colback=mygray, title={#2} ,colbacktitle=gray]
+  \textit{#1}
+\end{tcolorbox}}
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
 %----------------------------------------------------------------------------------------

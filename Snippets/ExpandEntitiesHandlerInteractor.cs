@@ -10,8 +10,16 @@ public class ExpandEntitiesHandlerInteractor
 
         foreach (var entity in app.Entities)
         {
-            string fullSavePath = Path.Combine(entitiesFolder, $"{entity.Name}.cs");
-            templateService.RenderAndSave(pathToTemplate, new { entity }, fullSavePath);
+            string fullSavePath = Path.Combine(
+                entitiesFolder, 
+                $"{entity.Name}.cs"
+            );
+            
+            templateService.RenderAndSave(
+                pathToTemplate, 
+                new { entity }, 
+                fullSavePath
+            );
         }
     }
 }

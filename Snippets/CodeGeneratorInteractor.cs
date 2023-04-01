@@ -8,7 +8,8 @@ internal sealed class CodeGeneratorInteractor : ICodeGeneratorInteractor
     /// <inheritdoc/>
     public void Execute()
     {
-        foreach (IExpanderInteractor expander in expanders.OrderBy(x => x.Model.Order))
+        foreach (IExpanderInteractor expander in expanders
+            .OrderBy(x => x.Model.Order))
         {
             expander.Harvest();
 
