@@ -1,4 +1,5 @@
-public class ExpandEntitiesHandlerInteractor : IExpanderHandlerInteractor<CleanArchitectureExpander>
+public class ExpandEntitiesHandlerInteractor 
+    : IExpanderHandlerInteractor<CleanArchitectureExpander>
 {
     // ... other code 
 

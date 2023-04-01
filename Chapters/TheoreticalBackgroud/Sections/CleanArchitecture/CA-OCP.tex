@@ -1,2 +1,57 @@
 \subsubsection*{The Open-Closed Principle} \label{subsubsec:ocp}
 
+The \gls{ocp} was first mentioned by \Citeauthor{meyer_object-oriented_1997}. He described
+the principle as followed \parencite[79]{meyer_object-oriented_1997}. The reference here
+is for the second edition of the book, the original version is from 1988.
+
+\begin{tcolorbox}[boxrule=0.1pt, colback=mygray, title=\acrlong{ocp} ,colbacktitle=gray]
+    \textit{A module should	be open for extension but closed for modification.}
+\end{tcolorbox}
+
+\gls{ocp} emphasizes the importance of designing systems that are open for extension but
+closed for modification. This means that the behavior of implementations can be extended
+without modifying its source code. The OCP promotes the use of abstraction and
+polymorphism to achieve this goal. By using interfaces, and abstract classes a system can
+be designed to allow for new behaviors to be added through extension, without changing the
+existing code. The OCP is one of the driving forces	behind the architecture	of systems.
+The goal is	to make	the	system easy	to extend without incurring a high impact of change
+\parencite[94]{robert_c_martin_clean_2018}.
+
+A relevant manifestation of \gls{ocp} are all the different implementations of expander
+handlers in figure \ref{fig:handlers}. The availability of the
+\code{koks_iexpanderhandlerinteractor_2023} interface makes it possible to add more
+functionality to the CleanArchtictureExpander without modifying any existing
+implementation. New handlers are added by extension, and when implemented correctly, the
+handler is automatically executed in the desired order and the required conditions.
+
+\lstinputlisting[
+    caption={The \citetitle{koks_iexpanderhandlerinteractor_2023}},
+    label={SipIExpanderHandlerInteractor} ]
+    {Snippets/IExpanderHandlerInteractor.cs}
+
+\lstinputlisting[
+    caption={The \citetitle{koks_iexecutioninteractor_2023}},
+    label={SipIExecutionInteractor} ]
+    {Snippets/IExecutionInteractor.cs}
+
+The fact that \citecode{koks_iexpanderhandlerinteractor_2023} derives from
+\citecode{koks_iexecutioninteractor_2023} is another manifestation of \gls{ocp}. This
+design decision allows for object types that need to be treated as executables by the
+\code{koks_codegeneratorinteractor_2023}. Examples are
+\citecode{koks_regionharvesterinteractor_2023},
+\citecode{koks_regionrejuvenatorinteractor_2023},
+\citecode{koks_preprocessorinteractor_2023} and
+\citecode{koks_postprocessorinteractor_2023}. 
+
+Listing \ref{SipCodeGeneratorInteractor} shows the
+\code{koks_codegeneratorinteractor_2023} that cohesively executes all of the
+\code{koks_iexecutioninteractor_2023} in order. The software engineer only has to focus on
+implementing the specific type of \code{koks_iexecutioninteractor_2023} without having to
+affect the implementation. This is by definition an example of \enquote{open for
+extension} and \enquote{closed for modifications}.
+
+
+\lstinputlisting[
+    caption={The \citetitle{koks_codegeneratorinteractor_2023}},
+    label={SipCodeGeneratorInteractor} ]
+    {Snippets/CodeGeneratorInteractor.cs}
