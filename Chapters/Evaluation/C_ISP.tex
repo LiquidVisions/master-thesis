@@ -1,0 +1,36 @@
+\subsection{The convergence of the Interface Segregation Principle}
+
+\begin{table}[H]
+    \begin{tabular}{ l | c | p{0.78\linewidth}}
+        \toprule
+        \gls{soc} & \converges & The \gls{isp} converges with the \gls{soc} theorem, as
+        both principles emphasize the importance of modularity and the separation of
+        concerns. \gls{isp} states that clients should not be forced to depend on
+        implementation they do not use, promoting the creation of smaller, focused
+        interfaces. By adhering to \gls{soc} and designing target interfaces, inherently
+        support \gls{soc}, leading to more evolvable software systems. \\
+        \midrule
+        \gls{dvt} & \supports & The \gls{isp} has an indirect relationship with the
+        \gls{dvt} theorem. When adhering to the \gls{isp} a developer can create a
+        specific interface supporting a specific version of data entities. Although this
+        approach can help minimize the impact of data structure changes on the system, it
+        does not guarantee full \gls{dvt} information system. \\
+        \midrule
+        \gls{avt} & \supports & The \gls{isp} supports the \gls{avt} theorem. Both
+        principles emphasize the importance of separating actions within a system.
+        \gls{isp} promotes the creation of interfaces for each (version of an) action,
+        which aligns with the core concept of \gls{avt}. This alignment allows for a more
+        manageable system, where changes in one action do not lead to ripple effects
+        throughout the entire system. Although the adherence to \gls{isp} does not
+        guarantee full compliance with the \gls{avt} \\
+        \midrule
+        \gls{sos} & \diverges &  There is no alignment between \gls{isp} and \gls{sos}.
+        Mostly because \gls{isp} focuses on the separation of interfaces and/or abstract
+        classes, while \gls{sos} emphasizes isolating different states within a system.
+        This is an implementation concern. By no means the application of \gls{isp} could
+        lead to a separation of state. \\
+        \bottomrule
+    \end{tabular}
+    \caption{Convergence \gls{isp} with \gls{ns}}
+    \label{tab:convergence_isp}
+\end{table}

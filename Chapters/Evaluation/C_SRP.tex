@@ -1,0 +1,45 @@
+\subsection{The convergence of the Single Responsibility Principle}
+
+\begin{table}[H]
+    \begin{tabular}{ l | c | p{0.78\linewidth}}
+        \toprule
+        \gls{soc} & \converges & \gls{srp} and \gls{soc} share a common objective:
+        facilitating evolvable software systems through the promotion of modularity, low
+        coupling, and high cohesion. While there may be some differences in granularity
+        when applying both principles according to the original definition of SOC, the
+        more stringent definition of Separation of Concerns, offered by the \gls{ns}
+        Theorems \ref{subsubsec:soc} minimizes these differences. As a result, the two
+        principles can be regarded as practically interchangeable. In conclusion, SRP and
+        SOC exhibit full convergence, as they both emphasize encapsulating
+        'responsibilities' or 'concerns' within modular components of a software system.
+        \\
+        \midrule
+        \gls{dvt} & \supports & While not immediately obvious, \gls{srp} offers supports
+        for the \gls{dvt} theorem. While \gls{srp} emphasizes limiting the responsibility of
+        each module, it does not explicitly require handling changes in data structures.
+        However, following gls{srp} can still indirectly contribute to achieving \gls{dvt}
+        by promoting the Law of Demeter
+        \footnote{\url{https://en.wikipedia.org/wiki/Law_of_Demeter}}, which encourages
+        modules to interact with each other only through well-defined interfaces. This
+        approach can minimize the impact of data structure changes, although it does not
+        guarantee full convergence with \gls{dvt}. \\
+        \midrule
+        \gls{avt} & \supports & Although not that apparent, \gls{srp} supports the \gls{dvt}
+        theorem. While \gls{srp} emphasizes limiting the responsibility of each module, it
+        does not explicitly require handling changes in data structures. However, following
+        gls{srp} can still indirectly contribute to achieving \gls{dvt} by promoting the Law
+        of Demeter \footnote{\url{https://en.wikipedia.org/wiki/Law_of_Demeter}}, which
+        encourages modules to interact with each other only through well-defined interfaces.
+        This approach can minimize the impact of data structure changes, although it does not
+        guarantee full convergence with \gls{dvt}. \\
+        \midrule
+        \gls{sos} & \diverges & The convergence between \gls{srp} and the \gls{sos} theorem is
+        not as direct as with other theorems. \gls{srp} focuses on assigning a single
+        responsibility to each module but does not explicitly address state management.
+        Nevertheless, by following \gls{srp}, developers can create modules that manage their
+        state, which indirectly contributes to \gls{sos}. \\
+        \bottomrule
+    \end{tabular}
+    \caption{Convergence \gls{srp} with \gls{ns}}
+    \label{tab:convergence_srp}
+\end{table}

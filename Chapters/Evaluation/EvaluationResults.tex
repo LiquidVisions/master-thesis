@@ -1,22 +1,10 @@
 \chapter{Evaluation results} \label{evaluation}
 
-\begin{itemize}
-    \item analyseren van de mate van convergentie
-    \item positieve \& negatieve voorbeelden beschrijven
-    \item waarmogelijk code voorbeelden laten zien (linkjes naar de bron code op github).
-    \item Toelichting op anticipated changes aan de hand van de onderstaande table
-\end{itemize}
+\input{Chapters/Evaluation/Convergence.tex}
+\input{Chapters/Evaluation/C_SRP.tex}
+\input{Chapters/Evaluation/C_OCP.tex}
+\input{Chapters/Evaluation/C_LSP.tex}
+\input{Chapters/Evaluation/C_ISP.tex}
+\input{Chapters/Evaluation/C_DIP.tex}
+\input{Chapters/Evaluation/C_Conclusion.tex}
 
-\begin{tabular}{ |p{7cm}||p{2cm}|p{2cm}|p{2cm}|  }
-    \hline
-    \multicolumn{4}{|c|}{Anticipated changes} \\
-    \hline
-    Change driver on implementations of &Current &Expected &Result\\
-    \hline
-    separation of concerns &? &? &?\\
-    separation of state &? &? &?\\
-    data version transparency &? &? &?\\
-    action version transparency &? &? &?\\
-    the meta-model &? &? &?\\
-    \hline
-   \end{tabular}

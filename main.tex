@@ -28,7 +28,7 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \addbibresource{bibliography.bib} % The filename of the bibliography
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 \usepackage[acronym, toc]{glossaries}
-
+\usepackage{fontawesome}
 \makeglossaries
 \loadglsentries{Pages/Abbreviations.tex}
 \let\cleardoublepage=\clearpage
@@ -115,6 +115,10 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \newcommand{\mycolorbox}[2]{\begin{tcolorbox}[boxrule=0.1pt, colback=mygray, title={#2} ,colbacktitle=gray]
   \textit{#1}
 \end{tcolorbox}}
+\newcommand{\converges}{\faPlus\faPlus}
+\newcommand{\diverges}{\faMinus}
+\newcommand{\supports}{\faPlus}
+
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
 %----------------------------------------------------------------------------------------
