@@ -1,0 +1,229 @@
+\section{The meta-model} \label{sec:artifact_meta_model}
+
+The meta-model is the model, of a model that is used to define a software system in the
+context of this research. It contains the important characteristics that is needed in
+order to generate software applications and components. It contains the structures,
+entities and relationships within the Generated Artifact. Having a meta-model ensures a
+standardized way to describe and define the software components and their interactions,
+enabling the design and analysis of modular, evolvable, and scalable software systems.
+
+In this context, the meta-model serves as a blueprint for the software system, describing
+its components, such as entities, fields, relationships, and expanders, along with their
+attributes and constraints. The meta-model is used to generate the Generated Artifact
+(\ref{sec:generated_artifact}). Moreover, it is potentially reusable for other types of
+applications, which should lead to same stability and evolvability characteristics as the
+one used for this research. 
+
+The following sections describe all the entities that are part of the meta-model. These
+entities are the basis of the \gls{erd} depicted in Appendix \ref{appendix:erd}. The ERD
+is the offical model representing the meta-model.
+
+\subsection{The App entity}
+
+The App entity represents an application and is regarded as the highest entry point for the
+Generator artifact. The App Entity and subsequent entities contain all the information
+needed to generate the Generated Artifact described in section \ref{sec:generated_artifact}. 
+
+\begin{table}[H]
+    \small
+    \begin{tabular}{ p{0.21\linewidth} p{0.21\linewidth} p{0.49\linewidth} }
+        \hline
+        \textbf{Name} & \textbf{DataType} & \textbf{Description} \\
+        \hline
+        Id & Guid & Unique identifier of the application \\
+        Name & string & Name of the application \\
+        FullName & string & Full name of the application \\
+        Expanders & List of Expanders & The Expanders that will be used during the
+        generation process. \\
+        Entities & List of Entities & The Entities that are applicable for the Generated artifact. \\
+        ConnectionStrings & List of ConnectionStrings & The ConnectionString to the
+        database that is used by the Generator Artifact. \\
+        \hline
+    \end{tabular}
+    \caption{The fields of the App entity}
+    \label{table:app_entity}
+\end{table}
+
+\subsection{The Component entity}
+
+The Component entity represents a software component that can be part of an application.
+Based on this entity the Generator Artifact can make design time on where to place certain
+elements  
+
+\begin{table}[H]
+\small
+\begin{tabular}{ p{0.20\linewidth} p{0.20\linewidth} p{0.50\linewidth} }
+\hline
+\textbf{Name} & \textbf{DataType} & \textbf{Description} \\
+\hline
+Id & Guid & Unique identifier of the component \\
+Name & string & Name of the component \\
+Description & string & Description of the component \\
+Packages & List of Package & The Packages that should be applied to the component. \\
+Expander & Expander & Navigation property to the Expander entity. \\
+\hline
+\end{tabular}
+\caption{The fields of the Component entity}
+\label{table:component_entity}
+\end{table}
+
+\subsection{The ConnectionString entity}
+
+The ConnectionString entity represents a ConnectionString used by an application to
+connect to a database or other external system.
+
+\begin{table}[H]
+\small
+\begin{tabular}{ p{0.20\linewidth} p{0.20\linewidth} p{0.50\linewidth} }
+\hline
+\textbf{Name} & \textbf{DataType} & \textbf{Description} \\
+\hline
+Id & Guid & Unique identifier of the ConnectionString \\
+Name & string & Name of the ConnectionString \\
+Definition & string & Definition of the ConnectionString \\
+App & App & Navigation property to the App entity \\
+\hline
+\end{tabular}
+\caption{The fields of the ConnectionString entity}
+\label{table:connectionstring_entity}
+\end{table}
+
+\subsection{The Entity entity}
+
+The Entity entity represents an entity in the application's data model. 
+
+\begin{table}[H]
+\small
+\begin{tabular}{ p{0.20\linewidth} p{0.24\linewidth} p{0.46\linewidth} }
+\hline
+\textbf{Name} & \textbf{DataType} & \textbf{Description} \\
+\hline
+Id & Guid & Unique identifier of the entity \\
+Name & string & Name of the entity \\
+Callsite & string & The sourcecode location where the entity is defined. In case of a C\#
+artifact, this is to determine the name of the namespace.\\
+Type & string & Type of the entity \\
+Modifier & string & Modifier of the entity (e.g. public, private) \\
+Behaviour & string & The behavior of the entity (e.g. abstract, virtual) \\
+App & App & Navigation property to the App entity. \\
+Fields & List of Fields & The Fields property represents a collection of the fields that
+make up the entity. \\
+ReferencedIn & List of Fields & Represents a navigation property that points to a Field
+that uses the current entity as a return type. \\
+Relations & List of Relationships & List of relationships involving this entity \\
+IsForeignEntityOf & List of Relationships & List of relationships where this entity is the foreign entity \\
+\hline
+\end{tabular}
+\caption{The fields of the Entity entity}
+\label{table:entity_entity}
+\end{table}
+
+\subsection{The Expander entity}
+
+The Expander entity represents an expander, which is responsible for generating code for
+an application. The Generator Artifact attempts to execute all expanders that are related
+to the selected App.
+
+\begin{table}[H]
+\small
+\begin{tabular}{ p{0.20\linewidth} p{0.22\linewidth} p{0.48\linewidth} }
+\hline
+\textbf{Name} & \textbf{DataType} & \textbf{Description} \\
+\hline
+Id & Guid & Unique identifier of the expander \\
+Name & string & Name of the expander \\
+TemplateFolder & string & relative path to the templates that are used by the expander. \\
+Order & int & The order in which the expander is executed \\
+Apps & List of Apps & List of applications associated with the expander. \\
+Components & List of Components & List of components associated with the expander \\
+\hline
+\end{tabular}
+\caption{The fields of the Expander entity}
+\label{table:expander_entity}
+\end{table}
+
+\subsection{The Field entity}
+
+The Field entity represents a field or property of an entity in an application's data
+model. Each field has a unique ID, name, and other properties such as its return type,
+modifiers, and behavior. It can be associated with an entity and can have relationships
+with other entities. The IsKey and IsIndex properties indicate whether the field is part
+of the primary key or an index of the entity, respectively.
+
+\begin{table}[H]
+\small
+\begin{tabular}{ p{0.23\linewidth} p{0.23\linewidth} p{0.44\linewidth} }
+\hline
+\textbf{Name} & \textbf{DataType} & \textbf{Description} \\
+\hline
+Id & Guid & Unique identifier of the field \\
+Name & string & Name of the field \\
+ReturnType & string & Return type of the field \\
+IsCollection & bool & Whether the field is a collection or not \\
+Modifier & string & Modifier of the field (e.g. public, private) \\
+GetModifier & string & Modifier of the get accessor for the field \\
+SetModifier & string & Modifier of the set accessor for the field \\
+Behaviour & string & The behavior of the field (e.g. abstract, virtual) \\
+Order & int & The order of the field within its entity \\
+Size & int? & The size of the field \\
+Required & bool & Whether the field is required or not \\
+Reference & Entity & The entity that this field refers to\\
+Entity & Entity & A navigation property to the parent entity \\
+IsKey & bool & Indicates whether the field is part of the primary key \\
+IsIndex & bool & Indicates whether the field is part of an index \\
+RelationshipKeys & List of Relationships & List of relationships where this field is the key \\
+IsForeignEntityKeyOf & List of Relationships & List of relationships where this field is the foreign key \\
+\hline
+\end{tabular}
+\caption{The fields of the Field entity}
+\label{table:field_entity}
+\end{table}
+
+\subsection{The Package entity}
+
+The Package entity represents a software package that can be used by a component. This
+could either be a Nuget package in the case of .NET projects, or for example npm packages
+for web projects.
+
+\begin{table}[H]
+\small
+\begin{tabular}{ p{0.20\linewidth} p{0.20\linewidth} p{0.50\linewidth} }
+\hline
+\textbf{Name} & \textbf{DataType} & \textbf{Description} \\
+\hline
+Id & Guid & Unique identifier of the package \\
+Name & string & Name of the package \\
+Version & string & Version of the package used \\
+Component & Component & Component associated with the package \\
+\hline
+\end{tabular}
+\caption{The fields of the Package entity}
+\label{table:package_entity}
+\end{table}
+
+\subsection{The Relationship entity}
+
+The Relationship entity represents a relationship between two entities in the App's data
+model. The Relationship entity has proper cardinality support. Relationships are
+bidirectional and can be navigated from either entity.
+
+\begin{table}[H]
+\small
+\begin{tabular}{ p{0.24\linewidth} p{0.12\linewidth} p{0.55\linewidth} }
+\hline
+\textbf{Name} & \textbf{DataType} & \textbf{Description} \\
+\hline
+Id & Guid & Unique identifier of the relationship \\
+Key & Field & The key field of the relationship \\
+Entity & Entity & Navigation property to the parent Entity \\
+Cardinality & string & The cardinality of the relationship \\
+WithForeignEntityKey & Field & The foreign key field of the relationship, pointing to a
+Field entity. \\
+WithForeignEntity & Entity & The entity associated with the foreign key field \\
+WithCardinality & string & The cardinality of the relationship with the foreign entity \\
+Required & bool & indicates whether the relationship is required or not \\
+\hline
+\end{tabular}
+\caption{The fields of the Relationship entity}
+\label{table:relationship_entity}
+\end{table}
