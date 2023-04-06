@@ -25,7 +25,7 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \usepackage[font=scriptsize]{caption}
 \usepackage[colorinlistoftodos,textwidth=30mm,textsize=tiny]{todonotes}
 \usepackage[style=authoryear,maxbibnames=9,maxcitenames=2,uniquelist=false,backend=biber]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
-\addbibresource{bibliography.bib} % The filename of the bibliography
+
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 \usepackage[acronym, toc]{glossaries}
 \usepackage{fontawesome}
@@ -165,6 +165,9 @@ software artifact.} % \subjectname
 \pdfinfo{
 	/title=\ttitle
 }
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+\addbibresource{bibliography.bib} % The filename of the bibliography
 
 \begin{document}
 \frontmatter % Use roman page numbering style (i, ii, iii, iv) for the pre-content pages
