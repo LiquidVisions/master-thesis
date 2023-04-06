@@ -4,9 +4,9 @@ The artifacts adhere to the design philosophy of \gls{ca}, described in chapter
 \ref{sec:ca_theory}, as much as possible. In order to do so the following
 requirements are to be applied.
 
-\subsection{Requirement 1: Artifact components}
+\subsection{Artifact components}
 In \fullref{subsec:layers} we describe that in a typical application, one of the goals of
-\gls{ca} is to separate the domain logic from implementation details like (user) interface
+\gls{ca} is to separate the domain logic from Impl details like (user) interface
 or storage mechanisms. Therefore, the artifact must follow the layered architecture of
 \gls{ca} (see figure \ref{fig:modulair_components})
 
@@ -16,7 +16,7 @@ EntityFrameworkCore\footnote{\url{https://learn.microsoft.com/en-us/ef/core/}} t
 for data persistence in an Azure SQL database. The other one handles persistence by
 serialization of data on a windows machine.
 
-\subsection{Requirement 2: Flow of control}
+\subsection{Flow of control}
 One of the \gls{solid} design principles is the \acrfull{dip}. This principle affects the.
 As described in \fullref{sebsec:dependency_rule}, this affects the flow of control of the
 artifacts components. To achieve the evolvability of each of the components the flow of
@@ -27,12 +27,12 @@ The component dependencies must point only inward, toward higher-level policies.
 it more strict, the Presentation and infrastructure layers only depend on the Application
 layer The Application layer only depends on the  Domain Layer.
 
-\subsection{Requirement 3: Adherence to Design principles}
+\subsection{Adherence to Design principles}
 In \fullref{subsec:design_principles} we describe what needs to be done to adhere to the
 \gls{solid} design principles. Each design pattern that is applied to the architecture of
 artifacts adheres at least to one of the \gls{solid} principles.
 
-\subsection{Requirement 4: Screaming Architecture}
+\subsection{Screaming Architecture}
 The essence of Screaming Architecture is to design a system where the structure and
 purpose of each component and layer are immediately apparent to anyone looking at it. This
 is achieved through clear and consistent naming conventions of the classes, namespaces and
@@ -50,7 +50,7 @@ convention of the recurring elements. For more information about these elements 
 
 \begin{table}[h]
     \small
-    \begin{tabular}{ |l|l|l| }
+    \begin{tabular}{ l p{0.30\linewidth} p{0.43\linewidth} }
     \hline
     \textbf{Component} & \textbf{Filename} & \textbf{Namespace} \\ 
     \hline
@@ -63,45 +63,45 @@ convention of the recurring elements. For more information about these elements 
     Infrastructure & [Prod].Infrastructure.[Tech] & [Company].[Prod].Infrastructure.[Tech] \\
     \hline
     \end{tabular}
-    \caption{Naming convention components}
-    \label{table:component_naming_convention}
-    \end{table}
+\caption{Naming convention components}
+\label{table:component_naming_convention}
+\end{table}
 
     \begin{table}[h]
         \small
-        \begin{tabular}{ |l|l|l| }
+        \begin{tabular}{ l p{0.33\linewidth} p{0.39\linewidth} }
         \hline
         \textbf{Component} & \textbf{Element type} & \textbf{Naming Convention} \\ 
         \hline
-        Presentation & Controller Implementation & \textit{Noun}Controller \\ \hline
-        & ViewModelMapper Implementation & \textit{Noun}ViewModelMapper \\ \hline
-        & Presenter Implementation & \textit{VerbNoun}Presenter \\ \hline
-        & ViewModel Implementation & \textit{Noun}ViewModel \\ \hline
-        & Dependency Injection Bootstrapper & DependencyInjectionBootstrapper \\ \hline
+        Presentation & Controller Impl & \textit{Noun}Controller \\ \hline
+        & ViewModelMapper Impl & \textit{Noun}ViewModelMapper \\ \hline
+        & Presenter Impl & \textit{VerbNoun}Presenter \\ \hline
+        & ViewModel Impl & \textit{Noun}ViewModel \\ \hline
+        & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
 
-        Application & Boundary Implementation & \textit{VerbNoun}Boundary \\ \hline
+        Application & Boundary Impl & \textit{VerbNoun}Boundary \\ \hline
         & Boundary interface & IBoundary \\ \hline
         & Gateway interface & I\textit{Verb}Gateway \\ \hline
         & Interactor interface & I\textit{Verb}Interactor \\ \hline
-        & Interactor Implementation & \textit{VerbNoun}Interactor \\ \hline
+        & Interactor Impl & \textit{VerbNoun}Interactor \\ \hline
         & Mapper Interface & IMapper \\ \hline
-        & RequestModelMapper Implementation & \textit{VerbNoun}RequestModelMapper \\ \hline
+        & RequestModelMapper Impl & \textit{VerbNoun}RequestModelMapper \\ \hline
         & Presenter Interface & IPresenter \\ \hline
         & Validator Interface & IValidator \\ \hline
-        & Validator Implementation & \textit{VerbNoun}Validator \\ \hline
-        & Dependency Injection Bootstrapper & DependencyInjectionBootstrapper \\ \hline
+        & Validator Impl & \textit{VerbNoun}Validator \\ \hline
+        & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
         
-        Infrastructure & Gateway Implementation & \textit{Noun}Repository \\ \hline
-        & Dependency Injection Bootstrapper & DependencyInjectionBootstrapper \\ \hline
+        Infrastructure & Gateway Impl & \textit{Noun}Repository \\ \hline
+        & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
 
-        Domain & Data Entity Implementation & \textit{Noun} \\ \hline
-        & Dependency Injection Bootstrapper & DependencyInjectionBootstrapper \\ \hline
+        Domain & Data Entity Impl & \textit{Noun} \\ \hline
+        & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
         \end{tabular}
         \caption{Naming convention of recurring elements}
         \label{table:element_naming_convention}
         \end{table}
 
-    \subsection{Requirement 5: Recurring elements}
+    \subsection{Recurring elements}
     
     For each data entity defined in the model (see chapter \ref{sec:artifact_model}), a
     fixed set of required elements, listed in table \ref{table:element_naming_convention}

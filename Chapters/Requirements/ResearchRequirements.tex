@@ -1,4 +1,49 @@
 \section{Research requirements} \label{sec:research_requirements} 
 
-In the chapters following \ref{sec:ns_theory} \gls{ns} we described that the main purpose
-of \gls{ns} is to provide evolvability \parencite[406]{mannaert_normalized_2016}.
+In order to address \nameref{rq1} and \nameref{rq2} we outlined in Chapter
+\ref{sec:research_questions}, we need to know what violations in the context of \gls{ns}
+can occur in a software artifact. In chapters \ref{sec:ns_theory} we have shown that
+\gls{ns} attempts to achieve evolvability by achieving stability. Through the extensive
+and consistent use of the \gls{ns} theorems, a modular design emerges that is free of
+instabilities. Or in terms used by the \gls{ns} theorem: the absence of combinatorial
+effects. However, as described in section \ref{sec:artifact_requirements}, the artifacts
+are designed based on the principles and philosophy of \gls{ca}. The \gls{ns} theorems are
+not considered using the design phase of the artifacts. 
+
+To be able to analyze the stability of the artifacts the following functional requirement
+specifications are reused \parencite[254-259]{mannaert_normalized_2016}. They are noted
+without the mathematical formulas that are present in cited sources.
+
+
+\mycolorbox{An information system needs to be able to represent instances of data
+entities. A data entity consists of a number of data fields. Such a field may be a basic
+data field representing a value of a reference to another data entity.}
+{Research Requirement 1}
+
+\mycolorbox{An information system needs to be able to execute processing actions on
+instances of data entities. A processing action consists of a number of consecutive
+processing tasks. Such a task may be a basic task, i.e., a unit of processing that can
+change independently, or an invocation of another processing action.}
+{Research Requirement 2}
+
+\mycolorbox{An information system needs to be able to input or output values of instances of data entities through connectors.}
+{Research Requirement 3}
+
+\mycolorbox{An existing information system representing a set of data entities, needs
+to be able to represent: 
+\begin{itemize}
+    \item a new version of a data entity Dm that corresponds to including an additional
+    data field
+    \item an additional data entity 
+\end{itemize}}
+{Research Requirement 4}
+
+\mycolorbox{An existing information system providing a set of processing actions,
+needs to be able to provide:
+\begin{itemize}
+    \item a new version of a processing task, whose use may be mandatory
+    \item a new version of a processing action, whose use may be mandatory
+    \item an additional processing task
+    \item an additional processing action
+\end{itemize}}
+{Research Requirement 5}
