@@ -55,13 +55,10 @@ convention of the recurring elements. For more information about these elements 
     \textbf{Component} & \textbf{Filename} & \textbf{Namespace} \\ 
     \hline
     Domain & [Prod].Domain & [Company].[Prod].Domain \\
-    \hline
     Application & [Prod].Application & [Company].[Prod].Application \\
-    \hline
     Presentation & [Prod].Presentation.[Tech] & [Company].[Prod].Presentation.[Tech] \\
-    \hline
-    Infrastructure & [Prod].Infrastructure.[Tech] & [Company].[Prod].Infrastructure.[Tech] \\
-    \hline
+    Infrastructure & [Prod].Infrastructure.[Tech] & [Company].[Prod].Infrastructure.[Tech]
+    \\ \hline
     \end{tabular}
 \caption{Naming convention components}
 \label{table:component_naming_convention}
@@ -71,30 +68,29 @@ convention of the recurring elements. For more information about these elements 
         \small
         \begin{tabular}{ l p{0.33\linewidth} p{0.39\linewidth} }
         \hline
-        \textbf{Component} & \textbf{Element type} & \textbf{Naming Convention} \\ 
-        \hline
-        Presentation & Controller Impl & \textit{Noun}Controller \\ \hline
-        & ViewModelMapper Impl & \textit{Noun}ViewModelMapper \\ \hline
-        & Presenter Impl & \textit{VerbNoun}Presenter \\ \hline
-        & ViewModel Impl & \textit{Noun}ViewModel \\ \hline
+        \textbf{Component} & \textbf{Element type} & \textbf{Naming Convention} \\ \hline
+        Presentation & Controller Impl & \textit{Noun}Controller \\
+        & ViewModelMapper Impl & \textit{Noun}ViewModelMapper \\
+        & Presenter Impl & \textit{VerbNoun}Presenter \\
+        & ViewModel Impl & \textit{Noun}ViewModel \\
         & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
 
-        Application & Boundary Impl & \textit{VerbNoun}Boundary \\ \hline
-        & Boundary interface & IBoundary \\ \hline
-        & Gateway interface & I\textit{Verb}Gateway \\ \hline
-        & Interactor interface & I\textit{Verb}Interactor \\ \hline
-        & Interactor Impl & \textit{VerbNoun}Interactor \\ \hline
-        & Mapper Interface & IMapper \\ \hline
-        & RequestModelMapper Impl & \textit{VerbNoun}RequestModelMapper \\ \hline
-        & Presenter Interface & IPresenter \\ \hline
-        & Validator Interface & IValidator \\ \hline
-        & Validator Impl & \textit{VerbNoun}Validator \\ \hline
+        Application & Boundary Impl & \textit{VerbNoun}Boundary \\
+        & Boundary interface & IBoundary \\
+        & Gateway interface & I\textit{Verb}Gateway \\
+        & Interactor interface & I\textit{Verb}Interactor \\
+        & Interactor Impl & \textit{VerbNoun}Interactor \\
+        & Mapper Interface & IMapper \\
+        & RequestModelMapper Impl & \textit{VerbNoun}RequestModelMapper \\
+        & Presenter Interface & IPresenter \\
+        & Validator Interface & IValidator \\
+        & Validator Impl & \textit{VerbNoun}Validator \\
         & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
         
-        Infrastructure & Gateway Impl & \textit{Noun}Repository \\ \hline
+        Infrastructure & Gateway Impl & \textit{Noun}Repository \\
         & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
 
-        Domain & Data Entity Impl & \textit{Noun} \\ \hline
+        Domain & Data Entity Impl & \textit{Noun} \\
         & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
         \end{tabular}
         \caption{Naming convention of recurring elements}
@@ -107,3 +103,5 @@ convention of the recurring elements. For more information about these elements 
     fixed set of required elements, listed in table \ref{table:element_naming_convention}
     will be added to the appropriate component, in order to comply with the design of the
     architecture.
+
+    \todo{requirement mbt code expansion toevoegen (pag 403)}

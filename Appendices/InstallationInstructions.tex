@@ -1,0 +1,75 @@
+\chapter{Installation Instructions} \label{appendix:installation_instructions} 
+
+\section{Prerequisits} \label{appendix:installation_prerequisits} 
+
+\subsection*{Create output folder}
+Create an output folder so that Pantha Rhei:
+\begin{itemize}
+    \item has a location where to find the required expanders.
+    \item has a location where the log files are stored.
+    \item has a location where the result of the generation processes can be stored.
+\end{itemize}
+
+The location of the output folder is irrelevant.
+
+\subsection*{Create the nuget.config file}
+Add a nuget.config file to the output folder with the following content:
+\lstinputlisting[
+    caption={The content of the nuget.config file},
+    label={list:nugetconfig}]
+    {Snippets/nuget.config}
+
+\subsection*{Install the Expanders}
+Click the following link and download the required expanders. The expander contains the
+required logic and templates in order for Pantha Rhei to execute the code generation process.
+
+\url{https://www.add/a/correct/url/here}
+
+Create a subfolder \emph{Expanders} in the output folder created in the first step. Extract
+each of the expanders in their own folder in the \emph{Expanders} folder.
+
+When following the previous steps you should have the following folder structure
+available:
+
+\begin{forest}
+    for tree={
+      font=\ttfamily,
+      grow'=0,
+      child anchor=west,
+      parent anchor=south,
+      anchor=west,
+      calign=first,
+      inner xsep=7pt,
+      edge path={
+        \noexpand\path [draw, \forestoption{edge}]
+        (!u.south west) +(7.5pt,0) |- (.child anchor) pic {folder} \forestoption{edge label};
+      },
+      % style for your file node 
+      file/.style={edge path={\noexpand\path [draw, \forestoption{edge}]
+        (!u.south west) +(7.5pt,0) |- (.child anchor) \forestoption{edge label};},
+        inner xsep=2pt,font=\small\ttfamily
+                   },
+      before typesetting nodes={
+        if n=1
+          {insert before={[,phantom]}}
+          {}
+      },
+      fit=band,
+      before computing xy={l=15pt},
+    }  
+    [PanthaRhei.Output
+    [Expanders
+        [.Templates]
+    ]
+    [nuget.config, file]
+  ]
+\end{forest}
+
+\section{Installing Pantha Rhei} \label{appendix:installing_pantha_rhei} 
+Run the following command to install Pantha Rhei.
+\lstinputlisting[
+    caption={The install command},
+    label={list:install-command}]
+    {Snippets/dotnet-install-command.txt}
+
+Pantha Rhei is now ready for use.

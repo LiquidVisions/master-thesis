@@ -6,46 +6,46 @@ in chapter \ref{subsec:design_principles} leads to the following generalization 
 architecture. Each of the following elements has a crucial role in order to achieve the
 design goals.
 
-\subsubsection*{Entities}
+\subsubsection{Entities}
 \textit{Entities} are the core business objects of the application, representing the fundamental
 concepts and rules of the domain. They encapsulate the data and behavior that are
 essential to the application's functionality.
 
-\subsubsection*{Interactors}
+\subsubsection{Interactors}
 \textit{Interactors}, also known as Use cases, encapsulate the application's business
 logic and represent specific actions that can be performed by the system. They are
 responsible for coordinating the work of other components and ensuring that the system
 behaves correctly.
 
-\subsubsection*{RequestModels}
+\subsubsection{RequestModels}
 \textit{RequestModels} are used to represent the data required by a specific interactor. They
 provide a clear and concise representation of the data required by the Use Case, making it
 easier to manage and modify the application.
 
-\subsubsection*{ViewModels}
+\subsubsection{ViewModels}
 ViewModels are part of the presentation layer and are responsible for managing the state
 of the user interface. They receive data from the Presenters and update the user interface
 accordingly. They are also responsible for handling user input and sending it to the
 Controllers for processing.
 
-\subsubsection*{Controllers}
+\subsubsection{Controllers}
 \textit{Controllers} are responsible for handling requests from the user interface and
 routing them to the appropriate Interactor. They are typically part of the user interface
 layer and are responsible for coordinating the work of other components.
 
-\subsubsection*{Presenters}
+\subsubsection{Presenters}
 \textit{Presenters} are responsible for formatting and presenting data to the user
 interface. They receive data from the Interactor and convert it into a format that can be
 easily displayed to the user. They are also responsible for handling user input and
 sending it back to the Interactor for processing.
 
-\subsubsection*{Gateways}
+\subsubsection{Gateways}
 A \textit{Gateway} provides an abstraction layer between the application and its external
 dependencies, such as databases, web services, or other systems. They allow the
 system to be decoupled from its external dependencies and can be easily replaced or
 adapted if needed.
 
-\subsubsection*{Boundaries}
+\subsubsection{Boundaries}
 A \textit{Boundary} refers to an interface or abstraction that separates different layers
 or components of a system. The purpose of these boundaries is to promote modularity,
 evolvability and testability by enforcing the separation of concerns, allowing each layer

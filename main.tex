@@ -22,6 +22,7 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \usepackage{float}
 \usepackage{hyperref}
 \usepackage{tcolorbox}
+\usepackage{forest}
 \usepackage[font=scriptsize]{caption}
 \usepackage[colorinlistoftodos,textwidth=30mm,textsize=tiny]{todonotes}
 \usepackage[style=authoryear,maxbibnames=9,maxcitenames=2,uniquelist=false,backend=biber]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
@@ -109,12 +110,20 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 
 \lstset{style=solarizedcsharp}
 
+
+%----------------------------------------------------------------------------------------
+%	RANDOM COMMANDS USED IN THE THESIS
+%----------------------------------------------------------------------------------------
 \newcommand{\fullref}[1]{chapter \ref{#1} \nameref{#1}}
 \newcommand{\code}[1]{\textcolor{sblue}{\textit{\citetitle{#1}}}}
 \newcommand{\citecode}[1]{\textcolor{sblue}{\citetitle{#1} \parencite{#1}}}
 \newcommand{\mycolorbox}[2]{\begin{tcolorbox}[boxrule=0.1pt, colback=mygray, title={#2} ,colbacktitle=gray]
   \textit{#1}
 \end{tcolorbox}}
+
+%----------------------------------------------------------------------------------------
+%	FONT ICON COMMANDS
+%----------------------------------------------------------------------------------------
 \newcommand{\converges}{\faPlus\faPlus}
 \newcommand{\diverges}{\faMinus}
 \newcommand{\supports}{\faPlus}
@@ -165,9 +174,29 @@ software artifact.} % \subjectname
 \pdfinfo{
 	/title=\ttitle
 }
+
+%----------------------------------------------------------------------------------------
+%	Bibliography
+%----------------------------------------------------------------------------------------
 \setcounter{biburllcpenalty}{7000}
 \setcounter{biburlucpenalty}{8000}
 \addbibresource{bibliography.bib} % The filename of the bibliography
+
+%----------------------------------------------------------------------------------------
+%	Enabling a treeview used in the appendix
+%----------------------------------------------------------------------------------------
+\definecolor{folderbg}{RGB}{124,166,198}
+\definecolor{folderborder}{RGB}{110,144,169}
+
+\def\Size{4pt}
+\tikzset{
+      folder/.pic={
+        \filldraw[draw=folderborder,top color=folderbg!50,bottom color=folderbg]
+          (-1.05*\Size,0.2\Size+5pt) rectangle ++(.75*\Size,-0.2\Size-5pt);  
+        \filldraw[draw=folderborder,top color=folderbg!50,bottom color=folderbg]
+          (-1.15*\Size,-\Size) rectangle (1.15*\Size,\Size);
+      }
+    }
 
 \begin{document}
 \frontmatter % Use roman page numbering style (i, ii, iii, iv) for the pre-content pages
@@ -213,7 +242,8 @@ software artifact.} % \subjectname
 % Uncomment the lines as you write the Appendices
 
 %\include{Appendices/Erd.tex}
-\include{Appendices/AppendixA}
+\include{Appendices/ERD.tex}
+\include{Appendices/InstallationInstructions.tex}
 %\include{Appendices/AppendixC}
 
 %----------------------------------------------------------------------------------------

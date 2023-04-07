@@ -1,4 +1,4 @@
-\section{The meta-model} \label{sec:artifact_meta_model}
+\subsection{The meta-model} \label{sec:artifact_meta_model}
 
 The meta-model is the model, of a model that is used to define a software system in the
 context of this research. It contains the important characteristics that is needed in
@@ -11,14 +11,14 @@ In this context, the meta-model serves as a blueprint for the software system, d
 its components, such as entities, fields, relationships, and expanders, along with their
 attributes and constraints. The meta-model is used to generate the Generated Artifact
 (\ref{sec:generated_artifact}). Moreover, it is potentially reusable for other types of
-applications, which should lead to same stability and evolvability characteristics as the
-one used for this research. 
+applications, which should lead to same characteristics of stability and evolvability as
+the one used for this research. 
 
 The following sections describe all the entities that are part of the meta-model. These
 entities are the basis of the \gls{erd} depicted in Appendix \ref{appendix:erd}. The ERD
-is the offical model representing the meta-model.
+is the official model representing the meta-model.
 
-\subsection{The App entity}
+\subsubsection{The App entity}
 
 The App entity represents an application and is regarded as the highest entry point for the
 Generator artifact. The App Entity and subsequent entities contain all the information
@@ -44,7 +44,7 @@ needed to generate the Generated Artifact described in section \ref{sec:generate
     \label{table:app_entity}
 \end{table}
 
-\subsection{The Component entity}
+\subsubsection{The Component entity}
 
 The Component entity represents a software component that can be part of an application.
 Based on this entity the Generator Artifact can make design time on where to place certain
@@ -67,7 +67,7 @@ Expander & Expander & Navigation property to the Expander entity. \\
 \label{table:component_entity}
 \end{table}
 
-\subsection{The ConnectionString entity}
+\subsubsection{The ConnectionString entity}
 
 The ConnectionString entity represents a ConnectionString used by an application to
 connect to a database or other external system.
@@ -88,7 +88,7 @@ App & App & Navigation property to the App entity \\
 \label{table:connectionstring_entity}
 \end{table}
 
-\subsection{The Entity entity}
+\subsubsection{The Entity entity}
 
 The Entity entity represents an entity in the application's data model. 
 
@@ -118,7 +118,7 @@ IsForeignEntityOf & List of Relationships & List of relationships where this ent
 \label{table:entity_entity}
 \end{table}
 
-\subsection{The Expander entity}
+\subsubsection{The Expander entity}
 
 The Expander entity represents an expander, which is responsible for generating code for
 an application. The Generator Artifact attempts to execute all expanders that are related
@@ -142,7 +142,7 @@ Components & List of Components & List of components associated with the expande
 \label{table:expander_entity}
 \end{table}
 
-\subsection{The Field entity}
+\subsubsection{The Field entity}
 
 The Field entity represents a field or property of an entity in an application's data
 model. Each field has a unique ID, name, and other properties such as its return type,
@@ -179,7 +179,7 @@ IsForeignEntityKeyOf & List of Relationships & List of relationships where this 
 \label{table:field_entity}
 \end{table}
 
-\subsection{The Package entity}
+\subsubsection{The Package entity}
 
 The Package entity represents a software package that can be used by a component. This
 could either be a Nuget package in the case of .NET projects, or for example npm packages
@@ -201,7 +201,7 @@ Component & Component & Component associated with the package \\
 \label{table:package_entity}
 \end{table}
 
-\subsection{The Relationship entity}
+\subsubsection{The Relationship entity}
 
 The Relationship entity represents a relationship between two entities in the App's data
 model. The Relationship entity has proper cardinality support. Relationships are

@@ -1,20 +1,18 @@
 \subsection{Expansion and code generation} \label{subsec:expansion}
 
-In the context of \gls{ns}, code expansion refers to the process of adapting and extending
-software components to accommodate new requirements, features, or modifications while
-maintaining the software's overall stability and evolvability. This concept aims to
-address the inherent complexity of software systems and mitigate the adverse effects of
-change propagation and unintended consequences that often arise when modifying software
-components.
+Creating and maintaining a stable and evolvable system is a particularly difficult and
+meticulous engineering job. Developers are required to have a sound knowledge of \gls{ns},
+whilst implementing new requirements in an always consistent manner. Given the required
+recurring structure, it can be perceived as a repetitive and therefore boring taks.
+\parencite[219]{mannaert_normalized_2016}. On top of that, rejecting the temptation to
+take shortcuts in order to follow the business's time-to-market requirements.
 
-Creating and maintaining a stable and evolvable system is particularly difficult and
-tedious engineering job. The engineer in question needs to be aware of all the \gls{ns}
-Theorems \parencite*{mannaert_normalized_2016}[273-290], Normalized Elements
-\parencite*{mannaert_normalized_2016}[363-398] and recurring implementations
-\parencite*{mannaert_normalized_2016}[232].
+Given the above, it is quite logical to automate the instantiation process of software
+structures and use code generation for recurring
+tasks\parencite[403]{mannaert_normalized_2016}. This is where code expansion comes in
+place. The concept of code expansion does not only refer to the automatic process of
+adapting and maintaining software to new requirements, architectural enablers and/or
+technological alterations. It also embraces manually added craftings to the software, the
+so-called plugin code. These craftings are preserved after each expansion by a method that
+is called harvesting and rejuvenation \parencite[405-406]{mannaert_normalized_2016}.
 
-Therefore, Code expansion also embraces the concept of code generation, which involves the
-automatic creation of software components based on predefined templates, patterns, and
-rules. This approach streamlines the process of adapting and extending software components
-to accommodate new requirements, features, or modifications while maintaining the
-software's overall stability and evolvability.
