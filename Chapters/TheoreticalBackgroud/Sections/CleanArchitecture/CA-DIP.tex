@@ -4,7 +4,7 @@ how dependency injection can benefit the implementation and align with \ref{tab:
 The \gls{dip} prescribes that high-level modules should not depend on low-level modules,
 and that both should depend on abstractions. The principle emphasizes that the
 architecture should be designed in such a way that the flow of control between the
-different objects, layers and/or components are always from higher-level implementations
+different objects, layers and components are always from higher-level implementations
 to lower-level details.
 
 In other words, high-level implementations like business rules, should not be concerned
@@ -15,7 +15,7 @@ with each other \parencite[109]{robert_c_martin_clean_2018}.
 
 This approach allows for great flexibility and a modular architecture. Modifications in
 the low-level implementations will not affect the high-level implementations as long as
-they still adhere to the contract defined by the abstractions and/or interfaces.
+they still adhere to the contract defined by the abstractions and interfaces.
 Similarly, changes to the high-level modules will not affect the low-level modules as long
 as they still fulfill the contract. This reduces coupling and ensures the evolvability
 system over time, as changes can be made to specific modules without affecting the rest of

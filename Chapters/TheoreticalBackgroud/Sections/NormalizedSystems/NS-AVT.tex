@@ -1,13 +1,13 @@
-\subsubsection{Action version Transparancy}
+\subsubsection{Action version Transparency}
 \gls{avt} is the property of a system to modify existing processing functions without
 affecting the existing ones. It should be possible to upgrade a function without affecting
 the callers of those functions. This description leads to the following theorem
 \parencite[282]{mannaert_normalized_2016}.
 
-\mycolorbox{A processing function that is called by another processing function, needs to exhibit version transparency in order to achieve stability.}{Theorem III}
+\mycolorbox{A processing function that is called by another processing function, needs to exhibit version transparency to achieve stability.}{Theorem III}
 
 Most of the modern technology environments support some form of \gls{avt}. Polymorphism is
-a widely used technique in order to support this theorem. Specifically, parametric
+a widely used technique to support this theorem. Specifically, parametric
 polymorphism \footnote{\url{https://en.wikipedia.org/wiki/Parametric_polymorphism}} allows
 for a processing function to have multiple input parameters. There are also quite some
 design patterns supporting this theorem. Some random examples are the state pattern

@@ -1,5 +1,5 @@
 /// <summary>
-/// The actual data entity of the Component.
+/// The actual data entity of the component.
 /// </summary>
 public class Component
 {

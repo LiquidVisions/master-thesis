@@ -2,7 +2,7 @@
 
 
 The \gls{lsp} is a fundamental concept in object-oriented programming that deals with the
-behavior of derived objects (aka sub-types). The principal is named after Barbara Liskov
+behavior of derived objects (aka sub-types). The principal is named after Barbara Liskov,
 who first introduced the principle in a paper she co-authored in 1987. Barbara Liskov
 wrote the following statement as a way of defining subtypes
 \parencite[95]{robert_c_martin_clean_2018}.
@@ -11,8 +11,8 @@ wrote the following statement as a way of defining subtypes
 all programs P defined in terms of T, the behavior of P	is unchanged when o1 is
 substituted for	o2 then S is a subtype of T.1}{\acrlong{lsp}}
 
-In simpler terms: If you have an object \textit{Volvo} of type \textit{Vehical}, it should be
-possible to substitute it for an object \textit{Toyota} of type \textit{Vehical} in any
+In simpler terms: An object \textit{Volvo} of type \textit{Vehical} should be
+able to be substituted for an object \textit{Toyota} of type \textit{Vehical} in any
 program that was defined in terms of \textit{Vehical}, without affecting the program's
 correctness. This applies to all programs, not just a specific one.
 
@@ -21,14 +21,13 @@ its base type. This means that the subtype should behave in a way that is consis
 the expectations of the base type and should not introduce any new behaviors or violate
 any of the constraints imposed by the base type.
 
-The practical implications of \gls{lsp} are many. In software design, it means that we
-should strive to create subtypes that are as similar as possible to their base types in
-terms of their behavior and the constraints they impose. In testing, it means that we
-should test subtypes to ensure that they behave correctly when used in place of their base
-types.
+The practical implications of \gls{lsp} are many. In software design, we should strive to
+create subtypes that are as similar as possible to their base types in terms of their
+behavior and the constraints they impose. In testing, it means that we should test
+subtypes to ensure that they behave correctly when used in place of their base types.
 
 Consider \citecode{koks_abstractexpander_2023}. This (abstract) object type allows for
-multiple implementations of \textit{Expanders}. The main example is the
+multiple implementations of \textit{Expanders}. The primary example is the
 \citecode{koks_cleanarchitectureexpander_2023} which is responsible for generating the
 expanded artifact that is part of this research. Different types of expanders could be
 added to the generator, ensuring they all behave in the same way.

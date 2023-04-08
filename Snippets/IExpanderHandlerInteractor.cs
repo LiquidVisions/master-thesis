@@ -11,7 +11,7 @@ public interface IExpanderHandlerInteractor<out TExpander> : IExecutionInteracto
     string Name { get; }
 
     /// <summary>
-    /// Gets the order in whitch the handler should be executed.
+    /// Gets the order in which the handler should be executed.
     /// </summary>
     int Order { get; }
 
