@@ -1,0 +1,1 @@
+flux --root {folder} --clean --mode Default --app "{uniqueid}"

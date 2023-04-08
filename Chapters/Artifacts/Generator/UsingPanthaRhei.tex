@@ -1,0 +1,55 @@
+\subsection{The Flux command}
+
+Pantha Rhei is used by executing the \emph{flux} command with the following parameters
+
+\begin{table}[H]
+    \begin{tabular}{ l | p{0.78\linewidth}}
+        \toprule
+        --root & A mandatory parameter that should contain the full path to the output
+        directory \fullref{appendix:installation_instructions}. \\
+        --app & A mandatory parameter indicating the unique identifier of the application that should be generated. \\
+        --mode & An optional parameter that determines if an handler should be executed.
+        \emph{Default} is the default fallback mode (see \ref{tab:generation_modes}). \\
+        --clean & Determines if the output folder is cleaned prior executing the expanding
+        process.\\
+        --reseed & An optional parameter. Disregards the expanding process. The model will
+        be completely cleaned, and reseeded based on the entities of the expander
+        artifact. This enables to a certain extent the meta-circularity and enables the
+        expander artifact to generate itself. \\
+        \bottomrule
+    \end{tabular}
+    \caption{The \emph{flux} commandline parameters}
+    \label{tab:commandline_parameters}
+\end{table}
+
+\code{GenerationModes} are available in order to isolate the execution of the
+\code{ExpanderHandler}. It requires a current implementation shown in listing
+\ref{list:runmode_example}. The following runmodes are available.
+
+\begin{table}[H]
+    \begin{tabular}{ l | p{0.78\linewidth}}
+        \toprule
+        Default & The default generation mode. This mode will trigger the required dotnet
+        templates to be installed. The Harvest and Rejuvenation handlers will also be executed. \\
+        Extend & An extended generation mode, which allows for a partial generation when the
+       generated artifact has been generated already. \\
+       Deploy & An optional mode that allows for expander handlers to run deployments in
+       isolation.  \\
+       Migrate & An optional mode that allows for expander handlers to run migrations in
+       isolation. \\
+        \bottomrule
+    \end{tabular}
+    \caption{The available \emph{Generation modes}}
+    \label{tab:generation_modes}
+\end{table}
+
+\lstinputlisting[
+    caption={Example on how an expander handler can adhere to the RunMode parameters},
+    label={list:runmode_example}]
+    {Snippets/RunModeExample.cs}
+
+
+\lstinputlisting[
+    caption={Example command executing Pantha Rhei},
+    label={list:flux}]
+    {Snippets/flux.txt}
