@@ -8,9 +8,9 @@ Pantha Rhei is used by executing the \emph{flux} command with the following para
         --root & A mandatory parameter that should contain the full path to the output
         directory \fullref{appendix:installation_instructions}. \\
         --app & A mandatory parameter indicating the unique identifier of the application that should be generated. \\
-        --mode & An optional parameter that determines if an handler should be executed.
+        --mode & An optional parameter that determines if a handler should be executed.
         \emph{Default} is the default fallback mode (see \ref{tab:generation_modes}). \\
-        --clean & Determines if the output folder is cleaned prior executing the expanding
+        --clean & Determines if the output folder is cleaned prior to executing the expanding
         process.\\
         --reseed & An optional parameter. Disregards the expanding process. The model will
         be completely cleaned, and reseeded based on the entities of the expander
@@ -18,13 +18,13 @@ Pantha Rhei is used by executing the \emph{flux} command with the following para
         expander artifact to generate itself. \\
         \bottomrule
     \end{tabular}
-    \caption{The \emph{flux} commandline parameters}
+    \caption{The \emph{flux} command line parameters}
     \label{tab:commandline_parameters}
 \end{table}
 
-\code{GenerationModes} are available in order to isolate the execution of the
-\code{ExpanderHandler}. It requires a current implementation shown in listing
-\ref{list:runmode_example}. The following runmodes are available.
+RunModes are available in order to isolate the execution of the ExpanderHandler. It
+requires a current implementation shown in listing \ref{list:runmode_example}. The
+following RunModes are available.
 
 \begin{table}[H]
     \begin{tabular}{ l | p{0.78\linewidth}}
