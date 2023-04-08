@@ -1,0 +1,21 @@
+\subsection{The executer object} \label{subsec:IExecutionInteractorObject}
+
+An important implementation that facilitates a high degree of cohesion, whilst maintaining
+low coupling and adhering to the \gls{srp} principle is the use of the
+\citecode{koks_iexecutioninteractor_2023} interface. The generation process is designed to
+execute \enquote{tasks} in a predefined order. By using the
+\code{koks_iexecutioninteractor_2023} it is possible to design each of the tasks as
+separate classes, fully complying, or enabling all of the \gls{solid} principles. The 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Figures/class_diagram_iexecutioninteractor.pdf}
+    \caption[Plugin Archticture]{Both high cohesion and low coupling by using the \code{koks_iexecutioninteractor_2023}}
+    \label{fig:iexecutioninteractor}
+  \end{figure}
+
+
+As depicted in listing \ref{SipCodeGeneratorInteractor}, this design leads to a cohesive
+design where all tasks are gracefully executed from a single point in the application.
+\lstinputlisting[ caption={The \citetitle{koks_codegeneratorinteractor_2023}},
+label={SipCodeGeneratorInteractor} ] {Snippets/CodeGeneratorInteractor.cs}
