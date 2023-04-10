@@ -1,34 +1,42 @@
-\chapter{Installation Instructions} \label{appendix:installation_instructions} 
+\chapter{Installing \& using Pantha Rhei} \label{appendix_installation_instructions} 
 
-\section{Prerequisites} \label{appendix:installation_prerequisits} 
-
-\subsection*{Create output folder}
-Create an output folder so that Pantha Rhei:
+\section{Installation instructions} \label{appendix_installation_prerequisits}
+\subsection*{Step 1: Create output folder}
+Create an output folder so that the applications...
 \begin{itemize}
-    \item has a location where to find the required expanders.
-    \item has a location where the log files are stored.
-    \item has a location where the result of the generation processes can be stored.
+    \item ...has a location where to find the required expanders.
+    \item ...has a location where the log files are stored.
+    \item ...has a location where the result of the generation processes can be stored.
 \end{itemize}
 
 The location of the output folder is irrelevant.
 
-\subsection*{Create the nuget.config file}
-Add a nuget.config file to the output folder with the following content:
+\subsection*{Step 2: Create the Nuget configuration file}
+Add a configuration file named \emph{nuget.config} file to the output folder with the
+the following content: 
+
+\lstinputlisting[ caption={The content of the Nuget configuration file},
+label={list_nugetconfig}] {Snippets/nuget.config}
+
+This config file is needed for the following step where the Pantha Rhei application is
+installed. The file contains the information to the private feed where the Pantha Rhei
+application can be downloaded and installed.
+
+\subsection{Step 3: Installing Pantha Rhei} \label{appendix_installing_pantha_rhei} 
+Open a console in on the location where the Nuget configuration file is stored. The
+following command will download the package, and start the installation process which is
+executed in the background. 
+
 \lstinputlisting[
-    caption={The content of the nuget.config file},
-    label={list_nugetconfig}]
-    {Snippets/nuget.config}
+    caption={The install command},
+    label={list_install-command}]
+    {Snippets/dotnet-install-command.txt}
 
-\subsection*{Install the Expanders}
-Click the following link and download the required expanders. The expander contains the
-required logic and templates in order for Pantha Rhei to execute the code generation process.
-
-\url{https://www.add/a/correct/url/here}
-
-Create a subfolder \emph{Expanders} in the output folder created in the first step. Extract
-each of the expanders in their own folder in the \emph{Expanders} folder.
-
-When following the previous steps, the following folder structure should be available:
+\subsection*{Step 4: Download \& Install the Expanders}
+By clicking on the following link, an archived folder will be presented as a download by
+your browser. Download the archived folder and extract it on completion. Store the
+extracted folder, in a subfolder called \emph{Expanders} in the root of the output
+folder. By doing so, the following folder structure should be available:
 
 \begin{forest}
     for tree={
@@ -64,11 +72,79 @@ When following the previous steps, the following folder structure should be avai
   ]
 \end{forest}
 
-\section{Installing Pantha Rhei} \label{appendix:installing_pantha_rhei} 
-Run the following command to install Pantha Rhei.
-\lstinputlisting[
-    caption={The install command},
-    label={list_install-command}]
-    {Snippets/dotnet-install-command.txt}
+The Pantha Rhei application is now ready for use.
 
-Pantha Rhei is now ready for use.
+\subsection*{Setup a SQL database}
+Currently, Pantha Rhei is working with an MS SQL database for storing the model of the
+applications. Set up a SQL Database. This can either be a licensed version of SQL Server,
+the free-to-use SQL Express or an Azure SQL instance. See
+\url{https://www.microsoft.com/en/sql-server/sql-server-downloads} for more information.
+Make sure to have a valid connection string to the SQL server instance that is needed in
+step \fullref{appendix_run_flux}.
+
+\section{Commandline manual} \label{appendix_run_flux}
+
+Pantha Rhei is used by executing the \emph{flux} command with the following parameters
+
+\begin{table}[H]
+    \begin{tabular}{ l | p{0.78\linewidth}}
+        \toprule
+        --root & A mandatory parameter that should contain the full path to the output
+        directory \fullref{appendix_installation_instructions}. \\
+        --db & A mandatory parameter that contains the connectionstring to the database. \\
+        --app & A mandatory parameter indicating the unique identifier of the application that should be generated. \\
+        --mode & An optional parameter that determines if a handler should be executed.
+        \emph{Default} is the default fallback mode (see \ref{tab:generation_modes}). \\
+        --reseed & An optional parameter that bypasses the expanding process. The model will
+        be thoroughly cleaned, and reseeded based on the entities of the expander
+        artifact. This enables to a certain extent the meta-circularity and enables the
+        expander artifact to generate itself. \\
+        \bottomrule
+    \end{tabular}
+    \caption{The \emph{flux} command line parameters}
+    \label{tab:commandline_parameters}
+\end{table}
+
+\lstinputlisting[
+    caption={Example command executing Pantha Rhei},
+    label={list_flux}]
+    {Snippets/flux.txt}
+
+RunModes are available to isolate the execution of the ExpanderHandler. It
+requires a current implementation shown in listing \ref{list_runmode_example}. The
+following RunModes are available.
+
+\begin{table}[H]
+    \begin{tabular}{ l | p{0.78\linewidth}}
+        \toprule
+        Default & This is the default generation mode that executes all configured
+        handlers of the CleanArchitectureExpander. This will also install the required
+        Visual Studio templates which are needed for scaffolding the Solution and C\#
+        Project files. Furthermore, it also executes the Harvest and Rejuvenation
+        handlers. This mode will clean up the entire output folder prior after the
+        Harvesting process is finished prior to the execution of the handlers. \\
+        
+        Extend & This mode will skip the installation of the Visual Studio templates and
+        the project scaffolding. It will not clean up the output folder but will
+        overwrite any files handled. This mode is often less time-consuming and can be
+        used in scenarios to quickly check the result of a part of the generation process. \\
+
+       Deploy & An optional mode that allows for expander handlers to run deployments in
+       isolation. For example, when a developer wants to deploy the output to an Azure App
+       Service. \\
+       
+       Migrate & An optional mode that allows for expander handlers to run migrations in
+       isolation. For example, this  currently updates the database schema by running the
+       Entity Framework Commandline Interface (see \url{https://learn.microsoft.com/en-us/ef/core/cli/dotnet}).\\
+        \bottomrule
+    \end{tabular}
+    \caption{The available \emph{Generation modes}}
+    \label{tab:generation_modes}
+\end{table}
+
+\lstinputlisting[
+    caption={Example on how an expander handler can adhere to the RunMode parameters},
+    label={list_runmode_example}]
+    {Snippets/RunModeExample.cs}
+
+

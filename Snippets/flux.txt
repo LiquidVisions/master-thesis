@@ -1,1 +1,4 @@
-flux --root {folder} --clean --mode Default --app "{uniqueid}"
+flux --root "{folder}" 
+     --mode Default 
+     --app "{uniqueid}" 
+     --db "{connectionstring}"
