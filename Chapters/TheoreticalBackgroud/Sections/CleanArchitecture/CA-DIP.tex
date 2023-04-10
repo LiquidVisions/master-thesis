@@ -1,4 +1,4 @@
-\subsubsection{The Dependency Inversion Principle} \label{subsubsec:dip} \todo{explain
+\subsubsection{The Dependency Inversion Principle} \label{subsubsec_dip} \todo{explain
 how dependency injection can benefit the implementation and align with \ref{tab:convergence_dip}}
 
 The \gls{dip} prescribes that high-level modules should not depend on low-level modules,
@@ -25,24 +25,24 @@ Manifestations in the artifacts are ample. One of which is the consistent use of
 Dependency Injection pattern. In order to prevent the risks of displacing and dispersing
 dependencies all over the system \parencite[214]{mannaert_normalized_2016} we are using
 dependency containers. Each module is maintaining its own dependencies, which are
-bootstrapped at application startup (see Listing \ref{SIPDip})
+bootstrapped at application startup (see Listing \ref{list_dip})
 \parencite{koks_generator_2023}.
 
 \lstinputlisting[
     caption={Bootstrapping the dependencies of each component/layer of the
     generator artifact.},
-    label={SIPDip}]
+    label={list_dip}]
     {Snippets/Dip.cs}
 
 A more abstract example is the separation of required modules into separate component
 libraries. This applies to both the generated and generator artifact (see Figure
-\ref{fig:solutions}). The actual compliance to the \gls{dip} is how the flow of control
+\ref{fig_solutions}). The actual compliance to the \gls{dip} is how the flow of control
 between the components is organized. This is accurately depicted in Figure
-\ref{fig:modulair_components} \nameref{fig:modulair_components}.
+\ref{fig_modulair_components} \nameref{fig_modulair_components}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{Figures/solutions.pdf}
     \caption[modularity]{Separation of component libraries.}
-    \label{fig:solutions}
+    \label{fig_solutions}
 \end{figure}

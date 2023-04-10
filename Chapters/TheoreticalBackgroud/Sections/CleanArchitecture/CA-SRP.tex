@@ -1,4 +1,4 @@
-\subsubsection{The Single Responsibility Principle} \label{subsubsec:srp}
+\subsubsection{The Single Responsibility Principle} \label{subsubsec_srp}
 
 The \gls{srp} is one of the fundamental design principles of \gls{ca}. The principle
 advocates designing systems with high cohesion and low coupling. The \gls{srp} states that
@@ -22,18 +22,18 @@ or components based on their functional roles. \gls{srp} is concerned with separ
 responsibilities of individual modules regardless of the granularity of the module.
 \parencite[205]{robert_c_martin_clean_2018}.With this in mind, \gls{srp} adheres more to
 the definition of \gls{soc} from \gls{ns}. \textit{A processing function can only contain
-a single task to achieve stability.} (see chapter \ref{subsubsec:soc}
-\nameref{subsubsec:soc}).
+a single task to achieve stability.} (see chapter \ref{subsubsec_soc}
+\nameref{subsubsec_soc}).
 
 There are various manifestations of \gls{srp} implemented in the artifacts. One of which is
-already mentioned in Figure \ref{fig:modulair_components}, where \gls{srp} is applied to
+already mentioned in Figure \ref{fig_modulair_components}, where \gls{srp} is applied to
 separate the domain logic from the application, infrastructure and presentation logic. One
 could argue that this manifestation is more related to \gls{soc}, considering the high
 granularity of the components.
 
-A better example is the separation of handlers that are part of the Clean Architecture
+A better example is the separation of handlers that are part of the \gls{ca}
 Expander. Each of those handlers executes an isolated part of the expanding process.
-Consider the Listing \ref{SipEntityExpander} \nameref{SipEntityExpander}
+Consider the Listing \ref{list_entityexpander} \nameref{list_entityexpander}
 \parencite{koks_expandentitieshandlerinteractor_2023} for example. This Handler is solely
 responsible for the generation of data entities. 
 
@@ -41,10 +41,10 @@ responsible for the generation of data entities.
     \centering
     \includegraphics[width=0.6\textwidth]{Figures/expander_handlers.pdf}
     \caption[handlers]{Each of the handlers handles an isolated part of the expanding process.}
-    \label{fig:handlers}
+    \label{fig_handlers}
 \end{figure}
 
 \lstinputlisting[
     caption={The \citetitle{koks_expandentitieshandlerinteractor_2023}},
-    label={SipEntityExpander}]
+    label={list_entityexpander}]
     {Snippets/ExpandEntitiesHandlerInteractor.cs}

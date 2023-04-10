@@ -42,3 +42,24 @@ schendingen van de design principles is ook een combinatorische effect.
 solid zegt niks over seperation of state
 
 11.2 - NS requirements
+
+-- Feedback Hans
+Gerco,
+
+ 
+
+Complimenten,  je hebt hard gewerkt! Ik vind het knap dat je het onderzoek op een begrijpelijke wijze hebt beschreven. Ik heb een paar kleine suggesties:
+
+Pag iv: Master of Enterprise IT Architecture Department or School Name
+Pag 1: Klopt de volgende zin “James Edwin McIl- roy proposed a vision where the systematic reuse of software building blocks leads to harmful programming practices where software changes eventually reduce com- plexity (P. Naur and B. Randell 1968). ? Is bedoeld ‘a vision where the systematic reuse of building blocks leads to programming practices where software changes eventually reduce complexity’ ?
+Pag 2: This the- sis focuses on two prevalent approaches to research the hypothesized convergence introduced in 1.4 and 1.5.  Ik zou toevoegen ‘namely, Clean Architecture and Normalized Systems’
+Pag 2; wellicht enkele APA-referenties opnemen na ‘Many great experiences doc- umented throughout professional and personal blog posts on the internet. ‘
+Wellicht de vraag opdelen in twee ‘Is it possible combining the two approaches? If so, can the combination be an method that leads to a highly modular and evolvable software artifact?  De vraag die achterwege wordt gelaten is, is het nodig om beide benaderingen te combineren of volstaat één benadering. Klopt dat?
+Volgens mij een punt ‘ . ‘ te veel in ‘where Java SE has been used. (Oorts et al. 2014; De Bruyn et al. 2018).
+De eerste keer als het begrip SOLID gebruikt (pag.4) noemt deze toelichten, komt nu op pag. 7
+Wellicht aangeven dat je Amerikaanse spelling i.p.v. UK gebruikt (organization of Toward ipv  towards; both are two acceptable ways of spelling the same preposition. Toward is the preferred spelling in the United States and Canada. Towards is the preferred spelling in the United Kingdom and Australia.)
+Wellicht net zoals bij de research question, de hypothesis als paragraaf en dikgedrukt opnemen
+Pag 25, wellicht de afkorting DM toelichten in ‘Research Requirement 4’
+Pag. 27 requirement mbt code ex- pansion toevoegen (pag 403)
+Pag. 36 Toelichten wat je bedoelt met: invoegen dat de entiteiten een relatie krijgen met component, zodat plaatsen entiteiten in component niet meer in designtime
+Hoe wil je de conclusie in 5.2., discussion in chapter 6 en conclusions in chapter 7 aanpakken?

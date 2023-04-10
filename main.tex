@@ -17,7 +17,7 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage{lipsum}
-\usepackage{mathpazo} % Use the Palatino font by default
+\usepackage{mathpazo} % Use the Palatino font by default 
 \usepackage{fltrace}
 \usepackage{float}
 \usepackage{hyperref}
@@ -115,7 +115,7 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 %----------------------------------------------------------------------------------------
 %	RANDOM COMMANDS USED IN THE THESIS
 %----------------------------------------------------------------------------------------
-\newcommand{\fullref}[1]{chapter \ref{#1} \nameref{#1}}
+\newcommand{\fullref}[1]{\ref{#1} \nameref{#1}}
 \newcommand{\code}[1]{\textcolor{sblue}{\textit{\citetitle{#1}}}}
 \newcommand{\citecode}[1]{\textcolor{sblue}{\citetitle{#1} \parencite{#1}}}
 \newcommand{\mycolorbox}[2]{\begin{tcolorbox}[boxrule=0.1pt, colback=mygray, title={#2} ,colbacktitle=gray]
@@ -162,8 +162,8 @@ software artifact.} % \subjectname
 
 \keywords{} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
 \university{Antwerp Management School}
-\department{\href{http://department.university.com}{Department or School Name}}
-\group{\href{http://researchgroup.university.com}{Research Group Name}}
+%\department{\href{http://department.university.com}{Department or School Name}}
+%\group{\href{http://researchgroup.university.com}{Research Group Name}}
 \faculty{Master of Enterprise IT Architecture}
 
 \AtBeginDocument{

@@ -1,4 +1,4 @@
-\subsubsection{The Open-Closed Principle} \label{subsubsec:ocp}
+\subsubsection{The Open-Closed Principle} \label{subsubsec_ocp}
 
 The \gls{ocp} was first mentioned by \Citeauthor{meyer_object-oriented_1997}. He described
 the principle as followed \parencite[79]{meyer_object-oriented_1997}. The reference here
@@ -16,7 +16,7 @@ The goal is	to make	the	system easy	to extend without incurring a high impact of
 \parencite[94]{robert_c_martin_clean_2018}.
 
 A relevant manifestation of \gls{ocp} are all the different implementations of expander
-handlers in figure \ref{fig:handlers}. The availability of the
+handlers in figure \ref{fig_handlers}. The availability of the
 \code{koks_iexpanderhandlerinteractor_2023} interface makes it possible to add more
 functionality to the CleanArchtictureExpander without modifying any existing
 implementation. New handlers are added by extension, and when implemented correctly, the
@@ -24,12 +24,12 @@ handler is automatically executed in the desired order and the required conditio
 
 \lstinputlisting[
     caption={The \citetitle{koks_iexpanderhandlerinteractor_2023}},
-    label={SipIExpanderHandlerInteractor} ]
+    label={list_iexpanderhandlerinteractor} ]
     {Snippets/IExpanderHandlerInteractor.cs}
 
 \lstinputlisting[
     caption={The \citetitle{koks_iexecutioninteractor_2023}},
-    label={SipIExecutionInteractor} ]
+    label={list_iexecutioninteractor} ]
     {Snippets/IExecutionInteractor.cs}
 
 The fact that \citecode{koks_iexpanderhandlerinteractor_2023} derives from
@@ -41,7 +41,7 @@ design decision allows for object types that need to be treated as executables b
 \citecode{koks_preprocessorinteractor_2023} and
 \citecode{koks_postprocessorinteractor_2023}. 
 
-Listing \ref{SipCodeGeneratorInteractor} shows the
+Listing \ref{list_CodeGeneratorInteractor} shows the
 \code{koks_codegeneratorinteractor_2023} that cohesively executes all of the
 \code{koks_iexecutioninteractor_2023} in order. The software engineer only has to focus on
 implementing the specific type of \code{koks_iexecutioninteractor_2023} without having to

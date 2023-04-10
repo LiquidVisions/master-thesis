@@ -1,4 +1,4 @@
-\subsection{The executer object} \label{subsec:IExecutionInteractorObject}
+\subsection{The executer object} \label{subsec_IExecutionInteractorObject}
 
 A vital implementation that facilitates a high degree of cohesion, whilst maintaining
 low coupling and adhering to the \gls{srp} principle is the use of the
@@ -11,11 +11,13 @@ separate classes, entirely complying, or enabling all of the \gls{solid} princip
     \centering
     \includegraphics[width=1\textwidth]{Figures/class_diagram_iexecutioninteractor.pdf}
     \caption[Plugin Archticture]{Both high cohesion and low coupling by using the \code{koks_iexecutioninteractor_2023}}
-    \label{fig:iexecutioninteractor}
+    \label{fig_iexecutioninteractor}
   \end{figure}
 
 
-As depicted in listing \ref{SipCodeGeneratorInteractor}, this design leads to a cohesive
+As depicted in listing \ref{list_CodeGeneratorInteractor}, this design leads to a cohesive
 design where all tasks are gracefully executed from a single point in the application.
-\lstinputlisting[ caption={The \citetitle{koks_codegeneratorinteractor_2023}},
-label={SipCodeGeneratorInteractor} ] {Snippets/CodeGeneratorInteractor.cs}
+\lstinputlisting[
+  caption={The \citetitle{koks_codegeneratorinteractor_2023}},
+  label={list_CodeGeneratorInteractor} ] 
+  {Snippets/CodeGeneratorInteractor.cs}

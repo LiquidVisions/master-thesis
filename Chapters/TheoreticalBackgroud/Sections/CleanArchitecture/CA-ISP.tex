@@ -1,4 +1,4 @@
-\subsubsection{The Interface Segregation Principle} \label{subsubsec:isp}
+\subsubsection{The Interface Segregation Principle} \label{subsubsec_isp}
 
 The \gls{isp} suggests that software components should have narrow, specific interfaces
 rather than broad, general-purpose ones. The \gls{isp} states that no client code should
@@ -12,9 +12,9 @@ Overall, the \gls{isp} is about designing interfaces that are tailored to the sp
 needs of the clients that use them, rather than trying to create one-size-fits-all
 interfaces that may be bloated or unwieldy.
 
-Take a look at Listing \ref{SipISPExample}. In order to comply with the \gls{isp}, the
+Take a look at Listing \ref{list_ispexample}. In order to comply with the \gls{isp}, the
 design decision was made to separate all \gls{crud} operations into separate interfaces.
-In the example of the \citecode{koks_appseederinteractor_2023} (see \ref{SipISPExample})
+In the example of the \citecode{koks_appseederinteractor_2023} (see \ref{list_ispexample})
 only the delete and create gateways where required. An alternative approach was to create
 an IGateway interface containing all of the \gls{crud} operations. Following this approach
 would lead to dependencies to all \gls{crud} operations in the
@@ -22,5 +22,5 @@ would lead to dependencies to all \gls{crud} operations in the
 
 \lstinputlisting[
     caption={The Gateways for Create, Read, Update, Delete operations},
-    label={SipISPExample}]
+    label={list_ispexample}]
     {Snippets/ISP_Example.cs}
