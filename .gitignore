@@ -12,7 +12,6 @@
 *.synctex.gz
 *.toc
 *-blx.bib
-main.pdf
 *.acr
 *.glo
 *.ist
