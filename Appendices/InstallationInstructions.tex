@@ -22,7 +22,7 @@ This config file is needed for the following step where the Pantha Rhei applicat
 installed. The file contains the information to the private feed where the Pantha Rhei
 application can be downloaded and installed.
 
-\subsection{Step 3: Installing Pantha Rhei} \label{appendix_installing_pantha_rhei} 
+\subsection*{Step 3: Installing Pantha Rhei} \label{appendix_installing_pantha_rhei} 
 Open a console in on the location where the Nuget configuration file is stored. The
 following command will download the package, and start the installation process which is
 executed in the background. 
@@ -74,7 +74,7 @@ folder. By doing so, the following folder structure should be available:
 
 The Pantha Rhei application is now ready for use.
 
-\subsection*{Setup a SQL database}
+\subsection*{Step 5: Setup a SQL database}
 Currently, Pantha Rhei is working with an MS SQL database for storing the model of the
 applications. Set up a SQL Database. This can either be a licensed version of SQL Server,
 the free-to-use SQL Express or an Azure SQL instance. See
@@ -82,9 +82,15 @@ the free-to-use SQL Express or an Azure SQL instance. See
 Make sure to have a valid connection string to the SQL server instance that is needed in
 step \fullref{appendix_run_flux}.
 
-\section{Commandline manual} \label{appendix_run_flux}
+\subsection*{Step 6: Execute the command} \label{appendix_run_flux}
 
-Pantha Rhei is used by executing the \emph{flux} command with the following parameters
+Pantha Rhei is used by executing the \emph{flux} command with the parameters as described
+in table \ref{tab_commandline_parameters}
+
+\lstinputlisting[
+    caption={Example command executing Pantha Rhei},
+    label={list_flux}]
+    {Snippets/flux.txt}
 
 \begin{table}[H]
     \begin{tabular}{ l | p{0.78\linewidth}}
@@ -94,7 +100,7 @@ Pantha Rhei is used by executing the \emph{flux} command with the following para
         --db & A mandatory parameter that contains the connectionstring to the database. \\
         --app & A mandatory parameter indicating the unique identifier of the application that should be generated. \\
         --mode & An optional parameter that determines if a handler should be executed.
-        \emph{Default} is the default fallback mode (see \ref{tab:generation_modes}). \\
+        \emph{Default} is the default fallback mode (see \ref{tab_generation_modes}). \\
         --reseed & An optional parameter that bypasses the expanding process. The model will
         be thoroughly cleaned, and reseeded based on the entities of the expander
         artifact. This enables to a certain extent the meta-circularity and enables the
@@ -102,13 +108,10 @@ Pantha Rhei is used by executing the \emph{flux} command with the following para
         \bottomrule
     \end{tabular}
     \caption{The \emph{flux} command line parameters}
-    \label{tab:commandline_parameters}
+    \label{tab_commandline_parameters}
 \end{table}
 
-\lstinputlisting[
-    caption={Example command executing Pantha Rhei},
-    label={list_flux}]
-    {Snippets/flux.txt}
+
 
 RunModes are available to isolate the execution of the ExpanderHandler. It
 requires a current implementation shown in listing \ref{list_runmode_example}. The
@@ -139,7 +142,7 @@ following RunModes are available.
         \bottomrule
     \end{tabular}
     \caption{The available \emph{Generation modes}}
-    \label{tab:generation_modes}
+    \label{tab_generation_modes}
 \end{table}
 
 \lstinputlisting[
