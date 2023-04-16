@@ -1,1 +1,20 @@
-\subsection{Converging the ResponseModel element}
+\subsection{Converging the ResponseModel element} \label{converging_responsemodel_element}
+
+The following \gls{ns} elements are convergent with the ResponseModel element of
+\gls{ca}. The Task, Flow, Connector and Trigger elements are in no way convergent as they
+differ in the perspective of structure, intent, purpose and functionality. 
+
+\begin{table}[H]
+    \begin{tabular}{ M{0.15\linewidth} | M{0.05\linewidth} | p{0.70\linewidth}}
+        \toprule
+        Data & \someConvergence & The ResponseModel and \gls{ns} Data element convergent
+        to a limited degree. Both are involved in defining the structure of data used in
+        the system. This includes required information about attributes and relationships.
+        The ResponseModel represents output data for a specific interactor and will most
+        likely contain only the information that is needed in response for that specific
+        use case. \\
+        \bottomrule
+    \end{tabular}
+    \caption{Converge \gls{ca} 'ResponseModel element' with \gls{ns} elements}
+    \label{tab_convergence_responsemodel}
+\end{table}
