@@ -27,7 +27,7 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \usepackage[font=scriptsize]{caption}
 \usepackage[colorinlistoftodos,textwidth=30mm,textsize=tiny]{todonotes}
 \usepackage[style=authoryear,maxbibnames=9,maxcitenames=2,uniquelist=false,backend=biber]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
-
+\usepackage{xspace}
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 \usepackage[acronym, toc]{glossaries}
 \usepackage{fontawesome}
@@ -117,8 +117,8 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 %----------------------------------------------------------------------------------------
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
-\newcommand{\ns}{\gls{ns}}
-\newcommand{\ca}{\gls{ca}}
+\newcommand{\ns}{\gls{ns}\xspace}
+\newcommand{\ca}{\gls{ca}\xspace}
 \newcommand{\fullref}[1]{\ref{#1} \nameref{#1}}
 \newcommand{\code}[1]{\textcolor{sblue}{\textit{\citetitle{#1}}}}
 \newcommand{\citecode}[1]{\textcolor{sblue}{\citetitle{#1} \parencite{#1}}}
