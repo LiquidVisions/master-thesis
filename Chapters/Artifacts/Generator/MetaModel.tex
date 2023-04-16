@@ -1,11 +1,12 @@
 \subsection{The meta-model} \label{sec_artifact_meta_model}
 
-The meta-model is the model, of a model that is used to define a software system in the
-context of this research. It contains the essential characteristics that are needed in
-order to generate software applications and components. It contains the structures,
-entities and relationships within the Generated Artifact. Having a meta-model ensures a
-standardized way to describe and define the software components and their interactions,
-enabling the design and analysis of modular, evolvable, and scalable software systems.
+The meta-model is a higher-level abstraction of the model that is used to describe the
+characteristics of a software system in the context of this research. It contains the
+essential characteristics that are needed in order to generate software applications and
+components. It contains the structures, entities and relationships within the Generated
+Artifact. Having a meta-model ensures a standardized way to describe and define the
+software components and their interactions, enabling the design and analysis of modular,
+evolvable, and scalable software systems.
 
 In this context, the meta-model serves as a blueprint for the software system, describing
 its components, such as entities, fields, relationships, and expanders, along with their
@@ -94,7 +95,7 @@ The Entity entity represents an entity in the application's data model.
 
 \begin{table}[H]
 \small
-\begin{tabular}{ p{0.20\linewidth} p{0.24\linewidth} p{0.46\linewidth} }
+\begin{tabular}{ p{0.20\linewidth} p{0.23\linewidth} p{0.47\linewidth} }
 \hline
 \textbf{Name} & \textbf{DataType} & \textbf{Description} \\
 \hline
@@ -104,12 +105,12 @@ Callsite & string & The source code location where the entity is defined. In the
 artifact, this is to determine the name of the namespace.\\
 Type & string & Type of the entity \\
 Modifier & string & Modifier of the entity (e.g. public, private) \\
-Behaviour & string & The behavior of the entity (e.g. abstract, virtual) \\
+Behavior & string & The behavior of the entity (e.g. abstract, virtual) \\
 App & App & Navigation property to the App entity. \\
 Fields & List of Fields & The Fields property represents a collection of the fields that
 make up the entity. \\
-ReferencedIn & List of Fields & Represents a navigation property that points to a Field
-that uses the current entity as a return type. \\
+ReferencedIn & List of Fields & Represents a navigation property to a Field that uses the
+current entity as a return type. \\
 Relations & List of Relationships & List of relationships involving this entity \\
 IsForeignEntityOf & List of Relationships & List of relationships where this entity is the foreign entity \\
 \hline
@@ -152,7 +153,7 @@ of the primary key or an index of the entity, respectively.
 
 \begin{table}[H]
 \small
-\begin{tabular}{ p{0.23\linewidth} p{0.23\linewidth} p{0.44\linewidth} }
+\begin{tabular}{ p{0.23\linewidth} p{0.23\linewidth} p{0.45\linewidth} }
 \hline
 \textbf{Name} & \textbf{DataType} & \textbf{Description} \\
 \hline
@@ -163,7 +164,7 @@ IsCollection & bool & Whether the field is a collection or not \\
 Modifier & string & Modifier of the field (e.g. public, private) \\
 GetModifier & string & Modifier of the get accessor for the field \\
 SetModifier & string & Modifier of the set accessor for the field \\
-Behaviour & string & The behavior of the field (e.g. abstract, virtual) \\
+Behavior & string & The behavior of the field (e.g. abstract, virtual) \\
 Order & int & The order of the field within its entity \\
 Size & int? & The size of the field \\
 Required & bool & Whether the field is required or not \\
@@ -171,8 +172,8 @@ Reference & Entity & The entity that this field refers to\\
 Entity & Entity & A navigation property to the parent entity \\
 IsKey & bool & Indicates whether the field is part of the primary key \\
 IsIndex & bool & Indicates whether the field is part of an index \\
-RelationshipKeys & List of Relationships & List of relationships where this field is the key \\
-IsForeignEntityKeyOf & List of Relationships & List of relationships where this field is the foreign key \\
+RelationshipKeys & List of Relationships & A List of entities that are defined as relations. \\
+IsForeignEntityKeyOf & List of Relationships & List of relationships to the field that is the foreign key \\
 \hline
 \end{tabular}
 \caption{The fields of the Field entity}
