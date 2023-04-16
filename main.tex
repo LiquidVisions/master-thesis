@@ -115,14 +115,12 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 %----------------------------------------------------------------------------------------
 %	RANDOM COMMANDS USED IN THE THESIS
 %----------------------------------------------------------------------------------------
-\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
-\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 \newcommand{\ns}{\gls{ns}\xspace}
 \newcommand{\ca}{\gls{ca}\xspace}
 \newcommand{\fullref}[1]{\ref{#1} \nameref{#1}}
 \newcommand{\code}[1]{\textcolor{sblue}{\textit{\citetitle{#1}}}}
 \newcommand{\citecode}[1]{\textcolor{sblue}{\citetitle{#1} \parencite{#1}}}
-\newcommand{\mycolorbox}[2]{\begin{tcolorbox}[boxrule=0.1pt, colback=mygray, title={#2} ,colbacktitle=gray]
+\newcommand{\mycolorbox}[2]{\begin{tcolorbox}[boxrule=0.1pt, colback=mygray, title={#2}, colbacktitle=gray]
   \textit{#1}
 \end{tcolorbox}}
 
