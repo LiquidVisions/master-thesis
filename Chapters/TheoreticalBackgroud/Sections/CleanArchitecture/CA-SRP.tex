@@ -1,6 +1,6 @@
 \subsubsection{The Single Responsibility Principle} \label{subsubsec_srp}
 
-The \gls{srp} is one of the fundamental design principles of \ca. The principle
+The \gls{srp} is one of the fundamental design principles of \gls{ca}. The principle
 advocates designing systems with high cohesion and low coupling. The \gls{srp} states that
 each module in a system should have only one reason to change. That is, it should have a
 single responsibility. No matter the granularity of the module, so implementations of
@@ -21,7 +21,7 @@ on a functional level and architectural level. This divides a system into differ
 or components based on their functional roles. \gls{srp} is concerned with separating the
 responsibilities of individual modules regardless of the granularity of the module.
 \parencite[205]{robert_c_martin_clean_2018}.With this in mind, \gls{srp} adheres more to
-the definition of \gls{soc} from \ns. \textit{A processing function can only contain
+the definition of \gls{soc} from \gls{ns}. \textit{A processing function can only contain
 a single task to achieve stability.} (see chapter \ref{subsubsec_soc}
 \nameref{subsubsec_soc}).
 
@@ -31,7 +31,7 @@ separate the domain logic from the application, infrastructure and presentation 
 could argue that this manifestation is more related to \gls{soc}, considering the high
 granularity of the components.
 
-A better example is the separation of handlers that are part of the \ca
+A better example is the separation of handlers that are part of the \gls{ca}
 Expander. Each of those handlers executes an isolated part of the expanding process.
 Consider the Listing \ref{list_entityexpander} \nameref{list_entityexpander}
 \parencite{koks_expandentitieshandlerinteractor_2023} for example. This Handler is solely
