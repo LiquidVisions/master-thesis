@@ -11,7 +11,7 @@
         with Action version Transparent implementations of the signature.
         \\
         \midrule
-        \gls{dvt} & \diverges & \gls{lsp} has a limited alignment with the \gls{dvt}
+        \gls{dvt} & \noconvergence & \gls{lsp} has a limited alignment with the \gls{dvt}
         theorem. While \gls{lsp} focuses on the substitutability of objects in class
         hierarchies, \gls{dvt} aims to handle changes in data structures without impacting
         the system. By following \gls{lsp}, developers can ensure that derived classes can
@@ -27,7 +27,7 @@
         adhering to \gls{lsp} alone may not guarantee full convergence with \gls{avt}. 
         \\
         \midrule
-        \gls{sos} & \diverges & By designing class hierarchies according to \gls{lsp},
+        \gls{sos} & \noconvergence & By designing class hierarchies according to \gls{lsp},
         developers can create components that are less prone to side effects caused by shared
         states. However, the alignment between \gls{lsp} and \gls{sos} is very weak, and
         adhering to \gls{lsp} alone may not guarantee full separation of states. 
