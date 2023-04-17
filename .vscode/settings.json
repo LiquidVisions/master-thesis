@@ -9,7 +9,7 @@
         "**/*.out": true,
         "**/*.toc": true,
         "**/*.lot": true,
-        "**/*.log": true,
+        "**/*.log": false,
         "**/*.fdb_latexmk": true,
         "**/*.run.xml": true,
         "**/*.synctex.gz": true,
