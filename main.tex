@@ -27,10 +27,17 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \usepackage[font=scriptsize]{caption}
 \usepackage[colorinlistoftodos,textwidth=30mm,textsize=tiny]{todonotes}
 \usepackage[style=authoryear,maxbibnames=9,maxcitenames=2,uniquelist=false,backend=biber]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
-\usepackage{xspace}
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 \usepackage[acronym, toc]{glossaries}
 \usepackage{fontawesome}
+
+%----------------------------------------------------------------------------------------
+%	Bibliography
+%----------------------------------------------------------------------------------------
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+\bibliography{bibliography.bib} % The filename of the bibliography
+
 \makeglossaries
 \loadglsentries{Pages/Abbreviations.tex}
 \let\cleardoublepage=\clearpage
@@ -125,9 +132,9 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 %----------------------------------------------------------------------------------------
 %	FONT ICON COMMANDS
 %----------------------------------------------------------------------------------------
-\newcommand{\converges}{\faPlus\faPlus}
-\newcommand{\noconvergence}{\faMinus}
-\newcommand{\supports}{\faPlus}
+\newcommand{\conv}{\faPlus \faPlus}
+\newcommand{\noconv}{\faMinus}
+\newcommand{\partconv}{\faPlus}
 
 %----------------------------------------------------------------------------------------
 %	MARGIN SETTINGS
@@ -176,12 +183,7 @@ software artifact.} % \subjectname
 	/title=\ttitle
 }
 
-%----------------------------------------------------------------------------------------
-%	Bibliography
-%----------------------------------------------------------------------------------------
-\setcounter{biburllcpenalty}{7000}
-\setcounter{biburlucpenalty}{8000}
-\addbibresource{bibliography.bib} % The filename of the bibliography
+
 
 %----------------------------------------------------------------------------------------
 %	Enabling a treeview used in the appendix

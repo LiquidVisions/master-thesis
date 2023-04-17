@@ -50,6 +50,7 @@
         "command": "latexmk",
         "args": [
           "-synctex=1",
+          "-f",
           "-interaction=nonstopmode",
           "-file-line-error",
           "-pdf",

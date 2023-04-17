@@ -3,7 +3,7 @@
 \begin{table}[H]
     \begin{tabular}{ l | c | p{0.79\linewidth}}
         \toprule
-        \gls{soc} & \converges & This principle converges with the \gls{soc} theorem.
+        \gls{soc} & \conv & This principle converges with the \gls{soc} theorem.
         \gls{dip} states that high-level modules should not depend on low-level modules.
         When unavoidable, high-level modules should depend on abstractions of low-level
         modules and abstractions should not depend on details. By adhering to \gls{dip}
@@ -19,14 +19,14 @@
         has been a great asset in creating evolvable software, especially in the aspect of
         \gls{soc}.\\
         \midrule
-        \gls{dvt} & \supports &  Adhering to the \gls{dip} can indirectly support the
+        \gls{dvt} & \partconv &  Adhering to the \gls{dip} can indirectly support the
         \gls{dvt} theorem. By adhering to the \gls{dip}, developers can promote
         implementations that encourage modules to interact with each other only through
         well-defined interfaces or abstractions. This approach can help minimize the
         impact of data structure changes on the system but does not guarantee full
         compliance with \gls{dvt}. \\
         \midrule
-        \gls{avt} & \supports & The \gls{dip} can support the \gls{avt} theorem. Both
+        \gls{avt} & \partconv & The \gls{dip} can support the \gls{avt} theorem. Both
         principles emphasize the importance of isolating actions or operations within a
         system. By adhering to \gls{dip}, developers can create modular components that
         interact through abstractions, which may contribute to achieving AvT. However, the
@@ -34,7 +34,7 @@
         adhering to \gls{dip} alone will not guarantee a system that entirely complies to
         \gls{avt}. \\ 
         \midrule
-        \gls{sos} & \noconvergence & There is a very weak alignment between \gls{dip} and
+        \gls{sos} & \noconv & There is a very weak alignment between \gls{dip} and
         \gls{sos}. Although Developers can create components that are less prone to side
         effects caused by a shared state, this can hardly be contributed to the \gls{dip}.
         Therefore it is stated that there is no convergence between the two principles.\\
