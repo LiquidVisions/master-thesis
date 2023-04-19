@@ -27,11 +27,11 @@ chapterinoneline, % Uncomment to place the chapter title next to the number on o
 \usepackage{enumitem}
 \usepackage[font=scriptsize]{caption}
 \usepackage[colorinlistoftodos,textwidth=30mm,textsize=tiny]{todonotes}
-\usepackage[style=authoryear,maxbibnames=9,maxcitenames=2,uniquelist=false,backend=biber]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+\usepackage[style=authoryear-comp,maxbibnames=9,maxcitenames=2,uniquelist=false,backend=biber]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 \usepackage[acronym, toc]{glossaries}
 \usepackage{fontawesome}
-
+\DeclareDelimFormat{nameyeardelim}{\addcomma\space}
 %----------------------------------------------------------------------------------------
 %	Bibliography
 %----------------------------------------------------------------------------------------
