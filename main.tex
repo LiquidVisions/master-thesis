@@ -49,37 +49,34 @@
 
 
 \begin{document}
-\pagestyle{plain}
+    \pagestyle{plain}
 
-\include{pages/title}
-\include{pages/quotes}
-\include{pages/information}
-\include{pages/abstract}
+    \include{pages/title}
+    \include{pages/quotes}
+    \include{pages/information}
+    \include{pages/abstract}
 
-\pagenumbering{roman}				%	Set pagenumbering to roman
-\include{pages/acknowledgements}
-\include{pages/toc}
-\printglossary[title=list of abbreviations, toctitle=list of abbreviations, type=\acronymtype, nonumberlist]
+    \pagenumbering{roman}				%	Set pagenumbering to roman
+    \include{pages/acknowledgements}
+    \include{pages/toc}
+    
+    \pagenumbering{arabic}	
+    \include{chapters/introduction/introduction}
+    \include{chapters/theoreticalbackgroud/theory}
+    \include{chapters/requirements/requirements}
+    \include{chapters/artifacts/artifacts}
+    \include{chapters/evaluation/evaluation}
+    \include{chapters/conclusion/conclusions}
+    \include{chapters/reflection/reflections}
 
-
-\pagenumbering{arabic}	
-\include{chapters/introduction/introduction}
-\include{chapters/theoreticalbackgroud/theory}
-\include{chapters/requirements/requirements}
-\include{chapters/artifacts/artifacts}
-\include{chapters/evaluation/evaluation}
-\include{chapters/conclusion/conclusions}
-\include{chapters/reflection/reflections}
-
-\include{pages/bibliography}
-\include{pages/listoffigures}
-\include{pages/listoftables}
-
-\appendix % Cue to tell LaTeX that the following "chapters" are Appendices
-\include{appendices/instructions}
-\include{appendices/metamodel}
-\include{appendices/architectures}
-
-
+    \include{pages/bibliography}
+    \include{pages/lof}
+    \include{pages/lot}
+    \printglossary[title=Glossary of Terms] 		% Add Glossary of Terms
+	\printglossary[title=Abbreviations, toctitle=Abbreviations, type=\acronymtype, nonumberlist]
+    \appendix % Cue to tell LaTeX that the following "chapters" are Appendices
+    \include{appendices/instructions}
+    \include{appendices/metamodel}
+    \include{appendices/architectures}
 
 \end{document}
