@@ -242,5 +242,13 @@
           "tectonic"
         ]
       }
-    ]
+    ],
+    "grammarly.config.documentDialect": "american",
+    "grammarly.config.suggestions.PassiveVoice": true,
+    "grammarly.config.suggestions.OxfordComma": true,
+    "grammarly.config.suggestions.PrepositionAtTheEndOfSentence": true,
+    "grammarly.config.suggestions.StylisticFragments": true,
+    "grammarly.startTextCheckInPausedState": true,
+    "grammarly.config.suggestions.UnnecessaryEllipses": true,
+    "grammarly.config.suggestions.ConjunctionAtStartOfSentence": true
 }
