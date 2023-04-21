@@ -1,263 +1,85 @@
-\documentclass[
-11pt, % The default document font size, options: 10pt, 11pt, 12pt
-%oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
-english, % ngerman for German
-singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
-%draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
-%nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
-%liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents
-%toctotoc, % Uncomment to add the main table of contents to the table of contents
-parskip, % Uncomment to add space between paragraphs
-%nohyperref, % Uncomment to not load the hyperref package
-headsepline, % Uncomment to get a line under the header
-chapterinoneline, % Uncomment to place the chapter title next to the number on one line
-%consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
-]{MastersDoctoralThesis} % The class file specifying the document structure
-\usepackage{url}
-\usepackage[utf8]{inputenc} % Required for inputting international characters
-\usepackage[T1]{fontenc} % Output font encoding for international characters
+\documentclass{scrreprt}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{wrapfig} % For wrapping figures in text.
+\usepackage{float}	% For placing figures in minipages
+\usepackage[hidelinks,linktocpage=true]{hyperref}
+\usepackage{xcolor}
 \usepackage{lipsum}
-\usepackage{mathpazo} % Use the Palatino font by default 
-\usepackage{fltrace}
+\usepackage{comment}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage[titletoc]{appendix}
+\usepackage{ccicons} % The Creative Commons Icons
+\usepackage{perpage} %the perpage package
 \usepackage{float}
-\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{tcolorbox}
+\usepackage{amsfonts} 
+\usepackage[nameinlink,noabbrev]{cleveref}
+\usepackage{scrlayer-scrpage} % for changing headers and footers
+\usepackage{arydshln}
+\usepackage{eso-pic}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{amsfonts} % Use the Palatino font by default 
+\usepackage{fltrace}
 \usepackage{forest}
 \usepackage{rotating}
-\usepackage{enumitem}
+\usepackage{scrhack}
 \usepackage[font=scriptsize]{caption}
 \usepackage[colorinlistoftodos,textwidth=30mm,textsize=tiny]{todonotes}
-\usepackage[style=authoryear-comp,maxbibnames=9,maxcitenames=2,uniquelist=false,backend=biber]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
-\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 \usepackage[acronym, toc]{glossaries}
 \usepackage{fontawesome}
-\DeclareDelimFormat{nameyeardelim}{\addcomma\space}
-%----------------------------------------------------------------------------------------
-%	Bibliography
-%----------------------------------------------------------------------------------------
-\setcounter{biburllcpenalty}{7000}
-\setcounter{biburlucpenalty}{8000}
-\bibliography{bibliography.bib} % The filename of the bibliography
 
-\makeglossaries
-\loadglsentries{Pages/Abbreviations.tex}
-\let\cleardoublepage=\clearpage
+\input{config/commands}
+\input{config/citations}
+\input{config/layout}
+\input{config/info}
+\input{config/listings}
+\input{config/bibliography}
+\input{config/treeview}
 
-%----------------------------------------------------------------------------------------
-%  code listings
-%----------------------------------------------------------------------------------------
-\usepackage{listings}
-\usepackage{etoolbox}
-\usepackage{color}
-
-\definecolor{base0}{RGB}{131,148,150}
-\definecolor{base01}{RGB}{88,110,117}
-\definecolor{base2}{RGB}{238,232,213}
-\definecolor{sgreen}{RGB}{133,153,0}
-\definecolor{sblue}{RGB}{38,138,210}
-\definecolor{scyan}{RGB}{42,161,151}
-\definecolor{smagenta}{RGB}{211,54,130}
-\definecolor{mygray}{gray}{0.98}
-
-
-\newcommand\digitstyle{\color{smagenta}}
-\newcommand\symbolstyle{\color{base01}}
-\makeatletter
-\newcommand{\ProcessDigit}[1]
-{%
-  \ifnum\lst@mode=\lst@Pmode\relax%
-   {\digitstyle #1}%
-  \else
-    #1%
-  \fi
-}
-\makeatother
-
-
-\lstdefinestyle{solarizedcsharp} {
-  language=[Sharp]C,
-  frame=lr,
-  breaklines=true,
-  tabsize=2,
-  numbers=left,
-  numbersep=5pt,
-  firstnumber=auto,
-  numberstyle=\tiny\ttfamily\color{base0},
-  rulecolor=\color{base2},
-  backgroundcolor=\color{mygray},
-  basicstyle=\scriptsize\ttfamily,
-  commentstyle=\color{base01},
-  morecomment=[s][\color{base01}]{/*+}{*/},
-  morecomment=[s][\color{base01}]{/*-}{*/},
-  morekeywords={  abstract, event, new, struct,
-                as, explicit, null, switch,
-                base, extern, object, this,
-                bool, false, operator, throw,
-                break, finally, out, true,
-                byte, fixed, override, try,
-                case, float, params, typeof,
-                catch, for, private, uint,
-                char, foreach, protected, ulong,
-                checked, goto, public, unchecked,
-                class, if, readonly, unsafe,
-                const, implicit, ref, ushort,
-                continue, in, return, using,
-                decimal, int, sbyte, virtual,
-                default, interface, sealed, volatile,
-                delegate, internal, short, void,
-                do, is, sizeof, while,
-                double, lock, stackalloc,
-                else, long, static,
-                enum, namespace, string, var},
-  keywordstyle=\bfseries\color{sgreen},
-  showstringspaces=false,
-  stringstyle=\color{scyan},
-  identifierstyle=\color{sblue},
-  extendedchars=true,
-  captionpos=b,
-}
-
-\lstset{style=solarizedcsharp}
-
-
-%----------------------------------------------------------------------------------------
-%	RANDOM COMMANDS USED IN THE THESIS
-%----------------------------------------------------------------------------------------
-\newcommand{\fullref}[1]{\ref{#1} \nameref{#1}}
-\newcommand{\code}[1]{\textcolor{sblue}{\textit{\citetitle{#1}}}}
-\newcommand{\citecode}[1]{\textcolor{sblue}{\citetitle{#1} \parencite{#1}}}
-\newcommand{\mycolorbox}[2]{\begin{tcolorbox}[boxrule=0.1pt, colback=mygray, title={#2}, colbacktitle=gray]
-  \textit{#1}
-\end{tcolorbox}}
-
-%----------------------------------------------------------------------------------------
-%	FONT ICON COMMANDS
-%----------------------------------------------------------------------------------------
-\newcommand{\conv}{\faPlus \faPlus}
-\newcommand{\noconv}{\faMinus}
-\newcommand{\partconv}{\faPlus}
-
-%----------------------------------------------------------------------------------------
-%	MARGIN SETTINGS
-%----------------------------------------------------------------------------------------
-\geometry{
-	paper=a4paper, % Change to letterpaper for US letter
-	inner=2.5cm, % Inner margin
-	outer=3.8cm, % Outer margin
-	bindingoffset=.5cm, % Binding offset
-	top=1.5cm, % Top margin
-	bottom=1.5cm, % Bottom margin
-	%showframe, % Uncomment to show how the type block is set on the page
-}
-
-%----------------------------------------------------------------------------------------
-%	THESIS INFORMATION
-%----------------------------------------------------------------------------------------
-
-\NewDocumentCommand{\promo}{m}{\newcommand{\promotor}{#1}}
-\NewDocumentCommand{\coproone}{m}{\newcommand{\firstco}{#1}}
-\NewDocumentCommand{\coprotwo}{m}{\newcommand{\secondco}{#1}}
-
-\thesistitle{On the convergence of Clean Architecture with the Normalized Systems Theorems} % \ttitle
-\subject{A Design Science approach of modularity,\\ stability and evolvability of a C\#
-software artifact.} % \subjectname
-
-\promo{Prof. Dr. Ing. Hans Mulder}
-\coproone{Dr. ir. Geert Haerens}
-\coprotwo{Frans Verstreken, MSc}
-\degree{Master of Enterprise IT Architecture}
-\author{Gerco Koks}
-
-\keywords{} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
-\university{Antwerp Management School}
-%\department{\href{http://department.university.com}{Department or School Name}}
-%\group{\href{http://researchgroup.university.com}{Research Group Name}}
-\faculty{Master of Enterprise IT Architecture}
-
-\AtBeginDocument{
-\hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
-\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
-\hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
-\hypersetup{citecolor=., linkcolor=., urlcolor=.}
-}
-\pdfinfo{
-	/title=\ttitle
-}
-
-
-
-%----------------------------------------------------------------------------------------
-%	Enabling a treeview used in the appendix
-%----------------------------------------------------------------------------------------
-\definecolor{folderbg}{RGB}{124,166,198}
-\definecolor{folderborder}{RGB}{110,144,169}
-
-\def\Size{4pt}
-\tikzset{
-      folder/.pic={
-        \filldraw[draw=folderborder,top color=folderbg!50,bottom color=folderbg]
-          (-1.05*\Size,0.2\Size+5pt) rectangle ++(.75*\Size,-0.2\Size-5pt);  
-        \filldraw[draw=folderborder,top color=folderbg!50,bottom color=folderbg]
-          (-1.15*\Size,-\Size) rectangle (1.15*\Size,\Size);
-      }
-    }
 
 \begin{document}
-\frontmatter % Use roman page numbering style (i, ii, iii, iv) for the pre-content pages
-
 \pagestyle{plain}
 
-%----------------------------------------------------------------------------------------
-%	PAGES
-%----------------------------------------------------------------------------------------
-\include{Pages/Title.tex}
-\include{Pages/Declaration.tex}
-\include{Pages/Quotation.tex}
-\include{Pages/Abstract.tex}
-\include{Pages/Acknowledgements.tex}
-\include{Pages/TableOfContents.tex}
-\include{Pages/ListOfFigures.tex}
-\include{Pages/ListOfTables.tex}
-\printglossary[title=List of Abbreviations, toctitle=List of Abbreviations, type=\acronymtype, nonumberlist]
-%\include{Pages/Abbreviations.tex}
-\include{Pages/Dedications.tex}
+\include{pages/title}
+\include{pages/quotes}
+\include{pages/information}
+\include{pages/abstract}
 
-%----------------------------------------------------------------------------------------
-%	THESIS CONTENT - CHAPTERS
-%----------------------------------------------------------------------------------------
-\mainmatter % Begin numeric (1,2,3) page numbering
-\pagestyle{thesis} % Return the page headers back to the "thesis" style
+\pagenumbering{roman}				%	Set pagenumbering to roman
+\include{pages/acknowledgements}
+\include{pages/toc}
+\printglossary[title=list of abbreviations, toctitle=list of abbreviations, type=\acronymtype, nonumberlist]
 
-\include{Chapters/Introduction/Introduction.tex}
-\include{Chapters/TheoreticalBackgroud/TheoreticalBackground.tex}
-\include{Chapters/Requirements/Requirements.tex}
-\include{Chapters/Artifacts/Artifacts.tex}
-\include{Chapters/Evaluation/Evaluation.tex}
-\include{Chapters/Discussion/Discussion.tex}
-\include{Chapters/Conclusion/Conclusions.tex}
-\include{Chapters/Reflection/Reflections.tex}
 
-%----------------------------------------------------------------------------------------
-%	THESIS CONTENT - APPENDICES
-%----------------------------------------------------------------------------------------
+\pagenumbering{arabic}	
+\include{chapters/introduction/introduction}
+\include{chapters/theoreticalbackgroud/theory}
+\include{chapters/requirements/requirements}
+\include{chapters/artifacts/artifacts}
+\include{chapters/evaluation/evaluation}
+\include{chapters/conclusion/conclusions}
+\include{chapters/reflection/reflections}
+
+\include{pages/bibliography}
+\include{pages/listoffigures}
+\include{pages/listoftables}
 
 \appendix % Cue to tell LaTeX that the following "chapters" are Appendices
+\include{appendices/instructions}
+\include{appendices/metamodel}
+\include{appendices/architectures}
 
-% Include the appendices of the thesis as separate files from the Appendices folder
-% Uncomment the lines as you write the Appendices
 
-%\include{Appendices/Erd.tex}
-\include{Appendices/ERD.tex}
-\include{Appendices/InstallationInstructions.tex}
-\include{Appendices/Architectures.tex}
-%\include{Appendices/AppendixC}
-
-%----------------------------------------------------------------------------------------
-%	BIBLIOGRAPHY
-%----------------------------------------------------------------------------------------
-
-\include{Pages/Bibliography.tex}
-
-%----------------------------------------------------------------------------------------
 
 \end{document}

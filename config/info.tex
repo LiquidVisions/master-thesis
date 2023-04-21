@@ -1,0 +1,38 @@
+\NewDocumentCommand{\thesistitle} { o m }{%
+ \IfValueTF{#1}{\def\shorttitle{#1}}{\def\shorttitle{#2}}%
+ \def\@title{#2}%
+ \def\ttitle{#2}%
+}
+\NewDocumentCommand{\supr}{m}{\newcommand{\supervisorname}{#1}}
+\NewDocumentCommand{\pro}{m}{\newcommand{\promotor}{#1}}
+\NewDocumentCommand{\copro}{m}{\newcommand{\copromotor}{#1}}
+\NewDocumentCommand{\auth}{m}{\newcommand{\authorname}{#1}}
+\NewDocumentCommand{\supervisor}{m}{\newcommand{\supname}{#1}}
+\NewDocumentCommand{\examiner}{m}{\newcommand{\examname}{#1}}
+\NewDocumentCommand{\degree}{m}{\newcommand{\degreename}{#1}}
+\NewDocumentCommand{\addresses}{m}{\newcommand{\addressname}{#1}}
+\NewDocumentCommand{\university}{m}{\newcommand{\univname}{#1}}
+\NewDocumentCommand{\faculty}{m}{\newcommand{\facname}{#1}}
+\NewDocumentCommand{\subj}{m}{\newcommand{\subjectname}{#1}}
+\NewDocumentCommand{\keywords}{m}{\newcommand{\keywordnames}{#1}}
+
+\thesistitle{On the convergence of Clean Architecture with the Normalized Systems Theorems}
+\subj{A Design Science approach of stability, evolvability and modularity of a C\# software artifact.}
+\supr{Prof. Dr. Ing. Hans Mulder}
+\pro{Dr. ir. Geert Haerens}
+\copro{Frans Verstreken, MSc}
+\degree{Master of Enterprise IT Architecture}
+\auth{Gerco Koks}
+\keywords{}
+\university{Antwerp Management School}
+\faculty{Master of Enterprise IT Architecture}
+
+\AtBeginDocument{
+\hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
+\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
+\hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
+\hypersetup{citecolor=., linkcolor=., urlcolor=.}
+}
+\pdfinfo{
+	/title=\ttitle
+}
