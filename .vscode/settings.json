@@ -21,6 +21,7 @@
         "**/*.ist": true,
         "**/*.glsdefs": true,
         "**/*.alg": true,
+        "**/*.dvi": true,
       },
     "rewrap.autoWrap.enabled": true,
     "rewrap.autoWrap.notification": "icon",
