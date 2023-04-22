@@ -1,44 +1,6 @@
 \documentclass{scrreprt}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{graphicx}
-\usepackage{subcaption}
-\usepackage{caption}
-\usepackage{wrapfig} % For wrapping figures in text.
-\usepackage{float}	% For placing figures in minipages
-\usepackage[hidelinks,linktocpage=true]{hyperref}
-\usepackage{xcolor}
-\usepackage{lipsum}
-\usepackage{comment}
-\usepackage{tabularx}
-\usepackage{longtable}
-\usepackage{multirow}
-\usepackage{booktabs}
-\usepackage{enumitem}
-\usepackage[titletoc]{appendix}
-\usepackage{ccicons} % The Creative Commons Icons
-\usepackage{perpage} %the perpage package
-\usepackage{float}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{tcolorbox}
-\usepackage{amsfonts} 
-\usepackage[nameinlink,noabbrev]{cleveref}
-\usepackage{scrlayer-scrpage} % for changing headers and footers
-\usepackage{arydshln}
-\usepackage{eso-pic}
-\usepackage{amsthm}
-\usepackage{url}
-\usepackage{amsfonts} % Use the Palatino font by default 
-\usepackage{fltrace}
-\usepackage{forest}
-\usepackage{rotating}
-\usepackage{scrhack}
-\usepackage[font=scriptsize]{caption}
-\usepackage[colorinlistoftodos,textwidth=30mm,textsize=tiny]{todonotes}
-\usepackage[acronym, toc]{glossaries}
-\usepackage{fontawesome}
 
+\input{config/packages}
 \input{config/commands}
 \input{config/citations}
 \input{config/layout}
@@ -46,7 +8,6 @@
 \input{config/listings}
 \input{config/bibliography}
 \input{config/treeview}
-
 
 \begin{document}
     \pagestyle{plain}
@@ -72,9 +33,10 @@
     \include{pages/bibliography}
     \include{pages/lof}
     \include{pages/lot}
-    \printglossary[title=Glossary of Terms] 		% Add Glossary of Terms
-	\printglossary[title=Abbreviations, toctitle=Abbreviations, type=\acronymtype, nonumberlist]
-    \appendix % Cue to tell LaTeX that the following "chapters" are Appendices
+    \include{pages/abbreviations}
+    \include{pages/glossary}
+	
+    \appendix
     \include{appendices/instructions}
     \include{appendices/metamodel}
     \include{appendices/architectures}
