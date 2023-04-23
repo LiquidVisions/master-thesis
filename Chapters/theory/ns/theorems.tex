@@ -1,18 +1,29 @@
-\subsection{The Theoretical Framework} \label{subsec_ns_desing_theorems}
+\subsection{The Design Theorems} \label{subsec_ns_desing_theorems}
 
-\gls{ns} consists of a theoretical framework describing a set of design principles. These
-principles are the basis for achieving the concepts of stability, evolvability, and
-modularity. \gls{ns} provides a rigorous and mathematical foundation for these theorems
-and they offer guidelines for designing and developing software systems. In the following
-sections, we will focus on the principles of \gls{ns} very briefly as they have been
-extensively described in various scientific papers.
+In the following table we will describe the Design Theorems of \gls{ns}, firstly presented
+by \textcite[111-119]{mannaert_normalized_2009}. They are known as \gls{soc}, \gls{dvt},
+\gls{avt} and \gls{sos}.
 
-We know from Chapter \ref{sec_artifact_requirements} that the design artifacts, as a part
-of this research, are implemented based on the \gls{ca} principles. Therefore, contrary to
-Chapter \ref{sec_ca_theory}, there will be no references to the manifestations of the NS
-design theorems in the design.
-
-\input{chapters/theory/ns/soc}
-\input{chapters/theory/ns/dtv}
-\input{chapters/theory/ns/avt}
-\input{chapters/theory/ns/sos}
+\begin{table}[H]
+    \begin{tabular}{ p{0.15\linewidth} p{0.75\linewidth}}
+        \hline
+        \textbf{Principle} & \textbf{Definition} \\ 
+        \hline
+        \gls{soc} & \gls{ns} has adopted the \gls{soc} principle. However,
+        \textcite[112]{mannaert_normalized_2009} defined a more strict definition. \emph{A
+        processing function can only contain a single task to achieve stability.} \\
+        
+        \gls{dvt} &  A data structure that is passed through the interface of a processing function needs to
+        exhibit version transparency to achieve stability.\\
+        
+        \gls{avt} & A processing function that is called by another processing function, needs to exhibit version
+        transparency to achieve stability.\\
+        
+        \gls{sos} & Calling a processing function within another processing function, needs to exhibit state
+        keeping to achieve stability.\\
+        
+        \bottomrule
+    \end{tabular}
+    \caption{The Design Theorems of Normalized Systems.}
+    \label{ns_principles}
+\end{table}
