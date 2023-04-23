@@ -1,42 +1,11 @@
-\subsection{Coupling} \label{subsec_on_coupling}
+\subsection{Low Coupling} \label{subsec_on_coupling}
 
-Coupling is an essential concept in software engineering that pertains to the degree of
-interdependence among software modules and components. The level of coupling between
-modules denotes the strength of their relationship, whereby a high level of coupling
-implies a significant degree of interdependence. Conversely, low coupling signifies a
-weaker relationship between modules, where modifications in one module are less likely to
-impact others. Although not always possible, the level of coupling between the various
-modules of the system should be kept to a bare minimum.
-
-The negative impact of excessive coupling on software systems is considerable. High
-coupling can render software systems challenging to maintain, modify, or evolve. It can make
-it considerably more challenging to find the root cause of potential bugs. Additionally, it
-causes fragility in the system, where slight modifications in one module can trigger
-cascading failures throughout the entire system. Therefore, it is crucial for software
-engineers to minimize coupling between modules while maintaining a cohesive design. By
-developing systems with low coupling, software engineers can construct more maintainable,
-scalable, and adaptable systems that are easier to evolve.
-
-Coupling in software engineering can take several forms, including content, common,
-control, stamp, and data coupling. Content coupling occurs when one module accesses or
-modifies the internal data or logic of another module, leading to high interdependence and
-difficulty in isolating errors. Common coupling occurs when several modules access and use
-the same global data, increasing their interdependence and reducing modularity. Control
-coupling occurs when one module controls the execution flow of another module, making it
-challenging to modify or reuse the controlled module. Stamp coupling arises when two modules
-share a common data structure, leading to tight coupling and high interdependence.
-Finally, data coupling exists when two modules share data, which can lead to coupling
-between them.
-
-One attempt to lower coupling in the expanded artifact is to prefer stamp coupling over
-data coupling through the API interface. This is done by making use of RequestModels and
-ViewModels, instead of the actual data element (see example in Listings \ref{SnipModelExamples}).
-Depending on the use case, only the required data is passed down to the view, or in the
-case of a command accepted as an input parameter.
-
-\lstinputlisting[
-    caption={The ViewModel \parencite{koks_componentviewmodel_2023} and RequestModel
-    \parencite{koks_deletecomponentcommand_2023} of the Entity 'Component'
-    \parencite{koks_component_2023}},
-    label={SnipModelExamples}]
-    {Snippets/ModelExamples.cs}
+Coupling is an essential concept in software engineering related to the degree of
+interdependence among software modules and components. High coupling between modules
+indicates the strength of their relationship, whereby a high level of coupling implies a
+significant degree of interdependence. Conversely, low coupling signifies a weaker
+relationship between modules, where modifications in one module are less likely to impact
+others. Although not always possible, the level of coupling between the various modules of
+the system should be kept to a bare minimum. Both \textcite[23]{mannaert_normalized_2016}
+and \textcite[130]{robert_c_martin_clean_2018} agree with the idea that modules should be
+coupled as loosely as possible
