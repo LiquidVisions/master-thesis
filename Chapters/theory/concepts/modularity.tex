@@ -1,18 +1,12 @@
 \subsection{Modularity}
 
-A Software module can be defined as self-contained units of code that perform specific
-tasks or sets of tasks within a more extensive system. A software module is designed to operate
-independently of other modules, with well-defined interfaces that allow it to communicate
-and exchange data with other modules if necessary \autocite[22]{mannaert_normalized_2016}.
+The challange with the concept of modularity lies in the definition of the term. Both
+\gls{ca} and \gls{ns} use a slightly different definition.
+\textcite[82]{robert_c_martin_clean_2018} describes a module as a piece of code that is 
+encapsulated in a source file and a cohesive set of functions and data structures.
+\textcite[22]{mannaert_normalized_2016} explains a module as a part of a system,
+that exhibits a high degree of cohesion and operates independently of other parts of the
+system.
 
-A module can be considered a hierarchical and recursive concept. They are independent of
-their size (lines of code) or computational magnitude. They can be as small as a function
-as part of a class. The class itself can also be considered a module. A group of classes
-contained in a Dynamic Link Library (DLL) or Application Programming Interface (API) can
-also be considered a module of an even more extensive system. 
-
-An essential part of the design of a software system is to identify the possible different
-modules and their interaction interfaces. Figure \ref{fig_modulair_components} presents a
-high-level depiction of modular manifestations in the artifact, with additional examples
-of modularity found in more granular implementations. Further discussion of this
-architecture is provided in Chapter \ref{sec_ca_theory}.
+Whilst both design approaches agree on the cohesiveness of the internal parts of a module,
+it seems that there is a slight difference in granularity in their definitions.

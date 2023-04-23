@@ -107,7 +107,7 @@ different layers, whereas table \ref{table:element_naming_convention} lists the 
 convention of the recurring elements. For more information about these elements see
 \ref{subsec_design_elements}.
 
-\begin{table}[h]
+\begin{table}[ht]
     \small
     \begin{tabular}{ l p{0.30\linewidth} p{0.43\linewidth} }
     \hline
@@ -123,38 +123,38 @@ convention of the recurring elements. For more information about these elements 
 \label{table:component_naming_convention}
 \end{table}
 
-    \begin{table}[h]
-        \small
-        \begin{tabular}{ l p{0.33\linewidth} p{0.39\linewidth} }
-        \hline
-        \textbf{Component} & \textbf{Element type} & \textbf{Naming Convention} \\ \hline
-        Presentation & Controller Impl & \textit{Noun}Controller \\
-        & ViewModelMapper Impl & \textit{Noun}ViewModelMapper \\
-        & Presenter Impl & \textit{VerbNoun}Presenter \\
-        & ViewModel Impl & \textit{Noun}ViewModel \\
-        & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
+\begin{table}[ht]
+    \small
+    \begin{tabular}{ l p{0.33\linewidth} p{0.39\linewidth} }
+    \hline
+    \textbf{Component} & \textbf{Element type} & \textbf{Naming Convention} \\ \hline
+    Presentation & Controller Impl & \textit{Noun}Controller \\
+    & ViewModelMapper Impl & \textit{Noun}ViewModelMapper \\
+    & Presenter Impl & \textit{VerbNoun}Presenter \\
+    & ViewModel Impl & \textit{Noun}ViewModel \\
+    & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
 
-        Application & Boundary Impl & \textit{VerbNoun}Boundary \\
-        & Boundary interface & IBoundary \\
-        & Gateway interface & I\textit{Verb}Gateway \\
-        & Interactor interface & I\textit{Verb}Interactor \\
-        & Interactor Impl & \textit{VerbNoun}Interactor \\
-        & Mapper Interface & IMapper \\
-        & RequestModelMapper Impl & \textit{VerbNoun}RequestModelMapper \\
-        & Presenter Interface & IPresenter \\
-        & Validator Interface & IValidator \\
-        & Validator Impl & \textit{VerbNoun}Validator \\
-        & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
-        
-        Infrastructure & Gateway Impl & \textit{Noun}Repository \\
-        & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
+    Application & Boundary Impl & \textit{VerbNoun}Boundary \\
+    & Boundary interface & IBoundary \\
+    & Gateway interface & I\textit{Verb}Gateway \\
+    & Interactor interface & I\textit{Verb}Interactor \\
+    & Interactor Impl & \textit{VerbNoun}Interactor \\
+    & Mapper Interface & IMapper \\
+    & RequestModelMapper Impl & \textit{VerbNoun}RequestModelMapper \\
+    & Presenter Interface & IPresenter \\
+    & Validator Interface & IValidator \\
+    & Validator Impl & \textit{VerbNoun}Validator \\
+    & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
+    
+    Infrastructure & Gateway Impl & \textit{Noun}Repository \\
+    & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
 
-        Domain & Data Entity Impl & \textit{Noun} \\
-        & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
-        \end{tabular}
-        \caption{Naming convention of recurring elements}
-        \label{table:element_naming_convention}
-        \end{table}
+    Domain & Data Entity Impl & \textit{Noun} \\
+    & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
+    \end{tabular}
+    \caption{Naming convention of recurring elements}
+    \label{table:element_naming_convention}
+\end{table}
 
     \subsection{Recurring elements}
     
@@ -163,4 +163,4 @@ convention of the recurring elements. For more information about these elements 
     will be added to the appropriate component, to comply with the design of the
     architecture.
 
-    \todo{requirement mbt code expansion toevoegen (pag 403)}
+    \textcolor{red}{TODO: requirement mbt code expansion toevoegen (pag 403)}
