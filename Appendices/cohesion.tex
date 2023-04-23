@@ -1,0 +1,54 @@
+\chapter{Cohesion} \label{appendix_cohesion_principles}
+
+\begin{table}[H]
+    \begin{tabular}{ p{0.25\linewidth} | p{0.69\linewidth}}
+        \toprule
+        \acrlong{rep} & \acrshort{rep} is a concept related to software development that
+        refers to the balance between reusing existing software components and releasing
+        new ones to ensure the efficient use of resources and time
+        \parencite[119]{robert_c_martin_clean_2018}.\\ \midrule 
+        
+        \acrlong{ccp} & In the context of Clean Architecture, the \acrshort{ccp} states
+        that classes or components that change together should be packaged together. In
+        other words, if a group of classes is likely to be affected by the same kind of
+        change, they should be grouped into the same package or module. This approach
+        enhances the maintainability and modularity of the software
+        \parencite[120]{robert_c_martin_clean_2018}.\\ \midrule 
+        
+        \acrlong{crp} & \acrshort{crp} states that classes or components that are reused
+        together should be packaged together. It means that if a group of classes tends to
+        be used together or has a high level of cohesion, they should be grouped into the
+        same package or module. This approach aims to make it easier for developers to
+        reuse components and understand their relationships
+        \parencite[121]{robert_c_martin_clean_2018}.\\
+
+        \bottomrule
+    \end{tabular}
+    \caption{The Component Cohesion Principles}
+    \label{appendix_tab_cohesion_principles}
+\end{table}
+
+Cohesion facilitates the reduction of complexity and interdependence among the components
+of a system, thereby contributing to a more efficient, maintainable, and reliable system.
+By organizing components around a shared purpose or function or by standardizing their
+interfaces, data structures, and protocols, cohesion can offer the following benefits:
+
+\begin{itemize}
+    \item \textbf{Reduce redundancy and duplication of effort}: \\
+    Cohesion ensures that components are arranged around a common purpose or function,
+    reducing duplicates or redundant code. This simplifies system comprehension,
+    maintenance, and modification.
+    \item \textbf{Promoting code reuse:}\\
+    Cohesion facilitates code reuse by making it easier to extract and reuse components
+    designed for specific functions. This saves time and effort during development and
+    enhances overall system quality.
+    \item \textbf{Enhance maintainability:}\\
+    Cohesion decreases the complexity and interdependence of system components, making it
+    easier to identify and rectify bugs or errors in the code. This improves system
+    maintainability and reduces the risk of introducing new errors during maintenance.
+    \item \textbf{Increase scalability:}\\
+    Cohesion improves a system's scalability by enabling it to be extended or modified
+    effortlessly to accommodate changing requirements or conditions. By designing
+    well-organized and well-defined components, developers can easily add or modify
+    functionality as needed without disrupting the rest of the system.  
+\end{itemize}

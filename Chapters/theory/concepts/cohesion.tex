@@ -1,35 +1,11 @@
 \subsection{Cohesion} \label{subsubsec_on_cohesion}
 
-The term cohesion denotes the extent to which the various structural components of a
-software system operate cohesively towards a singular and well-defined objective or goal.
-Empirical studies in software engineering have extensively demonstrated the significance
-of cohesion, linking higher levels of cohesion with reduced defects, enhanced
-maintainability, and greater openness to change. Consequently, achieving high cohesion has
-been associated with an overall improvement in software quality attributes such as
-reliability, maintainability, reusability, and evolvability.
-
-Cohesion facilitates the reduction of complexity and interdependence among the components
-of a system, thereby contributing to a more efficient, maintainable, and reliable system.
-By organizing components around a shared purpose or function or by standardizing their
-interfaces, data structures, and protocols, cohesion can offer the following benefits:
-
-\begin{itemize}
-    \item \textbf{Reduce redundancy and duplication of effort}: \\
-    Cohesion ensures that components are arranged around a common purpose or function,
-    reducing duplicates or redundant code. This simplifies system comprehension,
-    maintenance, and modification.
-    \item \textbf{Promoting code reuse:}\\
-    Cohesion facilitates code reuse by making it easier to extract and reuse components
-    designed for specific functions. This saves time and effort during development and
-    enhances overall system quality.
-    \item \textbf{Enhance maintainability:}\\
-    Cohesion decreases the complexity and interdependence of system components, making it
-    easier to identify and rectify bugs or errors in the code. This improves system
-    maintainability and reduces the risk of introducing new errors during maintenance.
-    \item \textbf{Increase scalability:}\\
-    Cohesion improves a system's scalability by enabling it to be extended or modified
-    effortlessly to accommodate changing requirements or conditions. By designing
-    well-organized and well-defined components, developers can easily add or modify
-    functionality as needed without disrupting the rest of the system.  
-\end{itemize}
-
+\textcite[22]{mannaert_normalized_2016} consider cohesion as modules that exist out of
+connected or interrelated parts of a hierarchical structure. On the other hand,
+\textcite[118]{robert_c_martin_clean_2018} discusses cohesion in the context of
+components. He attributes the three component cohesion principles as crucial to grouping
+classes or functions into cohesive components. Cohesion is a complex and dynamic process,
+as the level of cohesiveness might evolve as requirements change over time. The component
+cohesion principles are further described in \textit{Appendix
+\ref{appendix_cohesion_principles} \nameref{appendix_cohesion_principles}}, and the
+beneficiary impact of applying cohesion on this research’s artifacts.
