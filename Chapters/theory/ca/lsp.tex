@@ -1,55 +1,11 @@
 \subsubsection{The Liskov Substitution Principle} \label{subsubsec_lsp}
 
+The\gls{lsp} is named after Barbara Liskov, who first introduced the principle in a paper
+she co-authored in 1987. Barbara Liskov wrote the following statement to define subtypes
+(Robert C. Martin, 2018, p. 95). 
 
-The \gls{lsp} is a fundamental concept in object-oriented programming that deals with the
-behavior of derived objects (aka sub-types). The principal is named after Barbara Liskov,
-who first introduced the principle in a paper she co-authored in 1987. Barbara Liskov
-wrote the following statement as a way of defining subtypes
-\parencite[95]{robert_c_martin_clean_2018}.
-
-\mycolorbox{If for each	object o1 of type S there is an	object o2 of type T such that for
-all programs P defined in terms of T, the behavior of P	is unchanged when o1 is
-substituted for	o2 then S is a subtype of T.1}{\acrlong{lsp}}
-
-In simpler terms: An object \textit{Volvo} of type \textit{Vehical} should be
-able to be substituted for an object \textit{Toyota} of type \textit{Vehical} in any
-program that was defined in terms of \textit{Vehical}, without affecting the program's
-correctness. This applies to all programs, not just a specific one.
-
-The principle is based on the idea that a subtype should be semantically substitutable for
-its base type. This means that the subtype should behave in a way that is consistent with
-the expectations of the base type and should not introduce any new behaviors or violate
-any of the constraints imposed by the base type.
-
-The practical implications of \gls{lsp} are many. In software design, we should strive to
-create subtypes that are as similar as possible to their base types in terms of their
-behavior and the constraints they impose. In testing, it means that we should test
-subtypes to ensure that they behave correctly when used in place of their base types.
-
-Consider \citecode{koks_abstractexpander_2023}. This (abstract) object type allows for
-multiple implementations of \textit{Expanders}. The primary example is the
-\citecode{koks_cleanarchitectureexpander_2023} which is responsible for generating the
-expanded artifact that is part of this research. Different types of expanders could be
-added to the generator, ensuring they all behave in the same way.
-
-The \citecode{koks_icreategateway_2023} in Listing \ref{list_icrreategateway} is another
-example. The artifact has two implementations of this interface. The data of the entities
-are currently stored in the database, but harvest data is serialized to XML using the same
-\code{koks_icreategateway_2023} interface. With this design decision, it is very easy to adapt
-to a different type of storage mechanism if future requirement demand such a change.
-
-One might notice the similarities with the \gls{ocp}. The difference is that the \gls{ocp}
-focuses on the extensibility of the system, without having to modify existing code.
-\gls{lsp} ensures that the behavior of different subtypes is following the required
-functionality. \gls{lsp} supports \gls{ocp}, but it is not the only way of doing so.
-
-\lstinputlisting[
-    caption={The \citetitle{koks_icreategateway_2023}},
-    label={list_icrreategateway} ]
-    {Snippets/ICreateGateway.cs}
-
-\lstinputlisting[
-    caption={The \citetitle{koks_genericrepository_2023} and \citetitle{koks_harvestrepository_2023}},
-    label={list_icrreategatewayImplementations} ]
-    {Snippets/ICreateGatewayImplementations.cs}
-
+\textit{If for each object o1 of type S, there is an object o2 of
+type T such that for all programs P defined in terms of T, the behavior of P is unchanged
+when o1 is substituted for o2 then S is a subtype of T.1.} Or in simpler terms: To build
+Software from interchangeable parts, those parts must adhere to a contract that allows
+those parts to be substituted for an other (Robert C. Martin, 2018, p. 80)

@@ -58,3 +58,38 @@ Listing \ref{list_CodeGeneratorInteractor} shows the
 implementing the specific type of \code{koks_iexecutioninteractor_2023} without having to
 affect the implementation. This is by definition an example of \enquote{open for
 extension} and \enquote{closed for modifications}.
+
+\textbf{Liskov Substitution Principe}
+
+The practical implications of \gls{lsp} are many. In software design, we should strive to
+create subtypes that are as similar as possible to their base types in terms of their
+behavior and the constraints they impose. In testing, it means that we should test
+subtypes to ensure that they behave correctly when used in place of their base types.
+
+Consider \citecode{koks_abstractexpander_2023}. This (abstract) object type allows for
+multiple implementations of \textit{Expanders}. The primary example is the
+\citecode{koks_cleanarchitectureexpander_2023} which is responsible for generating the
+expanded artifact that is part of this research. Different types of expanders could be
+added to the generator, ensuring they all behave in the same way.
+
+The \citecode{koks_icreategateway_2023} in Listing \ref{list_icrreategateway} is another
+example. The artifact has two implementations of this interface. The data of the entities
+are currently stored in the database, but harvest data is serialized to XML using the same
+\code{koks_icreategateway_2023} interface. With this design decision, it is very easy to adapt
+to a different type of storage mechanism if future requirement demand such a change.
+
+One might notice the similarities with the \gls{ocp}. The difference is that the \gls{ocp}
+focuses on the extensibility of the system, without having to modify existing code.
+\gls{lsp} ensures that the behavior of different subtypes is following the required
+functionality. \gls{lsp} supports \gls{ocp}, but it is not the only way of doing so.
+
+\lstinputlisting[
+    caption={The \citetitle{koks_icreategateway_2023}},
+    label={list_icrreategateway} ]
+    {Snippets/ICreateGateway.cs}
+
+\lstinputlisting[
+    caption={The \citetitle{koks_genericrepository_2023} and \citetitle{koks_harvestrepository_2023}},
+    label={list_icrreategatewayImplementations} ]
+    {Snippets/ICreateGatewayImplementations.cs}
+
