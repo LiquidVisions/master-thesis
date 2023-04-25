@@ -1,26 +1,9 @@
 \subsubsection{The Interface Segregation Principle} \label{subsubsec_isp}
 
 The \gls{isp} suggests that software components should have narrow, specific interfaces
-rather than broad, general-purpose ones. The \gls{isp} states that no client code should
-be forced to depend on methods it does not use. In other words, interfaces should be
-designed to be as small and focused as possible, containing only the methods that are
-relevant to the clients that use them. This allows clients to use only the methods they
-need, without being forced to implement or depend on unnecessary methods
-\parencite[104]{robert_c_martin_clean_2018}.
-
-Overall, the \gls{isp} is about designing interfaces that are tailored to the specific
-needs of the clients that use them, rather than trying to create one-size-fits-all
-interfaces that may be bloated or unwieldy.
-
-Take a look at Listing \ref{list_ispexample}. In order to comply with the \gls{isp}, the
-design decision was made to separate all \gls{crud} operations into separate interfaces.
-In the example of the \citecode{koks_appseederinteractor_2023} (see \ref{list_ispexample})
-only the delete and create gateways where required. An alternative approach was to create
-an IGateway interface containing all of the \gls{crud} operations. Following this approach
-would lead to dependencies to all \gls{crud} operations in the
-\code{koks_appseederinteractor_2023}.
-
-\lstinputlisting[
-    caption={The Gateways for Create, Read, Update, Delete operations},
-    label={list_ispexample}]
-    {Snippets/ISP_Example.cs}
+rather than broad, general-purpose ones. In addition, the \gls{isp} states that consumer
+code should not be allowed to depend on methods it does not use. In other words,
+interfaces should be designed to be as small and focused as possible, containing only the
+methods relevant to the consumer code using them. This allows for the consumer code to use
+only the needed methods without being forced to implement or depend on unnecessary methods
+\parencite[104]{robert_c_martin_clean_2018}. 

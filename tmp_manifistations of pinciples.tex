@@ -93,3 +93,16 @@ functionality. \gls{lsp} supports \gls{ocp}, but it is not the only way of doing
     label={list_icrreategatewayImplementations} ]
     {Snippets/ICreateGatewayImplementations.cs}
 
+\textbf{Interface segregation principle}
+Take a look at Listing \ref{list_ispexample}. In order to comply with the \gls{isp}, the
+design decision was made to separate all \gls{crud} operations into separate interfaces.
+In the example of the \citecode{koks_appseederinteractor_2023} (see \ref{list_ispexample})
+only the delete and create gateways where required. An alternative approach was to create
+an IGateway interface containing all of the \gls{crud} operations. Following this approach
+would lead to dependencies to all \gls{crud} operations in the
+\code{koks_appseederinteractor_2023}.
+
+\lstinputlisting[
+    caption={The Gateways for Create, Read, Update, Delete operations},
+    label={list_ispexample}]
+    {Snippets/ISP_Example.cs}
