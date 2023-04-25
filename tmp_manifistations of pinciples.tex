@@ -106,3 +106,31 @@ would lead to dependencies to all \gls{crud} operations in the
     caption={The Gateways for Create, Read, Update, Delete operations},
     label={list_ispexample}]
     {Snippets/ISP_Example.cs}
+
+    \textbf{dependency inversion principle}
+    
+Manifestations in the artifacts are ample. One of which is the consistent use of the
+Dependency Injection pattern. In order to prevent the risks of displacing and dispersing
+dependencies all over the system \parencite[214]{mannaert_normalized_2016} we are using
+dependency containers. Each module is maintaining its own dependencies, which are
+bootstrapped at application startup (see Listing \ref{list_dip})
+\parencite{koks_generator_2023}.
+
+\lstinputlisting[
+    caption={Bootstrapping the dependencies of each component/layer of the
+    generator artifact.},
+    label={list_dip}]
+    {Snippets/Dip.cs}
+
+A more abstract example is the separation of required modules into separate component
+libraries. This applies to both the generated and generator artifact (see Figure
+\ref{fig_solutions}). The actual compliance to the \gls{dip} is how the flow of control
+between the components is organized. This is accurately depicted in Figure
+\ref{fig_modulair_components} \nameref{fig_modulair_components}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figures/solutions.pdf}
+    \caption[Separation of component libraries]{Separation of component libraries.}
+    \label{fig_solutions}
+\end{figure}
