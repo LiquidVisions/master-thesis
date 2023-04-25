@@ -1,20 +1,17 @@
 \subsection{The Design principles} \label{subsec_design_principles}
 
-The history of \gls{solid} is long. \textcite{robert_c_martin_clean_2018} began to
-assemble them in the late 1980s
+\textcite[78]{robert_c_martin_clean_2018} argues that software can quickly become a
+well-intended mess of bricks and building blocks without a rigorous set of design
+principles. So, from the early 1980s, he began to assemble a set of software design
+principles as guidelines to create software structures that tolerate change and are easy
+to understand. The principles are intended to promote modular and component-level software
+structure \parencite[79]{robert_c_martin_clean_2018}. In 2004 the arrangement of the
+principles was definitively arranged to form the acronym SOLID. 
 
-\Citeauthor{robert_c_martin_clean_2018} argues that, without a solid (pun intended) set of
-design principles a design and architecture can quickly turn into a well-intended mess
-of bricks and building blocks. This is where the SOLID design principles come into place.
+The upcoming sections will provide an overview of each of the SOLID principles.
 
-SOLID is an acronym for \gls{solid}. The \gls{solid} principles guide the developer on how
-to arrange the architecture of the software system. It can be considered a set set of
-rules on how to arrange data structures and functions into classes
-\parencite[78]{robert_c_martin_clean_2018}.
-
-The upcoming sections will provide a brief overview of each of the SOLID principles, as
-there is a plethora of literature on this subject. In chapter
-\ref{sec_artifact_requirements} we learn that one of the requirements is to design the
-artifact solely based on the design approach of \gls{ca}. As such, each principle's description
-will be accompanied by one or more manifestation examples in the artifact, aligning with
-the research objectives.
+\input{chapters/theory/ca/srp}
+\input{chapters/theory/ca/ocp}
+\input{chapters/theory/ca/lsp}
+\input{chapters/theory/ca/isp}
+\input{chapters/theory/ca/dip}
