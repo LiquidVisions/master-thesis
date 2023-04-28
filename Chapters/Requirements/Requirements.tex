@@ -1,15 +1,45 @@
 \chapter{Requirements} \label{chap_requirements} 
 
-Since we are researching the convergence level between \gls{ca} with \gls{ns} in a
-real-life artifacts, we need a design cycle that complies to the evolvability requirements
-of \gls{ns} 
+This Chapter will specify the actual requirements of the software artifacts in Section
+\ref{sec_artifact_requirements}. During the Design Cycle of the artifacts we will apply
+the 5 basic functional requirements. These requirements are defined by
+\textcite[254-261]{mannaert_normalized_2016} as part of a Functional-Construction Software
+Transformation. They are used to study the evolvability  of software systems in general
+\parencite[251]{mannaert_normalized_2016}. Summarized, these requirements are defined by
+\textcite{mannaert_normalized_2016} as followed.
 
-As such, the design and architecture requirements are intentionally and
-entirely based on the principles and design approach of \gls{ca}. A full description of
-this requirement can be found in section \ref{sec_artifact_requirements}. In order to
-analyze the level of convergence, the artifacts need to comply with the evolvability
-requirements of the theory of \gls{ns}, described in section
-\ref{sec_research_requirements} of this chapter.
 
-\input{Chapters/requirements/research}
+
+\begin{table}[H]
+    \begin{tabular}{ p{0.15\linewidth} p{0.75\linewidth}}
+        \hline
+        \textbf{Element} & \textbf{Description} \\ 
+        \hline
+        Data & This object represents a piece of data in the system. Data elements are
+        used to pass information between processing functions and other objects. In
+        \gls{ns}, data elements are typically standardized to ensure consistency across
+        the system.\\ \midrule
+
+        Task & This object represents a specific task or action in the system. Tasks can
+        be composed of one or more processing functions and can be used to represent
+        complex operations within the system.\\ \midrule
+
+        Connector & This object is used to connect different parts of the system.
+        Connectors can link processing functions, data elements, and other objects to work
+        together seamlessly.\\ \midrule
+
+        Flow & This object represents the flow of control through the system.
+        It determines the order in which processing functions are executed and can be used
+        to handle error conditions or other exceptional cases.\\ \midrule
+
+        Trigger & A trigger represents an object that reacts to specific events or changes in the system
+        by executing predefined actions.\\
+
+        \bottomrule
+    \end{tabular}
+    \caption{The Elements proposed by Normalized Systems Theory}
+    \label{ns_element}
+\end{table}
+
+
 \input{Chapters/requirements/artifact}

@@ -6,7 +6,7 @@ requirements are to be applied.
 
 \subsection{Artifact components}
 In \fullref{subsec_layers} we describe that in a typical application, one of the goals of
-\gls{ca} is to separate the domain logic from Impl details like (user) interface
+\gls{ca} is to separate the domain logic from implementation details like (user) interface
 or storage mechanisms. Therefore, the artifact must follow the layered architecture of
 \gls{ca} (see figure \ref{fig_modulair_components})
 
@@ -66,32 +66,33 @@ convention of the recurring elements. For more information about these elements 
 
 \begin{table}[ht]
     \small
-    \begin{tabular}{ l p{0.33\linewidth} p{0.39\linewidth} }
+    \begin{tabular}{ l p{0.24\linewidth} p{0.09\linewidth} p{0.37\linewidth} }
     \hline
-    \textbf{Component} & \textbf{Element type} & \textbf{Naming Convention} \\ \hline
-    Presentation & Controller Impl & \textit{Noun}Controller \\
-    & ViewModelMapper Impl & \textit{Noun}ViewModelMapper \\
-    & Presenter Impl & \textit{VerbNoun}Presenter \\
-    & ViewModel Impl & \textit{Noun}ViewModel \\
-    & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
+    \textbf{Component} & \textbf{Element} & \textbf{Type} & \textbf{Naming Convention} \\ \hline
+    Presentation & Controller & class & \textit{Noun}Controller \\
+    & ViewModelMapper & class & \textit{Noun}ViewModelMapper \\
+    & Presenter & class & \textit{VerbNoun}Presenter \\
+    & ViewModel & class & \textit{Noun}ViewModel \\
+    & DI Bootstrapper & class & DependencyInjectionBootstrapper \\ \hline
 
-    Application & Boundary Impl & \textit{VerbNoun}Boundary \\
-    & Boundary interface & IBoundary \\
-    & Gateway interface & I\textit{Verb}Gateway \\
-    & Interactor interface & I\textit{Verb}Interactor \\
-    & Interactor Impl & \textit{VerbNoun}Interactor \\
-    & Mapper Interface & IMapper \\
-    & RequestModelMapper Impl & \textit{VerbNoun}RequestModelMapper \\
-    & Presenter Interface & IPresenter \\
-    & Validator Interface & IValidator \\
-    & Validator Impl & \textit{VerbNoun}Validator \\
-    & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
+    Application & Boundary & class & \textit{VerbNoun}Boundary \\
+    & Boundary  & interface & IBoundary \\
+    & Gateway  & interface & I\textit{Verb}Gateway \\
+    & Interactor  & interface & I\textit{Verb}Interactor \\
+    & Interactor & class & \textit{VerbNoun}Interactor \\
+    & Mapper  & interface & IMapper \\
+    & RequestModelMapper & class & \textit{VerbNoun}RequestModelMapper \\
+    & Presenter  & interface & IPresenter \\
+    & Validator  & interface & IValidator \\
+    & Validator & class & \textit{VerbNoun}Validator \\
+    & DI Bootstrapper & class & DependencyInjectionBootstrapper \\ \hline
     
-    Infrastructure & Gateway Impl & \textit{Noun}Repository \\
-    & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
+    Infrastructure & Gateway & class & \textit{Noun}Repository \\
+    & DI Bootstrapper & class & DependencyInjectionBootstrapper \\ \hline
 
-    Domain & Data Entity Impl & \textit{Noun} \\
-    & DI Bootstrapper & DependencyInjectionBootstrapper \\ \hline
+    Domain & Data Entity & class & \textit{Noun} \\
+    & DI Bootstrapper & class & DependencyInjectionBootstrapper \\ \hline
+
     \end{tabular}
     \caption{Naming convention of recurring elements}
     \label{table:element_naming_convention}
