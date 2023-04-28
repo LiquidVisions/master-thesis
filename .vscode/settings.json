@@ -26,19 +26,7 @@
     "rewrap.autoWrap.enabled": true,
     "rewrap.autoWrap.notification": "icon",
     "rewrap.wrappingColumn": 90,
-    "grammarly.selectors": [
-      {
-        "language": "latex",
-        "scheme": "file"
-      }
-    ],
-    "grammarly.files.exclude": [
-      "**/main.tex",
-      "**/main.old",
-      "**/**.cs",
-      "**/config/**.tex",
-    ],
-    "grammarly.config.documentDomain": "academic",
+
     "latex-workshop.latex.tools": [
       {
         "name": "makeglossaries",
@@ -243,6 +231,7 @@
         ]
       }
     ],
+    "grammarly.config.documentDomain": "academic",
     "grammarly.config.documentDialect": "american",
     "grammarly.config.suggestions.PassiveVoice": true,
     "grammarly.config.suggestions.OxfordComma": true,
@@ -250,5 +239,18 @@
     "grammarly.config.suggestions.StylisticFragments": true,
     "grammarly.startTextCheckInPausedState": true,
     "grammarly.config.suggestions.UnnecessaryEllipses": true,
-    "grammarly.config.suggestions.ConjunctionAtStartOfSentence": true
+    "grammarly.config.suggestions.ConjunctionAtStartOfSentence": true,
+    "grammarly.selectors": [
+      {
+        "language": "latex",
+        "scheme": "file"
+      }
+    ],
+    "grammarly.files.exclude": [
+      "**/main.tex",
+      "**/main.old",
+      "**/**.cs",
+      "**/config/**.tex",
+    ],
+
 }
