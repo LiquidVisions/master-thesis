@@ -2,44 +2,42 @@
 
 This Chapter will specify the actual requirements of the software artifacts in Section
 \ref{sec_artifact_requirements}. During the Design Cycle of the artifacts we will apply
-the 5 basic functional requirements. These requirements are defined by
-\textcite[254-261]{mannaert_normalized_2016} as part of a Functional-Construction Software
-Transformation. They are used to study the evolvability  of software systems in general
-\parencite[251]{mannaert_normalized_2016}. Summarized, these requirements are defined by
-\textcite{mannaert_normalized_2016} as followed.
+the 5 basic functional requirements. These requirements are defined by as part of a
+Functional-Construction Software Transformation. They are used to study the evolvability
+of software systems in general \parencite[251]{mannaert_normalized_2016}.
+\textcite[254-261]{mannaert_normalized_2016} defnined them as followed.
 
-
-
-\begin{table}[H]
-    \begin{tabular}{ p{0.15\linewidth} p{0.75\linewidth}}
-        \hline
-        \textbf{Element} & \textbf{Description} \\ 
-        \hline
-        Data & This object represents a piece of data in the system. Data elements are
-        used to pass information between processing functions and other objects. In
-        \gls{ns}, data elements are typically standardized to ensure consistency across
-        the system.\\ \midrule
-
-        Task & This object represents a specific task or action in the system. Tasks can
-        be composed of one or more processing functions and can be used to represent
-        complex operations within the system.\\ \midrule
-
-        Connector & This object is used to connect different parts of the system.
-        Connectors can link processing functions, data elements, and other objects to work
-        together seamlessly.\\ \midrule
-
-        Flow & This object represents the flow of control through the system.
-        It determines the order in which processing functions are executed and can be used
-        to handle error conditions or other exceptional cases.\\ \midrule
-
-        Trigger & A trigger represents an object that reacts to specific events or changes in the system
-        by executing predefined actions.\\
-
-        \bottomrule
-    \end{tabular}
-    \caption{The Elements proposed by Normalized Systems Theory}
-    \label{ns_element}
-\end{table}
+\begin{itemize}
+    \item An information system needs to be able to represent instances of
+    data entities. A data entity consists of several data fields. Such a field may be a basic
+    data field representing a value of a reference to another data entity.
+    
+    \item An information system needs to be able to execute processing actions on
+    instances of data entities. A processing action consists of several consecutive processing
+    tasks. Such a task may be a basic task, i.e., a unit of processing that can change
+    independently, or an invocation of another processing action.
+    
+    \item An information system needs to be able to input or output values
+    of instances of data entities through connectors.
+    
+    \item An existing information system representing a set of data entities, needs
+    to be able to represent: 
+    \begin{itemize}
+        \item a new version of a data entity that corresponds to including an additional
+        data field
+        \item an additional data entity 
+    \end{itemize}
+    
+    \item An existing information system providing a set of processing
+    actions, needs to be able to provide:
+    \begin{itemize}
+        \item a new version of a processing task, whose use may be mandatory
+        \item a new version of a processing action, whose use may be mandatory
+        \item an additional processing task
+        \item an additional processing action
+    \end{itemize}
+    
+\end{itemize}
 
 
 \input{Chapters/requirements/artifact}
