@@ -250,7 +250,7 @@
       "**/main.tex",
       "**/main.old",
       "**/**.cs",
-      "**/config/**.tex",
+      "**/config/**",
     ],
 
 }
