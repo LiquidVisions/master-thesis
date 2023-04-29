@@ -1,53 +1,36 @@
-\subsection{The Design Elements} \label{subsec_design_elements}
+\subsection{The Design Elements} \label{subsec_design_elements} \todo{add cites to CA book}
 
-In the context of \gls{ca} approach, the goal is to design a software system that is highly
-modular, maintainable and testable. The accumulation of the Desing principles discussed
-in chapter \ref{subsec_design_principles} leads to the following generalization of the
-architecture. Each of the following elements has a crucial role to achieve the
-design goals.
+\textcite{robert_c_martin_clean_2018} proposes the following elements to achieve
+the goal of \enquote{Clean Architecture} of software components.
 
 \begin{table}[H]
-    \begin{tabular}{ p{0.15\linewidth} p{0.75\linewidth}}
+    \begin{tabular}{ p{0.17\linewidth} p{0.74\linewidth}}
         \hline
         \textbf{Element} & \textbf{Description} \\ 
         \hline
-        Entity & Entities are the application's core business objects, representing the
-        domain's fundamental concepts and rules. They encapsulate the data and behavior
-        essential to the application's functionality.\\ \midrule
+        Entity & Entities are the core business objects, representing the domain's
+        fundamental data.\\ \midrule
 
-        Interactor & Interactors, also known as Use cases, encapsulate the application's
-        business logic and represent specific actions that the system can perform. They
-        are responsible for coordinating the work of other components and ensuring that
-        the system behaves correctly.\\ \midrule
+        Interactor & Interactors encapsulate business logic and represent specific actions
+        that the system can perform. \\ \midrule
 
-        RequestModel & RequestModels are used to represent the data required by a specific
-        interactor. They provide a clear and concise representation of the data required
-        by the Use Case, making it easier to manage and modify the application.\\ \midrule
+        RequestModel & RequestModels are used to represent the input data required by a specific
+        interactor.\\ \midrule
 
-        ViewModel & ViewModels are part of the presentation layer and are responsible for
-        managing the state of the user interface. They receive data from the Presenters
-        and update the user interface accordingly. They are also responsible for handling
-        user input and sending it to the Controllers for processing.\\ \midrule
+        ViewModel & ViewModels are responsible for managing the data and behaviour of the
+        user interface. \\ \midrule
 
         Controller & Controllers are responsible for handling requests from the user
-        interface and routing them to the appropriate Interactor. They are typically part
-        of the user interface layer and are responsible for coordinating the work of other
-        components.\\ \midrule
+        interface and routing them to the appropriate Interactor.\\ \midrule
 
-        Presenter & Presenters are responsible for formatting and presenting data to the
-        user interface. They receive data from the Interactor and convert it into a format
-        readily displayed to the user. They are also responsible for handling user input
-        and sending it back to the Interactor for processing.\\ \midrule
+        Presenter & Presenters are responsible for formatting and the data for the user
+        interface.\\ \midrule
 
         Gateway & A Gateway provides an abstraction layer between the application and its
-        external dependencies, such as databases, web services, or other systems. They
-        allow the system to be decoupled from its external dependencies and can be easily
-        replaced or adapted.\\ \midrule
+        external dependencies, such as databases, web services, or other external
+        systems.\\ \midrule
 
-        Boundary & A Boundary refers to an interface or abstraction that separates
-        different layers or components of a system. The purpose of these boundaries is to
-        promote modularity, evolvability, and testability by enforcing the separation of
-        concerns, allowing each layer to evolve independently.\\
+        Boundary & Boundaries are used to separate the the different layers of the component.\\
 
         \bottomrule
     \end{tabular}
