@@ -1,0 +1,32 @@
+\section{Software Transformation Requirements} \label{sec_requirements_transformation}
+
+We study stability and evolvability by investigating potential Combinatorial Effects in
+\gls{ca} artifacts. Therefore, during the implementation, we will apply parts of the
+Functional-Construction Software Transformation from
+\textcite[251]{mannaert_normalized_2016} by using the following five proposed Functional
+Requirements Specifications. \textcite[254-261]{mannaert_normalized_2016} have defnined
+them as followed.
+
+\begin{enumerate}[leftmargin=*]
+    \item An information system needs to be able to represent instances of
+    data entities. A data entity consists of several data fields. Such a field may be a basic
+    data field representing a value of a reference to another data entity.
+    
+    \item An information system needs to be able to execute processing actions on
+    instances of data entities. A processing action consists of several consecutive processing
+    tasks. Such a task may be a basic task, i.e., a unit of processing that can change
+    independently, or an invocation of another processing action.
+    
+    \item An information system needs to be able to input or output values
+    of instances of data entities through connectors.
+    
+    \item An existing information system representing a set of data entities, needs
+    to be able to represent a new version of a data entity that corresponds to including an additional
+    data field and an additional data entity.
+    
+    \item An existing information system providing a set of processing
+    actions, needs to be able to provide a new version of a processing task, whose use may
+    be mandatory, a new version of a processing action, whose use may be mandatory, an
+    additional processing task and an additional processing action
+    
+\end{enumerate}

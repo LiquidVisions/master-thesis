@@ -14,3 +14,12 @@
 \newcommand{\conv}{\faPlus \faPlus}
 \newcommand{\noconv}{\faMinus}
 \newcommand{\partconv}{\faPlus}
+
+\usepackage{array}
+\usepackage{ragged2e}
+\newcolumntype{P}[1]{>{\RaggedRight\hspace{0pt}}p{#1}}
+
+\usepackage{etoolbox}
+\preto\tabular{\setcounter{magicrownumbers}{0}}
+\newcounter{magicrownumbers}
+\newcommand\rownumber{\stepcounter{magicrownumbers}\arabic{magicrownumbers}}

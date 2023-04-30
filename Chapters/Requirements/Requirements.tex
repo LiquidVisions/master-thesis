@@ -1,44 +1,15 @@
 \chapter{Requirements} \label{chap_requirements} 
 
-This Chapter will specify the actual requirements of the software artifacts in Section
-\ref{sec_artifact_requirements}. We are studying the stability and evolvability by
-investigating potential Combinatorial Effects in \gls{ca} artifacts. During the
-implementation, we will apply parts of the Functional-Construction Software Transformation
-from \textcite[251]{mannaert_normalized_2016} by using the following five proposed
-Functional Requirements Specifications. \textcite[254-261]{mannaert_normalized_2016} have
-defnined them as followed.
-
-\begin{itemize}
-    \item An information system needs to be able to represent instances of
-    data entities. A data entity consists of several data fields. Such a field may be a basic
-    data field representing a value of a reference to another data entity.
-    
-    \item An information system needs to be able to execute processing actions on
-    instances of data entities. A processing action consists of several consecutive processing
-    tasks. Such a task may be a basic task, i.e., a unit of processing that can change
-    independently, or an invocation of another processing action.
-    
-    \item An information system needs to be able to input or output values
-    of instances of data entities through connectors.
-    
-    \item An existing information system representing a set of data entities, needs
-    to be able to represent: 
-    \begin{itemize}
-        \item a new version of a data entity that corresponds to including an additional
-        data field
-        \item an additional data entity 
-    \end{itemize}
-    
-    \item An existing information system providing a set of processing
-    actions, needs to be able to provide:
-    \begin{itemize}
-        \item a new version of a processing task, whose use may be mandatory
-        \item a new version of a processing action, whose use may be mandatory
-        \item an additional processing task
-        \item an additional processing action
-    \end{itemize}
-    
-\end{itemize}
+This Chapter outlines the requirements for this Design Science Research study, where we
+focus on the stability a\& evolvability of Software Artifacts. Section
+\ref{sec_requirements_transformation} begins by discussing Software Transformation
+Requirements proposed by \textcite{mannaert_normalized_2016}, which serve as a foundation
+for assessing the stability \& evolvability of the Artifacts. Next, Section
+\ref{sec_artifact_requirements} details the specific requirements of the Artifacts used in
+this study. These requirements will help ensure that the Artifacts are suitable for
+evaluating the stability \& evolvability of Software Artifacts designed based on Clean
+Architecture and SOLID Principles.
 
 
+\input{Chapters/requirements/functional}
 \input{Chapters/requirements/artifact}

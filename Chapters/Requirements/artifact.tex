@@ -1,107 +1,20 @@
 \section{Artifact requirements} \label{sec_artifact_requirements}
 
-Both of the artifacts will be implemented following the desing and principles of \gls{ca}
-as litterly and pricisely as possible.
+Chapter \fullref{sec_research_objectives} outlines the construction of two artifacts. Both
+of these artifacts will be meticulously designed and developed in accordance with the
+design philosophy and principles of \gls{ca}, ensuring strict adherence to the following
+requirements:
 
-\subsection*{Requirement 1: Package architecture}
-In \fullref{subsec_layers} we describe that in a typical application, one of the goals of
-\gls{ca} is to separate the domain logic from implementation details like (user) interface
-or storage mechanisms. Therefore, the artifact must follow the layered architecture of
-\gls{ca} (see figure \ref{fig_modulair_components})
+\input{Chapters/requirements/requirementComponent}
+\input{Chapters/requirements/requirementSoftware}
 
-In the case of the \nameref{sec_generator_artifact} there are two separate infrastructure
-layers. The first one has a dependency on
-EntityFrameworkCore\footnote{\url{https://learn.microsoft.com/en-us/ef/core/}} technology
-for data persistence in an Azure SQL database. The other one handles persistence by
-serialization of data on a windows machine.
 
-\subsection{Flow of control}
-One of the \gls{solid} design principles is the \acrfull{dip}. This principle affects the.
-As described in \fullref{sebsec:dependency_rule}, this affects the flow of control of the
-artifacts components. To achieve the evolvability of each of the components, the flow of
-control must adhere to the following statement. This is also depicted in Figure
-\ref{fig_modulair_components}.
 
-The component dependencies must point only inward, toward higher-level policies. To make
-it more strict, the Presentation and infrastructure layers only depend on the Application
-layer The Application layer only depends on the  Domain Layer.
 
-\subsection{Adherence to Design principles}
-In \fullref{subsec_design_principles} we describe what needs to be done to adhere to the
-\gls{solid} design principles. Each design pattern that is applied to the architecture of
-artifacts adheres at least to one of the \gls{solid} principles.
 
-\subsection{Screaming Architecture}
-The essence of Screaming Architecture is to design a system where the structure and
-purpose of each component and layer are immediately apparent to anyone looking at it. This
-is achieved through clear and consistent naming conventions of the classes, namespaces and,
-components.
+\subsection*{Design Principles compliancy}
+Each architectural pattern follows at least one of the SOLID principles, ensuring that
+none of the implementations violate these principles. 
 
-In the literature of \gls{ca}, there is no mention of rules or recommendations for naming
-conventions. The most commonly practiced naming convention of nouns (for data entities)
-and verbs (for actions) will be used. This is also advocated by the literature of \gls{ns}
-\parencite[357]{mannaert_normalized_2016}.
-
-Table \ref{table:component_naming_convention} lists the required naming convention for the
-different layers, whereas table \ref{table:element_naming_convention} lists the naming
-convention of the recurring elements. For more information about these elements see
-\ref{subsec_design_elements}.
-
-\begin{table}[ht]
-    \small
-    \begin{tabular}{ l p{0.30\linewidth} p{0.43\linewidth} }
-    \hline
-    \textbf{Component} & \textbf{Filename} & \textbf{Namespace} \\ 
-    \hline
-    Domain & [Prod].Domain & [Company].[Prod].Domain \\
-    Application & [Prod].Application & [Company].[Prod].Application \\
-    Presentation & [Prod].Presentation.[Tech] & [Company].[Prod].Presentation.[Tech] \\
-    Infrastructure & [Prod].Infrastructure.[Tech] & [Company].[Prod].Infrastructure.[Tech]
-    \\ \hline
-    \end{tabular}
-\caption{Naming convention components}
-\label{table:component_naming_convention}
-\end{table}
-
-\begin{table}[ht]
-    \small
-    \begin{tabular}{ l p{0.24\linewidth} p{0.09\linewidth} p{0.37\linewidth} }
-    \hline
-    \textbf{Component} & \textbf{Element} & \textbf{Type} & \textbf{Naming Convention} \\ \hline
-    Presentation & Controller & class & \textit{Noun}Controller \\
-    & ViewModelMapper & class & \textit{Noun}ViewModelMapper \\
-    & Presenter & class & \textit{VerbNoun}Presenter \\
-    & ViewModel & class & \textit{Noun}ViewModel \\
-    & DI Bootstrapper & class & DependencyInjectionBootstrapper \\ \hline
-
-    Application & Boundary & class & \textit{VerbNoun}Boundary \\
-    & Boundary  & interface & IBoundary \\
-    & Gateway  & interface & I\textit{Verb}Gateway \\
-    & Interactor  & interface & I\textit{Verb}Interactor \\
-    & Interactor & class & \textit{VerbNoun}Interactor \\
-    & Mapper  & interface & IMapper \\
-    & RequestModelMapper & class & \textit{VerbNoun}RequestModelMapper \\
-    & Presenter  & interface & IPresenter \\
-    & Validator  & interface & IValidator \\
-    & Validator & class & \textit{VerbNoun}Validator \\
-    & DI Bootstrapper & class & DependencyInjectionBootstrapper \\ \hline
-    
-    Infrastructure & Gateway & class & \textit{Noun}Repository \\
-    & DI Bootstrapper & class & DependencyInjectionBootstrapper \\ \hline
-
-    Domain & Data Entity & class & \textit{Noun} \\
-    & DI Bootstrapper & class & DependencyInjectionBootstrapper \\ \hline
-
-    \end{tabular}
-    \caption{Naming convention of recurring elements}
-    \label{table:element_naming_convention}
-\end{table}
-
-    \subsection{Recurring elements}
-    
-    For each data entity defined in the model (see chapter \ref{subsec_artifact_model}), a
-    fixed set of required elements, listed in table \ref{table:element_naming_convention}
-    will be added to the appropriate component, to comply with the design of the
-    architecture.
 
     \textcolor{red}{TODO: requirement mbt code expansion toevoegen (pag 403)}

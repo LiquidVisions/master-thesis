@@ -1,0 +1,27 @@
+\subsection{Component Architecture Requirements}
+ 
+The following requirements are applied to the Component Architecture of both the Generator
+Artifact and the Generated Artifact.
+\begin{table}[H]
+    \footnotesize
+    \begin{tabular}{ m{0.05\linewidth} p{0.87\linewidth} }
+    \hline
+    \textbf{Nr.} & \textbf{Description} \\ 
+    \hline
+        1. & The solution consists of separated C\# projects for the Domain, Application,
+        Infrastructure and Presentation layers of the Component. These layers are fully
+        described in \fullref{subsec_layers} \\  \hline
+
+        2. & The C\# projects representing the component layers comply the the
+        \nameref{appendix_component_naming_convention} laid out in the appendix
+        \ref{appendix_component_naming_convention} \\ \hline
+
+        3. & The dependencies between the component layers must point inward toward the
+        higher-level components as illustrated in Figure \ref{fig_modulair_components}
+        schematically. \\ \hline
+    \end{tabular}
+\caption{The Component Architecture Requirements}
+\label{table_component_requirements}
+\end{table}
+
+
