@@ -1,4 +1,4 @@
-\subsection{Expander Requirements}
+\subsection{Clean Architecture Requirements}
 
 In addition to the more generic requirements of previous sections, the following
 requirements are specific for Clean Architecture Exander \& Expander Framework Artifact.
@@ -8,6 +8,25 @@ requirements are specific for Clean Architecture Exander \& Expander Framework A
         \multicolumn{1}{@{\makebox[2em][c]{Nr.}}
         p{0.87\linewidth}}{Expander Framework Requirements}\\ 
     \hline
+    The Expander Framework enables interaction with the Clean Architecture Expander via a
+    \gls{cli}. The \gls{cli} is implemented in the Presentation Layer of the
+    Expander Framework. \\
+
+    The Expander Framework retrieves the model from a \gls{mssql} using the
+    EntityFramework ORM technology. The EntityFramework technology is implemented in the
+    Infrastructure Layer of the Expander Framework. \\
+    
+    The Expander Framework loads and executes the configured Expanders. In the case of
+    this research, only the Clean Architecture Expander is applied. \\
+
+    The Expander Framework supports generic harvesting and rejuvenation, which can be
+    used or extended by the Expanders using the \gls{ocp} principle. \\
+
+    The Expander Framework supports generic template handling, which can be used or
+    extended by the Expanders using the \gls{ocp} principle. \\
+
+    The Expander framework adheres to this chapter's Component and Software Requirements
+    specified in Sections \ref{component_requirements} and \ref{software_requirements}. \\
 
     \hline
     \end{tabular}
@@ -20,6 +39,17 @@ requirements are specific for Clean Architecture Exander \& Expander Framework A
         \multicolumn{1}{@{\makebox[2em][c]{Nr.}}
         p{0.87\linewidth}}{Clean Architecture Expander Requirements}\\ 
     \hline
+    The Clean Architecture Expander generates a C\# net7.0 RESTful service that provides an
+    HTTP interface on top of the metamodel of the Expander Framework, allowing the basic
+    \gls{crud} operations. \\
+
+
+    The Clean Architecture Expander consists solely of an Application Layer and reuses
+    the Domain Layer of the Expander Framework. \\
+
+    The Clean Architecture Expander adheres to this chapter's Component and Software
+    Requirements specified in Sections \ref{component_requirements} and
+    \ref{software_requirements}. \\
 
     \hline
     \end{tabular}
