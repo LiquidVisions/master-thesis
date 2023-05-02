@@ -1,35 +1,27 @@
-\subsection{Converging the ViewModel element} \label{converging_viewmodel_element}
+\subsection{The ViewModel Element} \label{converging_viewmodel_element}
 
-\begin{table}[H]
-    \begin{tabular}{ l | c | p{0.70\linewidth}}
-        \toprule
-        Data & \partconv & The ViewModel and Data element of \gls{ns} is convergent to
+\evaluateElementTable{ViewModel}{tab_convergence_viewemodel}{
+    \addEvalRow{Data & \partconv & The ViewModel and Data element of \gls{ns} is convergent to
         some degree. Both are involved in defining the structure of data used in the
         system. This could include required information about attributes and
         relationships. Additionally, the ViewModel could also represent information that
-        is specifically intended for the representation of behavior for a user interface.
-        \\ \midrule
+        is specifically intended for the representation of behavior for a user interface.}
 
-        Task & \noconv & The ViewModel is not convergent with the Task element of
+    \addEvalRow{Task & \noconv & The ViewModel is not convergent with the Task element of
         \gls{ns}. The ViewModel is focused on presenting information, whilst the Task element
-        is concerned with executing business logic. \\ \midrule
-        
-        Flow & \noconv & The ViewModel and Flow are not convergent, as the Flow element
+        is concerned with executing business logic.}
+
+    \addEvalRow{Flow & \noconv & The ViewModel and Flow are not convergent, as the Flow element
         represents the control between Tasks in \gls{ns} and is not directly involved in
-        the presentation of information. \\ \midrule
-        
-        Connector & \noconv & The ViewModel element and Connector element are not
+        the presentation of information.}
+
+    \addEvalRow{Connector & \noconv & The ViewModel element and Connector element are not
         convergent, as the Connector element in \gls{ns} is involved in the communication
         between components, whilst the ViewModel in \gls{ca} is involved in the
-        presentation of information.\\ \midrule
-        
-        Trigger & \noconv & The ViewModel element and Trigger element are not convergent,
+        presentation of information.}
+    
+    \addEvalRow{Trigger & \noconv & The ViewModel element and Trigger element are not convergent,
         as the Trigger element in \gls{ns} is responsible for the event-based execution
         of Tasks, whilst the ViewModel in \gls{ca} is involved in the presentation of
-        information.\\
-        
-        \bottomrule
-    \end{tabular}
-    \caption{The convergence of the ResponseModel element}
-    \label{tab_convergence_viewemodel}
-\end{table}
+        information.}
+}

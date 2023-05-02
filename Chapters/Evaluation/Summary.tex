@@ -13,6 +13,27 @@
     DIP & \conv & \partconv & \partconv & \noconv \\
     \bottomrule
     \end{tabular}
-    \caption{Convergence between SOLID principles and \gls{ns} theorems (abbreviated)}
-    \label{tab_convergence_abbreviated}
+    \caption{Convergence between the SOLID and \gls{ns} principles}
+    \label{tab_convergence_principles_summarized}
     \end{table}
+
+    \begin{table}[!ht]
+        \centering
+        \begin{tabular}{lccccc}
+        \toprule
+         & Data & Task & Flow & Connector & Trigger \\
+        Entity & \conv & \noconv & \noconv & \noconv & \noconv \\
+        
+        
+        
+        Interactor & \noconv & \partconv & \partconv & \noconv & \partconv \\
+        Boundary & \noconv & \noconv & \partconv & \conv & \noconv \\
+        Presenter & \noconv & \noconv & \noconv & \noconv & \noconv \\
+        Gateway & \noconv & \noconv & \noconv & \conv & \noconv \\
+        Controller & \noconv & \noconv & \noconv & \conv & \partconv \\
+        ViewModel & \partconv & \noconv & \noconv & \noconv & \noconv \\
+        RequestModel & \partconv & \noconv & \noconv & \noconv & \noconv \\
+        ResponseModel & \partconv & \noconv & \noconv & \noconv & \noconv \\
+        \end{tabular}
+        \caption{Convergence between the SOLID and \gls{ns} elements}
+        \end{table}

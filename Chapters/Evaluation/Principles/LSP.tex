@@ -1,39 +1,32 @@
-\subsection{Converging the Liskov Substitution Principle}
+\subsection{Liskov Substitution Principle}
 
-\begin{table}[H]
-    \begin{tabular}{ l | c | p{0.80\linewidth}}
-        \toprule
-        \acrshort*{soc} & \conv & Adhering to \gls{lsp} in the software design leads to a more
+\evaluatePrincipleTable{\gls{lsp}}{tab_convergence_lsp}{
+    \addEvalRow{\acrshort*{soc} & \conv & Adhering to \gls{lsp} in the software design leads to a more
         modular design and separation of specific concerns. Therefore we state that \gls{lsp}
         converges with \gls{soc}. \gls{lsp} states that objects of a derived class should be
         able to replace objects of the base class without affecting the correctness of the
         program. This can only be achieved by a strict separation of concerns in combination
-        with Action version Transparent implementations of the signature.
-        \\
-        \midrule
-        \acrshort*{dvt} & \noconv & \gls{lsp} has a limited alignment with the \gls{dvt}
-        theorem. While \gls{lsp} focuses on the substitutability of objects in class
-        hierarchies, \gls{dvt} aims to handle changes in data structures without impacting
-        the system. By following \gls{lsp}, developers can ensure that derived classes can
-        be substituted for their base classes, which may help reduce the impact of data
-        structure changes on the system. However, \gls{lsp} does not explicitly address
-        data versioning and thus does not guarantee full convergence with \gls{dvt}. \\
-        \midrule
-        \acrshort*{avt} & \partconv & The \gls{lsp} supports the \gls{avt} theorem. Both principles
+        with Action version Transparent implementations of the signature.}
+
+    \addEvalRow{\acrshort*{dvt} & \noconv & \gls{lsp} has a limited alignment with the
+        \gls{dvt} theorem. While \gls{lsp} focuses on the substitutability of objects in
+        class hierarchies, \gls{dvt} aims to handle changes in data structures without
+        impacting the system. By following \gls{lsp}, developers can ensure that derived
+        classes can be substituted for their base classes, which may help reduce the
+        impact of data structure changes on the system. However, \gls{lsp} does not
+        explicitly address data versioning and thus does not guarantee full convergence
+        with \gls{dvt}.}
+
+    \addEvalRow{\acrshort*{avt} & \partconv & The \gls{lsp} supports the \gls{avt} theorem. Both principles
         emphasize the importance of allowing the extensibility of the system, without
         negatively impacting the desired requirements. By adhering to \gls{lsp}, developers
         can create class hierarchies that can be easily extended to accommodate new actions or
         changes in existing ones, which may contribute to achieving \gls{avt}. However,
-        adhering to \gls{lsp} alone may not guarantee full convergence with \gls{avt}. 
-        \\
-        \midrule
-        \acrshort*{sos} & \noconv & By designing class hierarchies according to \gls{lsp},
+        adhering to \gls{lsp} alone may not guarantee full convergence with \gls{avt}}
+
+
+    \addEvalRow{\acrshort*{sos} & \noconv & By designing class hierarchies according to \gls{lsp},
         developers can create components that are less prone to side effects caused by shared
         states. However, the alignment between \gls{lsp} and \gls{sos} is very weak, and
-        adhering to \gls{lsp} alone may not guarantee full separation of states. 
-        \\
-        \bottomrule
-    \end{tabular}
-    \caption{Converge \gls{lsp} with \gls{ns}}
-    \label{tab_convergence_lsp}
-\end{table}
+        adhering to \gls{lsp} alone may not guarantee full separation of states.}
+}

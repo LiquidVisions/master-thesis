@@ -1,19 +1,17 @@
-\subsection{Converging the Single Responsibility Principle}
+\subsection{Single Responsibility Principle}
 
-\begin{table}[H]
-    \begin{tabular}{ l | c | p{0.80\linewidth}}
-        \toprule
-        \acrshort*{soc} & \conv & \gls{srp} and \gls{soc} share a common objective:
-        facilitating evolvable software systems through the promotion of modularity, low
-        coupling, and high cohesion. While there may be some differences in granularity
-        when applying both principles according to the original definition of SOC, the
-        more stringent definition of Separation of Concerns, offered by the \gls{ns}
-        Theorems minimizes these differences. As a result, the two principles can be
-        regarded as practically interchangeable. In conclusion, SRP and SOC exhibit full
-        convergence, as they both emphasize encapsulating 'responsibilities' or 'concerns'
-        within modular components of a software system. \\ \midrule
-        
-        \acrshort*{dvt} & \partconv & While not immediately apparent, \gls{srp} offers supports
+\evaluatePrincipleTable{\gls{ocp}}{tab_convergence_srp}{
+    \addEvalRow{ \acrshort*{soc} & \conv & \gls{srp} and \gls{soc} share a common objective:
+    facilitating evolvable software systems through the promotion of modularity, low
+    coupling, and high cohesion. While there may be some differences in granularity when
+    applying both principles according to the original definition of SOC, the more
+    stringent definition of Separation of Concerns, offered by the \gls{ns} Theorems
+    minimizes these differences. As a result, the two principles can be regarded as
+    practically interchangeable. In conclusion, SRP and SOC exhibit full convergence, as
+    they both emphasize encapsulating 'responsibilities' or 'concerns' within modular
+    components of a software system.}
+
+    \addEvalRow{\acrshort*{dvt} & \partconv & While not immediately apparent, \gls{srp} offers supports
         for the \gls{dvt} theorem. While \gls{srp} emphasizes limiting the responsibility of
         each module, it does not explicitly require handling changes in data structures.
         However, following gls{srp} can still indirectly contribute to achieving \gls{dvt}
@@ -21,25 +19,20 @@
         \footnote{\url{https://en.wikipedia.org/wiki/Law_of_Demeter}}, which encourages
         modules to interact with each other only through well-defined interfaces. This
         approach can minimize the impact of data structure changes, although it does not
-        guarantee full convergence with \gls{dvt}. \\ \midrule
+        guarantee full convergence with \gls{dvt}.}
 
-        \acrshort*{avt} & \partconv & Although not that apparent, \gls{srp} supports the \gls{dvt}
+    \addEvalRow{\acrshort*{avt} & \partconv & Although not that apparent, \gls{srp} supports the \gls{dvt}
         theorem. While \gls{srp} emphasizes limiting the responsibility of each module, it
         does not explicitly require handling changes in data structures. However, following
         gls{srp} can still indirectly contribute to achieving \gls{dvt} by promoting the Law
         of Demeter \footnote{\url{https://en.wikipedia.org/wiki/Law_of_Demeter}}, which
         encourages modules to interact with each other only through well-defined interfaces.
         This approach can minimize the impact of data structure changes, although it does not
-        guarantee full convergence with \gls{dvt}. \\ \midrule
-        
-        \acrshort*{sos} & \noconv & The convergence between \gls{srp} and the \gls{sos} theorem is
+        guarantee full convergence with \gls{dvt}.}
+
+    \addEvalRow{\acrshort*{sos} & \noconv & The convergence between \gls{srp} and the \gls{sos} theorem is
         not as direct as with other theorems. \gls{srp} focuses on assigning a single
         responsibility to each module but does not explicitly address state management.
         Nevertheless, by following \gls{srp}, developers can create modules that manage their
-        state, which indirectly contributes to \gls{sos}. \\
-        
-        \bottomrule
-    \end{tabular}
-    \caption{Converge \gls{srp} with \gls{ns}}
-    \label{tab_convergence_srp}
-\end{table}
+        state, which indirectly contributes to \gls{sos}.}
+}

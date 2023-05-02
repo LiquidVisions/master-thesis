@@ -1,9 +1,7 @@
-\subsection{Converging the Interface Segregation Principle}
+\subsection{Dependency Inversion Principle}
 
-\begin{table}[H]
-    \begin{tabular}{ l | c | p{0.79\linewidth}}
-        \toprule
-        \acrshort*{soc} & \conv & This principle converges with the \gls{soc} theorem.
+\evaluatePrincipleTable{\gls{dip}}{tab_convergence_dip}{
+    \addEvalRow{\acrshort*{soc} & \conv & This principle converges with the \gls{soc} theorem.
         \gls{dip} states that high-level modules should not depend on low-level modules.
         When unavoidable, high-level modules should depend on abstractions of low-level
         modules and abstractions should not depend on details. By adhering to \gls{dip}
@@ -17,29 +15,25 @@
         \parencite[215]{mannaert_normalized_2016}. Nevertheless, this technique, when
         applied correctly (see \ref{subsubsec_dip}), the artifact have pointed out that it
         has been a great asset in creating evolvable software, especially in the aspect of
-        \gls{soc}.\\
-        \midrule
-        \acrshort*{dvt} & \partconv &  Adhering to the \gls{dip} can indirectly support the
+        \gls{soc}.}
+
+    \addEvalRow{\acrshort*{dvt} & \partconv &  Adhering to the \gls{dip} can indirectly support the
         \gls{dvt} theorem. By adhering to the \gls{dip}, developers can promote
         implementations that encourage modules to interact with each other only through
         well-defined interfaces or abstractions. This approach can help minimize the
         impact of data structure changes on the system but does not guarantee full
-        compliance with \gls{dvt}. \\
-        \midrule
-        \acrshort*{avt} & \partconv & The \gls{dip} can support the \gls{avt} theorem. Both
+        compliance with \gls{dvt}.}
+
+    \addEvalRow{\acrshort*{avt} & \partconv & The \gls{dip} can support the \gls{avt} theorem. Both
         principles emphasize the importance of isolating actions or operations within a
         system. By adhering to \gls{dip}, developers can create modular components that
         interact through abstractions, which may contribute to achieving AvT. However, the
         alignment between \gls{dip} and \gls{avt} less strong than with \gls{soc}, and
         adhering to \gls{dip} alone will not guarantee a system that entirely complies to
-        \gls{avt}. \\ 
-        \midrule
-        \acrshort*{sos} & \noconv & There is a very weak alignment between \gls{dip} and
+        \gls{avt}.}
+
+    \addEvalRow{\acrshort*{sos} & \noconv & There is a very weak alignment between \gls{dip} and
         \gls{sos}. Although Developers can create components that are less prone to side
         effects caused by a shared state, this can hardly be contributed to the \gls{dip}.
-        Therefore it is stated that there is no convergence between the two principles.\\
-        \bottomrule
-    \end{tabular}
-    \caption{Converge \gls{dip} with \gls{ns}}
-    \label{tab_convergence_dip}
-\end{table}
+        Therefore it is stated that there is no convergence between the two principles.}
+}

@@ -1,38 +1,29 @@
-\subsection{Converging the Open/Closed Principle}
+\subsection{Open/Closed Principle}
 
-\begin{table}[H]
-    \begin{tabular}{ l | c | p{0.80\linewidth}}
-        \toprule
-        \acrshort*{soc} & \conv & The \gls{ocp} converges with the \gls{soc} theorem.
+\evaluatePrincipleTable{\gls{ocp}}{tab_convergence_ocp}{
+    \addEvalRow{\acrshort*{soc} & \conv & The \gls{ocp} converges with the \gls{soc} theorem.
         \gls{ocp} states that software implementations should be open for extension but
         closed for modification. When applying \gls{ocp} correctly, modifications are
         separated from the original implementations. For example by creating a new
         implementation of an interface or a base class. Conversely, adhering to \gls{soc}
         does not guarantee the fulfillment of \gls{ocp}, as \gls{soc} focuses on
-        modularization and encapsulation, rather than the extensibility of modules. \\
-        \midrule
-        
-        \acrshort*{dvt} & \partconv & The \gls{ocp} supports the \gls{dvt} theorem. While
+        modularization and encapsulation, rather than the extensibility of modules.}
+
+    \addEvalRow{ \acrshort*{dvt} & \partconv & The \gls{ocp} supports the \gls{dvt} theorem. While
         \gls{dvt} aims to handle changes in data structures without impacting the system,
         \gls{ocp} focuses on the extensibility of software entities. \gls{ocp} does not
         explicitly address data versioning, and thus does not guarantee full convergence
         with \gls{dvt}. However, by designing modules that follow \gls{ocp}, developers
-        can create components that are more adaptable to changes in data structures. \\
-        \midrule
+        can create components that are more adaptable to changes in data structures.}
 
-        \acrshort*{avt} & \conv & The \gls{ocp} converges with the \gls{avt} theorem. Both
+    \addEvalRow{\acrshort*{avt} & \conv & The \gls{ocp} converges with the \gls{avt} theorem. Both
         principles emphasize the importance of allowing changes or extensions to actions
         or operations without modifying existing implementations. By adhering to
         \gls{ocp}, developers can create modules that can be extended to accommodate new
-        actions or changes in existing ones, effectively achieving \gls{avt}. \\
-        \midrule
+        actions or changes in existing ones, effectively achieving \gls{avt}.}
 
-        \acrshort*{sos} & \noconv & The \gls{ocp} has an indirect relationship with the
+    \addEvalRow{\acrshort*{sos} & \noconv & The \gls{ocp} has an indirect relationship with the
         Separation of States (SoSt) theorem. However, not on a level where we can speak of
         convergence. \gls{sos} emphasizes isolating different states within a system.
-        Adhering to \gls{ocp} alone does not guarantee full separation of states. \\
-        \bottomrule
-    \end{tabular}
-    \caption{Converge \gls{ocp} with \gls{ns}}
-    \label{tab_convergence_ocp}
-\end{table}
+        Adhering to \gls{ocp} alone does not guarantee full separation of states.}
+}

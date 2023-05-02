@@ -1,31 +1,25 @@
-\subsection{Converging the Entity element}
+\subsection{The Entity Element}
 
-\begin{table}[H]
-    \begin{tabular}{ l | c | p{0.70\linewidth}}
-        \toprule
-        Data & \partconv & Both elements represent data objects that are part of the
+\evaluateElementTable{Entity}{tab_convergence_entity}{
+    \addEvalRow{Data & \partconv & Both elements represent data objects that are part of the
         ontology or data schema of the application, and typically include attributes and
         relationship information. While both can contain a full set of attributes and
         relationships, the Data entity of \gls{ns} may also include a specific set of
-        information that is required for a single task or use case. \\ \midrule
+        information that is required for a single task or use case.}
 
-        Task & \noconv & The Entity is not convergent with the Task
+    \addEvalRow{Task & \noconv & The Entity is not convergent with the Task
         element of \gls{ns}. However, the Tasks element might operate on entities to
-        perform business logic. \\ \midrule
+        perform business logic.}
 
-        Flow & \noconv & The Entity and Flow are not convergent, as the Flow element
+    \addEvalRow{Flow & \noconv & The Entity and Flow are not convergent, as the Flow element
         represents the control between Tasks in \gls{ns}, while the Entity in \gls{ca}
-        represents domain objects.\\ \midrule
-        
-        Connector & \noconv & The Entity element and Connector element are not
-        convergent, as the Connector element in \gls{ns} is involved in between components,
-        while the Entity in \gls{ca} represents domain objects.\\ \midrule
-        
-        Trigger & \noconv & The Entity element and Trigger element are not convergent,
-        as the Trigger element in \gls{ns} is about event-based execution of Tasks, while
-        the Entity in \gls{ca} represents domain objects.\\ \bottomrule
+        represents domain objects.}
 
-    \end{tabular}
-    \caption{The convergence of the Entity element}
-    \label{tab_convergence_entity}
-\end{table}
+    \addEvalRow{Connector & \noconv & The Entity element and Connector element are not
+        convergent, as the Connector element in \gls{ns} is involved in between components,
+        while the Entity in \gls{ca} represents domain objects.}
+    
+    \addEvalRow{Trigger & \noconv & The Entity element and Trigger element are not convergent,
+        as the Trigger element in \gls{ns} is about event-based execution of Tasks, while
+        the Entity in \gls{ca} represents domain objects.}
+}

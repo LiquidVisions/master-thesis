@@ -3,51 +3,37 @@
 The following requirements are applied to the Component Architecture of both the Generator
 Artifact and the Generated Artifact.
 
-\begin{table}[H]
-    \begin{tabular}{@{\makebox[2em][c]{\rownumber\space}}  p{0.87\linewidth}}
-        \multicolumn{1}{@{\makebox[2em][c]{Nr.}}  p{0.87\linewidth}}{Requirement}\\ 
-    \hline
-    The solution is organized into separate Visual Studio projects for the Domain,
+\requirement{The Component Architecture}{table_component_requirements}{
+    \addEvalRow{The solution is organized into separate Visual Studio projects for the Domain,
     Application, Infrastructure, and Presentation layers of the component. A detailed
-    description of these layers can be found in Section \fullref{subsec_layers}.
-    \\
-    The Visual Studio projects representing the component layers comply with the naming
-    conventions outlined in the appendix \fullref{appendix_component_naming_convention} \\
-       
-    The dependencies between the component layers must follow an inward direction towards
+    description of these layers can be found in Section \fullref{subsec_layers}}
+
+    \addEvalRow{The Visual Studio projects representing the component layers comply with the naming
+    conventions outlined in the appendix \fullref{appendix_component_naming_convention}}
+
+    \addEvalRow{The dependencies between the component layers must follow an inward direction towards
     the higher-level components as illustrated in Figure \ref{fig_modulair_components}
-    schematically, and cannot skip layers. \\
-       \hline
-    \end{tabular}
-\caption{The Component Architecture Requirements}
-\label{table_component_requirements}
-\end{table}
+    schematically, and cannot skip layers.}
+}
 
-\begin{table}[H]
-    \begin{tabular}{@{\makebox[2em][c]{\rownumber\space}}  p{0.87\linewidth}}
-        \multicolumn{1}{@{\makebox[2em][c]{Nr.}}  p{0.87\linewidth}}{Technology Requirement}\\ 
-    \hline
-       The Domain and Application layers have no dependencies on any infrastructure technologies, like web- or database
-       technologies. 
-       \\
-       The Presentation Layer relies on various infrastructure technologies for
-       facilitating end-user interaction. Examples of such technologies include Command
-       Line Interfaces (CLIs), RESTful APIs, and web-based solutions. Each dependency is
-       isolated and managed in separate Visual Studio Projects to ensure the stability and
-       evolvability of the system. \\
+\requirement{Technology Expander}{table_technology}{
+    \addEvalRow{The Domain and Application layers have no dependencies on any infrastructure technologies, like web- or database
+    technologies. }
 
-       The Infrastructure Layer may rely on other infrastructure components, such as
-       databases or filesystems. Each infrastructure dependency is isolated and managed in
-       separate Visual Studio Projects to promote stability and evolvability. \\
+    \addEvalRow{The Presentation Layer relies on various infrastructure technologies for
+    facilitating end-user interaction. Examples of such technologies include Command
+    Line Interfaces (CLIs), RESTful APIs, and web-based solutions. Each dependency is
+    isolated and managed in separate Visual Studio Projects to ensure the stability and
+    evolvability of the system.}
 
-       All Component Layers utilize the C\# programming language, explicitly targeting the
-       .NET 7.0 framework. \\
+    \addEvalRow{The Infrastructure Layer may rely on other infrastructure components, such as
+    databases or filesystems. Each infrastructure dependency is isolated and managed in
+    separate Visual Studio Projects to promote stability and evolvability.}
 
-       Reusing existing functionality or technology (packages) is permitted only when
-       adhering to the \gls{lsp} and utilizing the open-source package manager,
-       \gls{nuget}. \\
-       \hline
-    \end{tabular}
-\caption{Application Layer Technology Requirements}
-\label{table_requirements_application_layer_technology}
-\end{table}
+    \addEvalRow{All Component Layers utilize the C\# programming language, explicitly targeting the
+    .NET 7.0 framework.}
+
+    \addEvalRow{Reusing existing functionality or technology (packages) is permitted only when
+    adhering to the \gls{lsp} and utilizing the open-source package manager,
+    \gls{nuget}.}
+}

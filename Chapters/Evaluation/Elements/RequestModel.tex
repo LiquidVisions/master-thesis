@@ -1,37 +1,29 @@
-\subsection{Converging the RequestModel element} \label{converging_requestmodel_element}
+\subsection{The RequestModel Element} \label{converging_requestmodel_element}
 
-\begin{table}[H]
-    \begin{tabular}{ l | c | p{0.70\linewidth}}
-        \toprule
-        Data & \partconv & Both elements represent data objects that are part of the
+\evaluateElementTable{RequestModel}{tab_convergence_requestmodel}{
+    \addEvalRow{ Data & \partconv & Both elements represent data objects that are part of the
         ontology or data schema of the application, and typically include attributes and
         relationship information. While they may contain a specific set of information as
         input for a Task or use case, both elements can also contain a full set of
         attributes and relationships. However, unlike the Data entity in \gls{ns}, which
         may include only a subset of information necessary for a specific Task or use
         case, it may also include the full set of information required for Tasks other
-        purposes. \\
-        \midrule
+        purposes.}
 
-        Task & \noconv & The RequestModel is not convergent with the Task element of
+    \addEvalRow{Task & \noconv & The RequestModel is not convergent with the Task element of
         \gls{ns}. However, the Tasks element might operate on RequestModels as input
-        parameters to perform business logic. \\ \midrule
-        
-        Flow & \noconv & The RequestModel and Flow are not convergent, as the Flow element
+        parameters to perform business logic.}
+
+    \addEvalRow{Flow & \noconv & The RequestModel and Flow are not convergent, as the Flow element
         represents the control between Tasks in \gls{ns}, while the RequestModel in \gls{ca}
-        represents (parts of) domain objects.\\ \midrule
-        
-        Connector & \noconv & The RequestModel element and Connector element are not
+        represents (parts of) domain objects.}
+
+    \addEvalRow{Connector & \noconv & The RequestModel element and Connector element are not
         convergent, as the Connector element in \gls{ns} is involved in the communication
         between components, whilst the RequestModel in \gls{ca} represents (parts of)
-        domain objects.\\ \midrule
-        
-        Trigger & \noconv & The RequestModel element and Trigger element are not convergent,
+        domain objects.}
+    
+    \addEvalRow{Trigger & \noconv & The RequestModel element and Trigger element are not convergent,
         as the Trigger element in \gls{ns} is about event-based execution of Tasks, while
-        the RequestModel in \gls{ca} represents (parts of) domain objects.\\
-        
-        \bottomrule
-    \end{tabular}
-    \caption{The convergence of the RequestModel element}
-    \label{tab_convergence_requestmodel}
-\end{table}
+        the RequestModel in \gls{ca} represents (parts of) domain objects.}
+}

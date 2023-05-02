@@ -23,3 +23,48 @@
 \preto\tabular{\setcounter{magicrownumbers}{0}}
 \newcounter{magicrownumbers}
 \newcommand\rownumber{\stepcounter{magicrownumbers}\arabic{magicrownumbers}}
+\newcounter{reqcounter}
+\newcommand\requirementCategory{\arabic{reqcounter}}
+
+\newcommand{\evalTable}[3]{%
+\begin{table}[H]
+  \small
+  \begin{tabular}{ c c p{0.80\linewidth}}
+      \hline
+      \hline
+      #3
+      \hline
+      \hline
+  \end{tabular}
+  \caption{#1}
+  \label{#2}
+\end{table}
+}
+\newcommand{\addEvalRow}[1]{%
+    #1 \\
+}
+
+\newcommand{\evaluatePrincipleTable}[3]{%
+  \evalTable{The convergence of #1 with the \gls{ns} principles}{#2}{#3 \hline}
+}
+
+\newcommand{\evaluateElementTable}[3]{%
+  \evalTable{The convergence of the Element #1 with the elements of \gls{ns}}{#2}{#3 \hline}
+} 
+
+\newcommand{\requirement}[3]{%
+\stepcounter{reqcounter}
+  \begin{table}[H]
+    \begin{tabular}{@{\makebox[3em][c]{\requirementCategory.\rownumber\space}}  p{0.87\linewidth}}
+        \multicolumn{1}{@{\makebox[3em][c]{Nr.}}
+        p{0.87\linewidth}}{#1 Requirements}\\ 
+    \hline
+
+    #3 \hline
+
+    \hline
+    \end{tabular}
+  \caption{#1 Requirements}
+  \label{#2}
+  \end{table}
+}

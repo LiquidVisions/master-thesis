@@ -1,31 +1,25 @@
-\subsection{Converging the Controller element} \label{converging_controller_element}
+\subsection{The Controller Element} \label{converging_controller_element}
 
-\begin{table}[H]
-    \begin{tabular}{ l | c | p{0.70\linewidth}}
-        \toprule
-        Data & \noconv & The Controllers and Data elements are not directly convergent, as
+\evaluateElementTable{Controller}{tab_convergence_controller}{
+    \addEvalRow{Data & \noconv & The Controllers and Data elements are not directly convergent, as
         the Controller element is focused on handling input/output from external systems, while Data
-        elements represent domain objects. \\ \midrule
+        elements represent domain objects.}
 
-        Task & \noconv &  The Controllers and Task elements are not convergent. However,
-        controllers might initiate Task elements when handling incoming requests.\\
-        \midrule
-        
-        Flow & \noconv &  The Controllers and Flow elements are not convergent, as
+    \addEvalRow{Task & \noconv &  The Controllers and Task elements are not convergent. However,
+        controllers might initiate Task elements when handling incoming requests.}
+
+    \addEvalRow{Flow & \noconv &  The Controllers and Flow elements are not convergent, as
         the Controller element is focused on handling input/output from external systems,
-        whilst the Flow element is concerned with the orchestration of Tasks. \\ \midrule
-        
-        Connector & \partconv & The Controller and Connector element are convergent to some
+        whilst the Flow element is concerned with the orchestration of Tasks.}
+
+    \addEvalRow{Connector & \partconv & The Controller and Connector element are convergent to some
         degree. Both elements are involved in communication between components. The use of
         the Controller is a bit more strict it strictly defines communication from
-        external parts of the systems, involving specific Interacto. \\ \midrule
-        
-        Trigger & \partconv & The Controller and the Trigger element of \gls{ns} are
+        external parts of the systems, involving specific Interactor.}
+    
+    \addEvalRow{Trigger & \partconv & The Controller and the Trigger element of \gls{ns} are
         convergent to some degree as they both can initiate actions based on external
         events or requests. A Controller is primarily involved in receiving events or
         reqeusts from external sources, followed by the invocation of the appropriate
-        interactor.\\ \bottomrule
-    \end{tabular}
-    \caption{The convergence of the Controller element}
-    \label{tab_convergence_controller}
-\end{table}
+        interactor.}
+}

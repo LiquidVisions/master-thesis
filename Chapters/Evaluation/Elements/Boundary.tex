@@ -1,29 +1,23 @@
-\subsection{Converging the Boundary element}
+\subsection{The Boundary Element}
 
-\begin{table}[H]
-    \begin{tabular}{ l | c | p{0.70\linewidth}}
-        \toprule
-        Data & \noconv &  The Boundary and Data elements are not convergent, as the
+\evaluateElementTable{Boundary}{tab_convergence_boundary}{
+    \addEvalRow{Data & \noconv &  The Boundary and Data elements are not convergent, as the
         Boundary element is focused on separating concerns between components, while the
-        Data element of \gls{ns} represents a domain object.\\ \midrule
+        Data element of \gls{ns} represents a domain object.}
 
-        Task & \noconv &  The Boundary and Flow Task element are not convergent, However,
+    \addEvalRow{ Task & \noconv &  The Boundary and Flow Task element are not convergent, However,
         the Boundary element can be used in a Task element to ensure a clear separation
-        of concerns between different modules.\\ \midrule
-        
-        Flow & \partconv & The Boundary and Flow element are not convergent, However, the
+        of concerns between different modules.}
+
+    \addEvalRow{ Flow & \partconv & The Boundary and Flow element are not convergent, However, the
         Boundary element can be used in a Flow element to ensure a clear separation of
-        concerns between different modules.\\ \midrule
-        
-        Connector & \conv & The Boundary and Connector elements have a strong convergence,
+        concerns between different modules.}
+
+    \addEvalRow{Connector & \conv & The Boundary and Connector elements have a strong convergence,
         as both are involved in communication between components and help ensure loose
-        coupling between these components.\\ \midrule
-        
-        Trigger & \noconv & The Boundary and Trigger element are not convergent, as the
-        Trigger in \gls{ns} is about event-based execution of Tasks, whilst the Boundary in
-        \gls{ca} ensures the separation of concerns between components of the system.\\ \bottomrule
+        coupling between these components.}
     
-    \end{tabular}
-    \caption{The convergence of the Boundary element}
-    \label{tab_convergence_boundary}
-\end{table}
+    \addEvalRow{ Trigger & \noconv & The Boundary and Trigger element are not convergent, as the
+        Trigger in \gls{ns} is about event-based execution of Tasks, whilst the Boundary in
+        \gls{ca} ensures the separation of concerns between components of the system.}
+}
