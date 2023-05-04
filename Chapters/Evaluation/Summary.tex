@@ -22,18 +22,17 @@
         \begin{tabular}{lccccc}
         \toprule
          & Data & Task & Flow & Connector & Trigger \\
+         \midrule
         Entity & \conv & \noconv & \noconv & \noconv & \noconv \\
-        
-        
-        
-        Interactor & \noconv & \partconv & \partconv & \noconv & \partconv \\
-        Boundary & \noconv & \noconv & \partconv & \conv & \noconv \\
-        Presenter & \noconv & \noconv & \noconv & \noconv & \noconv \\
-        Gateway & \noconv & \noconv & \noconv & \conv & \noconv \\
-        Controller & \noconv & \noconv & \noconv & \conv & \partconv \\
-        ViewModel & \partconv & \noconv & \noconv & \noconv & \noconv \\
-        RequestModel & \partconv & \noconv & \noconv & \noconv & \noconv \\
+        Interactor & \noconv & \conv & \partconv & \noconv & \noconv \\
+        RequestModel & \partconv & \noconv & \noconv & \noconv & \noconv \\ 
         ResponseModel & \partconv & \noconv & \noconv & \noconv & \noconv \\
+        ViewModel & \partconv & \noconv & \noconv & \noconv & \noconv \\
+        Controller & \noconv & \noconv & \noconv & \partconv & \partconv \\
+        Gateway & \noconv & \noconv & \noconv & \conv & \noconv \\
+        Presenter & \noconv & \noconv & \noconv & \noconv & \noconv \\
+        Boundary & \noconv & \noconv & \partconv & \conv & \noconv \\ \bottomrule
+        
         \end{tabular}
         \caption{Convergence between the SOLID and \gls{ns} elements}
         \end{table}
