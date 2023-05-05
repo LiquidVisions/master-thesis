@@ -68,3 +68,18 @@
   \label{#2}
   \end{table}
 }
+
+\newcommand{\compareTable}[3]{%
+  \begin{table}[!ht]
+    \center
+    \begin{tabular}{cccc}
+    \toprule
+    SoC & DVT & AVT & SoS \\
+    \midrule
+    #3 \hline
+    \bottomrule
+    \end{tabular}
+    \caption{#1 with \acrlong*{ns} principles}
+    \label{#2}
+    \end{table}
+}
