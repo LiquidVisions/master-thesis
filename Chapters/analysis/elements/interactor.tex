@@ -1,23 +1,23 @@
 \subsection{The Interactor Element}
 
-\evaluateElementTable{Interactor}{tab_convergence_interactor}{
-    \addEvalRow{Data & \noAlignment &  The Interactor and Data elements are not convergent. However,
-        Interactors might use Data elements as input and output during the execution of
-        business logic.}
+\evaluateElementTable{Interactor}{tab_convergence_interactor}{ \addEvalRow{Data &
+    \noAlignment &  The Interactor and Data element do not align, although an Interactor
+    might use Data elements as input and output during the execution of business logic.}
 
     \addEvalRow{Task & \fullAlignment &  The Task element in \gls{ns} is very closely related to
         the Interactor element of \gls{ca}, as both encapsulate the execution of business
-        logic.}
+        logic. Code Listing \ref{list_interactor_task} illustrates an implementation of a
+        Task, with a Single execution of a business rule \parencite*{koks_createentityvalidator_2023}. }
 
-    \addEvalRow{Flow & \partialAlignment & The Interactor and Flow elements are partly convergent, as the
-        Interactor orchestrates the flow of execution for a use case, which can involve
-        multiple Tasks in \gls{ns}.}
+    \addEvalRow{Flow & \fullAlignment & The Interactor has a strong alignment with the
+        Flow element of \gls{ns} as the both elements can orchestrates the flow of execution for
+        a use case, which can involve multiple Tasks in \gls{ns}. This is clearly
+        illustrated in Code Listing \ref{list_interactor_flow}, where the Interactor
+        handles Validation, mapping and persistance of the Entity. }
 
-    \addEvalRow{Connector & \noAlignment & The Interactor and Connector elements are not convergent.
-        However, the Interactor might rely on connectors to communicate with other
-        components in the system.}
+    \addEvalRow{Connector & \noAlignment & There is no alignment between the Interactor
+    and the Connector Element of \gls{ns}.}
     
-    \addEvalRow{Trigger & \noAlignment & The Interactor and Trigger elements are not convergent.
-        However, the Interactors can be triggered by events or external requests, similar to
-        \gls{ns} Trigger elements.}
+    \addEvalRow{Trigger & \noAlignment & There is no alignment between the Interactor
+    and the Trigger Element of \gls{ns}.}
 }
