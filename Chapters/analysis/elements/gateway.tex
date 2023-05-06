@@ -1,23 +1,23 @@
 \subsection{The Gateway Element}
 
 \evaluateElementTable{Gateway}{tab_convergence_gateway}{
-    \addEvalRow{ Data & \noconv &  The Gateway and Data element are not convergent. Nevertheless,
+    \addEvalRow{ Data & \noAlignment &  The Gateway and Data element are not convergent. Nevertheless,
         the Gateway element might interact with data entities when providing access to
         external resources or systems.}
 
-    \addEvalRow{Task & \noconv &  The Gateway and Task element are not convergent. Nevertheless,
+    \addEvalRow{Task & \noAlignment &  The Gateway and Task element are not convergent. Nevertheless,
         the Task elements might use gateways when interacting with external resources or systems
         during the execution of business logic.}
 
-    \addEvalRow{Flow & \noconv & The Gateway and Flow element are not directly related, as the Flow
+    \addEvalRow{Flow & \noAlignment & The Gateway and Flow element are not directly related, as the Flow
         element represents the orchestration between Tasks in \gls{ns}, whilst the Gateway
         element in \gls{ca} provide access to external resources or systems.}
 
-    \addEvalRow{Connector & \conv & The Gateway and Connector element have a strong convergence, as both
+    \addEvalRow{Connector & \fullAlignment & The Gateway and Connector element have a strong convergence, as both
         are involved in communication between components and provide interfaces for
         accessing external resources or systems.}
     
-    \addEvalRow{Trigger & \noconv & The Gateway and Trigger element are not convergent, as the
+    \addEvalRow{Trigger & \noAlignment & The Gateway and Trigger element are not convergent, as the
         Trigger in \gls{ns} is about event-based execution of Tasks, whilst the Gateway in
         \gls{ca} provide access to external resources or systems.}
 }

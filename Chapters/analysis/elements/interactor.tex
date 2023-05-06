@@ -1,23 +1,23 @@
 \subsection{The Interactor Element}
 
 \evaluateElementTable{Interactor}{tab_convergence_interactor}{
-    \addEvalRow{Data & \noconv &  The Interactor and Data elements are not convergent. However,
+    \addEvalRow{Data & \noAlignment &  The Interactor and Data elements are not convergent. However,
         Interactors might use Data elements as input and output during the execution of
         business logic.}
 
-    \addEvalRow{Task & \conv &  The Task element in \gls{ns} is very closely related to
+    \addEvalRow{Task & \fullAlignment &  The Task element in \gls{ns} is very closely related to
         the Interactor element of \gls{ca}, as both encapsulate the execution of business
         logic.}
 
-    \addEvalRow{Flow & \partconv & The Interactor and Flow elements are partly convergent, as the
+    \addEvalRow{Flow & \partialAlignment & The Interactor and Flow elements are partly convergent, as the
         Interactor orchestrates the flow of execution for a use case, which can involve
         multiple Tasks in \gls{ns}.}
 
-    \addEvalRow{Connector & \noconv & The Interactor and Connector elements are not convergent.
+    \addEvalRow{Connector & \noAlignment & The Interactor and Connector elements are not convergent.
         However, the Interactor might rely on connectors to communicate with other
         components in the system.}
     
-    \addEvalRow{Trigger & \noconv & The Interactor and Trigger elements are not convergent.
+    \addEvalRow{Trigger & \noAlignment & The Interactor and Trigger elements are not convergent.
         However, the Interactors can be triggered by events or external requests, similar to
         \gls{ns} Trigger elements.}
 }

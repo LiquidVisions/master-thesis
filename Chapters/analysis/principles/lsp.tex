@@ -1,0 +1,23 @@
+\subsection{Liskov Substitution Principle}
+
+\evaluatePrincipleTable{\gls{lsp}}{table_lsp_alignment}{ 
+    
+\addEvalRow{\gls{soc} & \fullAlignment & \gls{lsp} states that objects of a derived class should be
+able to replace objects of the base class without affecting the program negatively.
+Replacing objects can only be achieved by separating them, aligning the principles
+inherritly. A good example is the implementation of the
+\citecode{koks_itemplateinteractor_2023} where the template engine Scriban
+\parencite{github_scriban_2023} is used to generate code instantiations as a result of the
+Expanding the Model \parencite{koks_scribantemplateinteractor_2023}. We could easily
+replace the Scriban template engine for an other engine with only impacting the Dependency
+Injection Register.}
+    
+\addEvalRow{\gls{dvt} & \noAlignment & The alignment between \gls{lsp} and \gls{dvt} is weak,
+and no manifestations are found in the artifacts.}
+    
+\addEvalRow{\gls{avt} & \fullAlignment & Since the \gls{lsp} } 
+    
+\addEvalRow{\gls{sos} & \noAlignment & By designing class hierarchies according to \gls{lsp},
+developers can create components that are less prone to side effects caused by shared
+states. However, the alignment between \gls{lsp} and \gls{sos} is very weak, and adhering
+to \gls{lsp} alone may not guarantee full separation of states.} }

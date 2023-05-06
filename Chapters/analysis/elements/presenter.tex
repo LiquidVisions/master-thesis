@@ -1,24 +1,24 @@
 \subsection{The Presenter Element}
 
 \evaluateElementTable{Presenter}{tab_convergence_presenter}{
-    \addEvalRow{Data & \noconv &  The Presenter and Data element are not convergent. However, Data
+    \addEvalRow{Data & \noAlignment &  The Presenter and Data element are not convergent. However, Data
         elements might be transformed into a suitable format for the user inter interface
         by \gls{ca}'s Presenter element.}
 
-    \addEvalRow{Task & \noconv &  The Presenter and Task elements are not convergent. The
+    \addEvalRow{Task & \noAlignment &  The Presenter and Task elements are not convergent. The
     Presenter element is focused on transforming output data to the user interface,
     while the Task element of \gls{ns} executes business logic.}
 
-    \addEvalRow{Flow & \noconv & The Presenter and Flow element are not convergent. The Flow
+    \addEvalRow{Flow & \noAlignment & The Presenter and Flow element are not convergent. The Flow
         element of \gls{ns} represents the orchestration between Tasks, while the
         Presenter element in \gls{ca} is responsible for transforming output data to the
         user interface.}
 
-    \addEvalRow{Connector & \noconv & The Presenter and Connector elements are not convergent.
+    \addEvalRow{Connector & \noAlignment & The Presenter and Connector elements are not convergent.
         Although the Presenter element of \gls{ca} might rely on Connector elements of
         \gls{ns} to communicate with other components in the system.}
     
-    \addEvalRow{Trigger & \noconv & The Presenter and Trigger elements are not convergent, as the
+    \addEvalRow{Trigger & \noAlignment & The Presenter and Trigger elements are not convergent, as the
         Triggers element in \gls{ns} is about event-based execution of Tasks, while
         presenters in \gls{ca} are responsible for transforming output data on behalf of
         the user interface.}

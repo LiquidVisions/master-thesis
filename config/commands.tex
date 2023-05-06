@@ -11,9 +11,9 @@
 %----------------------------------------------------------------------------------------
 %	FONT ICON COMMANDS
 %----------------------------------------------------------------------------------------
-\newcommand{\conv}{\faPlus \faPlus}
-\newcommand{\noconv}{\faMinus}
-\newcommand{\partconv}{\faPlus}
+\newcommand{\fullAlignment}{\faPlus \faPlus}
+\newcommand{\noAlignment}{\faMinus}
+\newcommand{\partialAlignment}{\faPlus}
 
 \usepackage{array}
 \usepackage{ragged2e}
@@ -45,11 +45,11 @@
 }
 
 \newcommand{\evaluatePrincipleTable}[3]{%
-  \evalTable{The convergence of #1 with the \gls{ns} principles}{#2}{#3 \hline}
+  \evalTable{The alignment of #1 with the \gls{ns} principles}{#2}{#3 \hline}
 }
 
 \newcommand{\evaluateElementTable}[3]{%
-  \evalTable{The convergence of the Element #1 with the elements of \gls{ns}}{#2}{#3 \hline}
+  \evalTable{The alignment of the Element #1 with the elements of \gls{ns}}{#2}{#3 \hline}
 } 
 
 \newcommand{\requirement}[3]{%
