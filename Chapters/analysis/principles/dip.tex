@@ -1,47 +1,30 @@
 \subsection{Dependency Inversion Principle}
 
-\compareTable
-{\acrlong*{dip}}
-{tab_convergence_sip_principle_summarized}
-{\addEvalRow{\fullAlignment & \partialAlignment & \partialAlignment & \noAlignment}}
+\evaluatePrincipleTable{\gls{dip}}{table_dip_alignment}{ 
+    
+\addEvalRow{\gls{soc} & \partialAlignment & \gls{dip} states that high-level modules should
+not depend on low-level modules.  By adhering to
+\gls{dip} correctly, the architecture promotes modular architectures and the use of
+component layers, as described in \fullref{subsec_dependency_rule}
+\parencite{koks_layers_2023}. Managing Dependencies inheritly promotes \gls{soc},
+therefore \gls{dip} aligns with \gls{soc} to some extend. However, adhering to \gls{soc}
+does not guarantee \gls{soc}.}
+    
+\addEvalRow{\gls{dvt} & \noAlignment & The \gls{dip} does not relate to the \gls{dvt}
+principle. The alignment of both principles is weak, and no manifestations are found in
+the artifacts.}
+    
+\addEvalRow{\gls{avt} & \partialAlignment & The \gls{dip} can support the \gls{avt}
+principle. The \gls{avt} principle emphasizes the importance of isolating actions or
+operations within a system. By adhering to \gls{dip}, the architecture simplifies the
+dependency management of those isolated versions of actions, which may contribute to
+achieving \gls{avt}. The artifact's handling of this is already described in Chapter
+\fullref{subsubsec_dip}. However, the alignment between \gls{dip} and \gls{avt} is not so
+strong as with \gls{soc}, and adhering to \gls{dip} alone will not guarantee a system that
+entirely complies to \gls{avt}. } 
+    
+\addEvalRow{\gls{sos} & \noAlignment & The \gls{dip} does not relate to the \gls{sos}
+principle. The alignment of both principles is weak, and no manifestations are found in
+the artifacts.} 
 
-\subsubsection{\acrlong*{soc}}
-
-This principle converges with the \gls{soc} theorem. \gls{dip} states that high-level
-modules should not depend on low-level modules. When unavoidable, high-level modules
-should depend on abstractions of low-level modules and abstractions should not depend on
-details. By adhering to \gls{dip} correctly, developers can create modular and decoupled
-software systems, which aligns to break down a system into evolvable components. This
-convergence enables developers to create maintainable, scalable, and adaptable software
-systems that effectively manage complexity. Dependency Injection is a valuable (but not
-the only or mandatory) aspect of \gls{dip}. We have observed that the claim that the
-technique of Dependency Injection solves coupling between classes in an application is
-dangerous and in some cases wrong \parencite[215]{mannaert_normalized_2016}. Nevertheless,
-this technique, when applied correctly (see \ref{subsubsec_dip}), the artifact have
-pointed out that it has been a great asset in creating evolvable software, especially in
-the aspect of \gls{soc}.
-
-\subsubsection{\acrlong*{dvt}} 
-
-Adhering to the \gls{dip} can indirectly support the \gls{dvt} theorem. By adhering to the
-\gls{dip}, developers can promote implementations that encourage modules to interact with
-each other only through well-defined interfaces or abstractions. This approach can help
-minimize the impact of data structure changes on the system but does not guarantee full
-compliance with \gls{dvt}.
-
-\subsubsection{\acrlong*{avt}}
-
-he \gls{dip} can support the \gls{avt} theorem. Both principles emphasize the importance
-of isolating actions or operations within a system. By adhering to \gls{dip}, developers
-can create modular components that interact through abstractions, which may contribute to
-achieving AvT. However, the alignment between \gls{dip} and \gls{avt} less strong than
-with \gls{soc}, and adhering to \gls{dip} alone will not guarantee a system that entirely
-complies to \gls{avt}.
-
-\subsubsection{\acrlong*{sos}}
-
-There is a very weak alignment between \gls{dip} and \gls{sos}. Although Developers can
-create components that are less prone to side effects caused by a shared state, this can
-hardly be contributed to the \gls{dip}. Therefore it is stated that there is no
-convergence between the two principles.
-
+}

@@ -15,9 +15,16 @@ Injection Register.}
 \addEvalRow{\gls{dvt} & \noAlignment & The alignment between \gls{lsp} and \gls{dvt} is weak,
 and no manifestations are found in the artifacts.}
     
-\addEvalRow{\gls{avt} & \fullAlignment & Since the \gls{lsp} } 
+\addEvalRow{\gls{avt} & \partialAlignment & The \gls{lsp} supports the \gls{avt} principle.
+Both principles emphasize the importance of allowing the extensibility of the software
+system. By adhering to \gls{lsp}, the architecture allows for class hierarchies that can
+be easily extended to accommodate new (versions of) actions, which can contribute to
+achieving \gls{avt}. However, adhering to \gls{lsp} alone may not guarantee full adherence
+with \gls{avt}. Considder \citecode{koks_icreategateway_2023} in Code Listing
+\ref{list_ICreateGatewayExamples}. The artifact contains multiple implementations of this
+interface. Each implementation could be considered a different version applied to the
+interface.} 
     
-\addEvalRow{\gls{sos} & \noAlignment & By designing class hierarchies according to \gls{lsp},
-developers can create components that are less prone to side effects caused by shared
-states. However, the alignment between \gls{lsp} and \gls{sos} is very weak, and adhering
-to \gls{lsp} alone may not guarantee full separation of states.} }
+\addEvalRow{\gls{sos} & \noAlignment & The \gls{lsp} does not relate to the \gls{sos}
+principle. The alignment of both principles is weak, and no manifestations are found in
+the artifacts.} }

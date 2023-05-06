@@ -1,6 +1,45 @@
-\section{Dependency management}
+\section{Dependency management} Dependency management is an extremely valuable aspect of
+achieving stability and evolvability. Dependency management can be achieved by using
+Dependency Injection. This research acknowledges the statement of
+\textcite[215]{mannaert_normalized_2016} that Dependency Injection does not solve coupling
+between classes. Working on the Artifact has shown that combinatorial effects can occur
+when not careful. Nevertheless, Dependency Injection is a widely used pattern in building
+the Artifact. In order to achieve stability and evolvability, the Dependency Injection
+pattern \underline{must} be combined with various other principles of both \gls{ca} and
+\gls{ns}. 
 
-\begin{enumerate}
-    \color{red}
-    \item TODO: DESCRIBE DI and use of service locator pattern.
-\end{enumerate}
+The goal is to centralize the management of dependencies and remove unwanted manual object
+instantiations in the code. Al this while respecting the \gls{dip} principle so that each
+Component Layer is responsible for managing its dependencies. The Artifact achieves this
+by using extension methods as illustrated in Code Listing
+\ref{list_DependencyInjectionExtension}
+\parencite{koks_dependencyinjectionextension_2023}. Additionally, and quite significantly,
+implementations primarily rely on abstractions or contracts (interfaces) instead of the
+details of concrete implementations. 
+
+Traditionally, Dependency Injection injects instantiations through constructor parameters
+or class properties. Although there are benefits in this approach, doing so will
+eventually lead to combinatorial effects, breaking the stability of a Software Artifact.
+In order to solve this problem, the Artifact used the Service Locator pattern, a central
+registry responsible for resolving dependencies \parencite{wikipedia_service_2023}. Many
+frameworks are available from \gls{nuget}, but the Artifact uses the Service Registry that
+is part of the .NET framework. This service registry is considered a cross-cutting
+concern. The dependency on this technology is reduced by applying the principles of the
+\gls{lsp} and \gls{isp}. The Artifact creates and uses separate interfaces to register
+\parencite{koks_idependencymanagerinteractor_2023} and resolve
+\parencite{koks_idependencyfactoryinteractor_2023} dependencies. As illustrated in Code
+Listing \ref{list_DependencyManager}, the framework technology dependency is abstracted
+behind implementing those interfaces \parencite{koks_dependencymanagerinteractor_2023}. 
+
+Practically every class gets the \citecode{koks_idependencyfactoryinteractor_2023}
+injected, on which further resolving is responsible for that class's inner workings. Code
+Listing \ref{list_Injecting} illustrates how this is done in the
+\citecode{koks_abstractexpander_2023} class. Finally, all the dependencies are
+bootstrapped on application bootup, depicted in Code Listing \ref{list_dip}. 
+
+The approach described here has many advantages in managing the stability and evolvability
+of the Software Artifact. However, as for most things, there are also some drawbacks. For
+example, a good amount of experience is required for developers to understand code that
+incorporates abstractions, contracts, and Dependency Injection. Another drawback is that
+dependency errors are detected in runtime rather than compile time. The benefits of the
+Artifacts, however, outweigh the drawbacks.
