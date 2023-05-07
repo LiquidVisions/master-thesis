@@ -1,25 +1,28 @@
 \subsection{The Controller Element} \label{converging_controller_element}
 
-\evaluateElementTable{Controller}{tab_convergence_controller}{
-    \addEvalRow{Data & \noAlignment & The Controllers and Data elements are not directly convergent, as
-        the Controller element is focused on handling input/output from external systems, while Data
-        elements represent domain objects.}
+\evaluateElementTable{Controller}{tab_convergence_controller}{ \addEvalRow{Data &
+    \noAlignment & There is no alignment between the Controller element of \gls{ca} and
+    the Data element of \gls{ns} and no manifestations are found in the Artifact.}
 
-    \addEvalRow{Task & \noAlignment &  The Controllers and Task elements are not convergent. However,
-        controllers might initiate Task elements when handling incoming requests.}
+    \addEvalRow{Task & \noAlignment &  There is no alignment between the Controller
+    element of \gls{ca} and the Task element of \gls{ns} and no manifestations are found
+    in the Artifact.}
 
-    \addEvalRow{Flow & \noAlignment &  The Controllers and Flow elements are not convergent, as
-        the Controller element is focused on handling input/output from external systems,
-        whilst the Flow element is concerned with the orchestration of Tasks.}
+    \addEvalRow{Flow & \noAlignment &  There is no alignment between the Controller
+    element of \gls{ca} and the Flow element of \gls{ns} and no manifestations are found
+    in the Artifact.}
 
-    \addEvalRow{Connector & \partialAlignment & The Controller and Connector element are convergent to some
-        degree. Both elements are involved in communication between components. The use of
-        the Controller is a bit more strict it strictly defines communication from
-        external parts of the systems, involving specific Interactor.}
+    \addEvalRow{Connector & \partialAlignment & Although the Controller of \gls{ca}
+    supports the intent of the Connector element of \gls{ns}, they are only partially
+    interchangeable. While both elements are involved in the interaction between
+    components, the Controller element from \gls{ca} primarily intends to interact with
+    external systems using a specific protocol or technology involving user or web
+    interfaces. An example of such a Controller is illustrated in Code Listing
+    \ref{list_entitycontroller}. \parencite{koks_entitycontroller_2023}. In this example,
+    the Controller exposes a Restful interface.}
     
-    \addEvalRow{Trigger & \partialAlignment & The Controller and the Trigger element of \gls{ns} are
-        convergent to some degree as they both can initiate actions based on external
-        events or requests. A Controller is primarily involved in receiving events or
-        reqeusts from external sources, followed by the invocation of the appropriate
-        interactor.}
-}
+    \addEvalRow{Trigger & \partialAlignment & Although the Controller of \gls{ca} supports
+    the intent of the Trigger element of \gls{ns}, they are only partially interchangeable.
+    While both elements are involved in receiving events from external systems, a Controller
+    is also able to initiate communication with the same external systems using specific
+    protocols or technologies involving user or web interfaces. } }

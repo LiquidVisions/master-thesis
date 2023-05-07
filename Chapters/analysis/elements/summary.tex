@@ -1,0 +1,24 @@
+\subsection{The Elements Alignment Overview}
+
+The following table offers a brief overview of the alignment of all elements from both
+\gls{ca} and \gls{ns}.
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{lccccc}
+    \toprule
+        & Data & Task & Flow & Connector & Trigger \\
+        \midrule
+    Entity & \fullAlignment & \noAlignment & \noAlignment & \noAlignment & \noAlignment \\
+    Interactor & \noAlignment & \fullAlignment & \fullAlignment & \noAlignment & \noAlignment \\
+    RequestModel & \fullAlignment & \noAlignment & \noAlignment & \noAlignment & \noAlignment \\ 
+    ResponseModel & \fullAlignment & \noAlignment & \noAlignment & \noAlignment & \noAlignment \\
+    ViewModel & \fullAlignment & \noAlignment & \noAlignment & \noAlignment & \noAlignment \\
+    Controller & \noAlignment & \noAlignment & \noAlignment & \partialAlignment & \partialAlignment \\
+    Gateway & \noAlignment & \noAlignment & \noAlignment & \fullAlignment & \noAlignment \\
+    Presenter & \noAlignment & \partialAlignment & \partialAlignment & \noAlignment & \noAlignment \\
+    Boundary & \noAlignment & \noAlignment & \noAlignment & \fullAlignment & \noAlignment \\ \bottomrule
+    
+    \end{tabular}
+    \caption{An overview of the alignment of all \gls{ca} and \gls{ns} elements}
+    \end{table}

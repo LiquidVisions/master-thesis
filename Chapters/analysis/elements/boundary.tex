@@ -1,23 +1,26 @@
 \subsection{The Boundary Element}
 
-\evaluateElementTable{Boundary}{tab_convergence_boundary}{
-    \addEvalRow{Data & \noAlignment &  The Boundary and Data elements are not convergent, as the
-        Boundary element is focused on separating concerns between components, while the
-        Data element of \gls{ns} represents a domain object.}
+\evaluateElementTable{Boundary}{tab_convergence_boundary}{ \addEvalRow{Data & \noAlignment
+    &  There is no alignment between the Boundary element of \gls{ca} and the Data
+    element of \gls{ns} and no manifestations are found in the Artifact.}
 
-    \addEvalRow{ Task & \noAlignment &  The Boundary and Flow Task element are not convergent, However,
-        the Boundary element can be used in a Task element to ensure a clear separation
-        of concerns between different modules.}
+    \addEvalRow{ Task & \noAlignment &  There is no alignment between the Boundary element
+    of \gls{ca} and the Task element of \gls{ns} and no manifestations are found in the
+    Artifact.}
 
-    \addEvalRow{ Flow & \partialAlignment & The Boundary and Flow element are not convergent, However, the
-        Boundary element can be used in a Flow element to ensure a clear separation of
-        concerns between different modules.}
+    \addEvalRow{ Flow & \noAlignment & There is no alignment between the Boundary
+    element of \gls{ca} and the Flow element of \gls{ns} and no manifestations are found
+    in the Artifact.}
 
-    \addEvalRow{Connector & \fullAlignment & The Boundary and Connector elements have a strong convergence,
-        as both are involved in communication between components and help ensure loose
-        coupling between these components.}
+    \addEvalRow{Connector & \fullAlignment & The Boundary element of \gls{ca} has a strong
+    alignment with the Connector element of \gls{ns}, as both are involved in communication
+    between components and help ensure loose coupling between these components. However,
+    the Boundary element's scope seems narrower, as this element usually separates
+    architectural boundaries within the application or component. In the Code Listing
+    Example \ref{list_CreateEntityBoundary} we can notice that the main purpose of the
+    Boundary is to separate the inner parts of the Application Layer from the Presentation
+    Layer, which aligns with the goal of the Connector Element of \gls{ns}}
     
-    \addEvalRow{ Trigger & \noAlignment & The Boundary and Trigger element are not convergent, as the
-        Trigger in \gls{ns} is about event-based execution of Tasks, whilst the Boundary in
-        \gls{ca} ensures the separation of concerns between components of the system.}
-}
+    \addEvalRow{ Trigger & \noAlignment & There is no alignment between the Boundary
+    element of \gls{ca} and the Task element of \gls{ns} and no manifestations are found
+    in the Artifact.} }
