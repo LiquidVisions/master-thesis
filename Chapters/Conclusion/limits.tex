@@ -1,0 +1,21 @@
+\section{Limitations}
+
+In this research, the artifacts created to demonstrate the alignment between \gls{ca} and
+\gls{ns} have shown promising results. However, it is essential to recognize these
+artifacts' limitations, particularly in implementing \gls{ns} principles such as the
+Separation of State Principle and the Trigger Element. These limitations must be
+acknowledged to guide future work and refinement of the combined architectural design
+approaches.
+
+One of the primary limitations of the artifacts lies in their incomplete representation of
+the Separation of State principle. This principle is crucial in \gls{ns} to ensure proper
+handling of state changes while achieving stability and evolvability. While the artifacts
+incorporate some aspects of state management, they fall short of fully implementing the
+Separation of State principle as \gls{ns} prescribes. 
+
+The other limitation of the artifacts is their lack of a comprehensive Trigger Element, an
+essential element of \gls{ns}. The Trigger Element manages external triggers while
+ensuring that software remains stable and evolvable. In the artifacts, incorporating the
+Trigger Element is limited, primarily relying on the Controller element from \gls{ca}.
+While this approach may be sufficient for web-enabled environments such as websites and
+RESTful APIs, it may not be adequate for a broader range of requirements.
