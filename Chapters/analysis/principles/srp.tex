@@ -10,31 +10,29 @@
     each other. Figure \ref{fig_handlers} illustrated some of the Tasks that are
     implemented in the Clean Architecture Expander Artifact. The Code Listing
     \ref{list_entityexpander} is an example of one implementation of such a Task
-    \citecode{koks_expandentitieshandlerinteractor_2023}. To sum up, \gls{srp} and
-    \gls{soc} share the goal of organizing a software system into modular components with
-    specific \enquote*{responsibilities} or \enquote*{concerns}. This convergence
-    highlights the importance of encapsulating these responsibilities within a software
-    system.}
+    \citecode{koks_expandentitieshandlerinteractor_2023}.}
     
-    \addEvalRow{\gls{dvt} & \partialAlignment & Although using \gls{srp} does not implicitly guarantees \gls{dvt}, it does support
-    \gls{dvt} by directing certain design choices. For example, both \gls{ca} and \gls{ns}
-    assign specific \gls{dto} objects to support specific use cases (Interactors or Tasks) or
-    to transfer (parts of) Data between architectural layers. \gls{ca} specifically assigned
-    \glspl{dto} and guidelines on where and when to use them. These are also applied in the
-    Artifact of this study as ResponseModels, RequestModels, and ViewModels
-    \parencites{koks_requestmodels_2023,koks_viewmodels_2023} \textcolor{red}{(TODO: Response
-    citation toevoegen)}. The separation of data structures specific to Use Cases minimizes
-    the impact of data structure changes by preferring stamp coupling over data coupling.
-    However, \gls{srp} is not a guaranteed measure for \gls{dvt}.}
+    \addEvalRow{\gls{dvt} & \partialAlignment & Although using \gls{srp} does not
+    implicitly guarantees \gls{dvt}, it does support \gls{dvt} by directing certain design
+    choices. For example, both \gls{ca} and \gls{ns} assign specific \gls{dto} objects to
+    support specific use cases (Interactors or Tasks) or to transfer (parts of) Data
+    between architectural layers. \gls{ca} specifically assigned \glspl{dto} and
+    guidelines on where and when to use them. These are also applied in the Artifact of
+    this study as ResponseModels, RequestModels, and ViewModels
+    \parencites{koks_requestmodels_2023,koks_viewmodels_2023}. The separation of data
+    structures specific to Use Cases minimizes the impact of data structure changes by
+    preferring stamp coupling over data coupling. However, \gls{srp} is not a guaranteed
+    measure for \gls{dvt}.}
     
-    \addEvalRow{\gls{avt} & \partialAlignment & While \gls{srp} emphasizes limiting the responsibility of each module, it does not
-    explicitly require handling specific versions of use cases. Nevertheless, adhering to
-    gls{srp} can still indirectly contribute to achieving \gls{avt}. One way to achieve this
-    is by separating versions of Actions into separate contracts, objects, or methods,
-    enabling Action Version transparency to some degree. Although not yet available in the
-    Artifact, the Code Listing \ref{list_versioning} shows that API versioning is a common
-    standard practice and fully supported by the open API specifcation and the .net core
-    framework \parencites{github_aspnet-api-versioningprogramcs_2023, oas_versioning_2023}.
+    \addEvalRow{\gls{avt} & \partialAlignment & While \gls{srp} emphasizes limiting the
+    responsibility of each module, it does not explicitly require handling specific
+    versions of use cases. Nevertheless, adhering to gls{srp} can still indirectly
+    contribute to achieving \gls{avt}. One way to achieve this is by separating versions
+    of Actions into separate contracts, objects, or methods, enabling Action Version
+    transparency to some degree. Although not yet available in the Artifact, the Code
+    Listing \ref{list_versioning} shows that API versioning is a common standard practice
+    and fully supported by the open API specifcation and the .net core framework
+    \parencites{github_aspnet-api-versioningprogramcs_2023, oas_versioning_2023}.
     Manifestations in the Artifact can be located in the Logger (Code Listing
     \ref{list_logging}), amongst others \parencite*{koks_logger_2023}.}
     
