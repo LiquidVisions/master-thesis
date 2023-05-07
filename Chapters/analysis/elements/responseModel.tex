@@ -1,29 +1,20 @@
 \subsection{The ResponseModel Element}
 
-\evaluateElementTable{ResponseModel}{tab_convergence_responsemodel}{
-    \addEvalRow{Data & \partialAlignment & Both elements represent data objects that are part of the
-        ontology or data schema of the application, and typically include attributes and
-        relationship information. While they may contain a specific set of information as
-        output for a Task or use case, both elements can also contain a full set of
-        attributes and relationships. However, unlike the Data entity in \gls{ns}, which
-        may include only a subset of information necessary for a specific Task or use
-        case, it may also include the full set of information required for Tasks other
-        purposes.}
+\evaluateElementTable{ResponseModel}{tab_convergence_responsemodel}{\addEvalRow{ Data &
+    \fullAlignment & Both elements represent data objects that are part of the ontology or
+    data schema of the application, and typically include attributes and relationship
+    information. They can contain a specific set of information as output for a Task or use
+    case, both elements can also contain a full set of attributes and relationships.}
 
-    \addEvalRow{Task & \noAlignment & The ResponseModel is not convergent with the Task element of
-        \gls{ns}. However, the Tasks element might operate on RequestModels as input
-        parameters to perform business logic.}
+    \addEvalRow{Task & \noAlignment & There is no alignment between the ResponseModel
+    and the Task Element of \gls{ns}.}
 
-    \addEvalRow{Flow & \noAlignment & The ResponseModel and Flow are not convergent, as the Flow element
-        represents the control between Tasks in \gls{ns}, while the ResponseModel in \gls{ca}
-        represents (parts of) domain objects.}
+    \addEvalRow{Flow & \noAlignment & There is no alignment between the ResponseModel
+    and the Flow Element of \gls{ns}.}
 
-    \addEvalRow{Connector & \noAlignment & The ResponseModel element and Connector element are not
-        convergent, as the Connector element in \gls{ns} is involved in communication
-        between components, whilst the ResponseModel in \gls{ca} represents (parts of)
-        domain objects.}
-    
-    \addEvalRow{Trigger & \noAlignment & The ResponseModel element and Trigger element are not convergent,
-        as the Trigger element in \gls{ns} is about event-based execution of Tasks, while
-        the ResponseModel in \gls{ca} represents (parts of) domain objects.}
-}
+    \addEvalRow{Connector & \noAlignment & There is no alignment between the ResponseModel
+    and the Connector Element of \gls{ns}.}
+
+    \addEvalRow{Trigger & \noAlignment & There is no alignment between the ResponseModel and
+    the Trigger Element of \gls{ns}.} }
+

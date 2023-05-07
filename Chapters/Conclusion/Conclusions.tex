@@ -1,53 +1,223 @@
-\chapter{Conclusions} \label{chap_conclusions}
+\chapter{Conclusions and discussion} \label{chap_conclusions}
 
-\begin{enumerate}
-    \color{red}
+This thesis culminates a multifaceted exploration into the convergence of \gls{ca} with
+\gls{ns}. We have drawn upon the author's firsthand experience in designing Software
+Architectures used rigorous theoretical research and created a practical and working
+Software Artifact. The primary objective was to investigate the alignment between \gls{ca}
+and \gls{ns}, by analyzing their principles and design elements through theory and
+practice. This Chapter will summarize the findings into a research conclusion.
 
-    \item \textbf{Literature Review}
-    \begin{itemize}
-        \item Ca offers structure, principles and guidelines on how to build something. On top
-        of that, NST also offers guidelines in order to apply actual changes.
-        \\gls{ca} has a strong emphasis on testability of code. Coupling is an important
-        aspect on this.
-        \item \gls{srp} differs fundamentally from \gls{soc} in definition, although in
-        the artifact not that much (further explain). Komt vooral door verschillende
-        definities in granulariteit.
-    \end{itemize}
-    
-    \item \textbf{Architectural Desing}
-    \begin{itemize}
-        \item 
-    \end{itemize}
+\section{Conclusion}
 
-    \item \textbf{Artifact Development}
-    \begin{itemize}
-        \item 
-    \end{itemize}
-    \begin{enumerate}[label*={\arabic*.}]
-        
-        \item \textbf{The Code Generator and Clean Architecture Expander}
-        \begin{itemize}
-            \item 
-        \end{itemize}
-        
-        \item \textbf{Expanded Clean Architecture artifact}
-        \begin{itemize}
-            \item 
-        \end{itemize}
-        
-    \end{enumerate}
-    
-    \item \textbf{Convergence Analysis:}
-    \begin{itemize}
-        \item 
-    \end{itemize}
-    \begin{enumerate}[label*={\arabic*.}]
-        
-        \item An analysis per principle of \gls{ca}, compared with each of the principles
-        of \gls{ns}, indicating each level of convergence per principle
-        
-        \item An analysis per element of \gls{ca}, compared with each of the elements of
-        \gls{ns}, indicating each level of convergence per principle
-    
-    \end{enumerate}
+A noteworthy distinction between \gls{ns} and \gls{ca} lies in their foundational roots.
+\gls{ns} is a product of computer science research built upon formal theories and
+principles derived from rigorous scientific investigation. Although, throughout this
+thesis, \gls{ns} is referred to as a development approach, it is a part of Computer
+Science.
+
+Stability and evolvability are concepts not directly referenced in the literature of
+\gls{ca}, but very much aligns with the goal of \textcite[31]{mannaert_normalized_2016}.
+The attentive reader surely observes the shared emphasis on modularity and the separation
+of concerns. Both approaches attempt to achieve low coupling and high cohesion. In
+addition, \gls{ca} add the dimensions of dependency management as an essential measure to
+improve maintainability and manage modularity. 
+
+A critical difference between \gls{ca} and \gls{ns} lies in their approach to handling
+state. \gls{ca} does not explicitly address state management in its principles or design
+elements. At the same time, \gls{ns} provides the principle of Separation of State,
+ensuring that state changes within a Software System are stable and evolvable. This
+principle can be crucial in developing scalable and high-performance systems, as it
+isolates state changes from the rest of the system, reducing the impact of state-related
+dependencies and side effects. This finding leads to the first conclusion of this thesis. 
+
+\begin{enumerate}[leftmargin=*]
+    \item The alignment between \gls{ca} and \gls{ns} is incomplete because \gls{ca} needs
+    specific state management principles. As a result, \gls{ca} cannot fully ensure stable and
+    evolvable software artifacts as defined by \gls{ns}.
 \end{enumerate}
+
+\section{Discussion}
+
+Nevertheless, \gls{ns} and \gls{ca} can be effectively applied to enhance the stability and evolvability
+of Software Systems. This synergetic relationship stems from the fact that NS contributes
+a solid theoretical foundation for understanding and addressing the combinatorial effects
+of system changes. At the same time, CA offers a robust, practical framework for
+architectural design in software development.
+
+By integrating the theoretical underpinnings of NS with the pragmatic principles of CA,
+Software Architectures can harness both approaches' strengths to create stable software
+systems and adaptable to changing requirements. In addition, the convergence of these
+methodologies allows for a comprehensive understanding of the factors contributing to
+reducing the complexity of the Software Architecture, enabling developers to make informed
+design decisions prioritizing modularity, scalability, and extensibility, leading to the
+last conclusion of this thesis.
+
+The synergistic application of \gls{ns} and \gls{ca} can significantly improve software
+systems' stability and evolvability. It leverages the advantages of both
+approaches—combining \glspl{ns} rigorous theoretical basis with \glspl{ca} practical
+guidelines for architectural design. This fusion of methodologies offers a powerful,
+holistic approach to software development that addresses the challenges of system
+complexity and fosters adaptability in an ever-evolving technological landscape.
+
+
+\begin{enumerate}[resume, leftmargin=*]
+    \item The alignment between \gls{ca} and \gls{ns} is incomplete because \gls{ca} needs
+    specific state management principles. As a result, \gls{ca} cannot fully ensure stable and
+    evolvable software artifacts as defined by \gls{ns}.
+\end{enumerate}
+
+\input{chapters/reflection/reflections}
+
+% This thesis is the culmination of a multifaceted exploration into the convergence of
+% \gls{ca} and \gls{ns}, drawing upon the author's firsthand experience in designing
+% Software Architectures, rigorous theoretical research, and the development of a practical
+% and working software artifact. The primary objective was to investigate the alignment
+% between\gls{ca} and \gls{ns}. This was achieved by focussing the analysis on the
+% principles and design elements of both approaches. This Chapter will summarize the
+% findings into a research conclusion.
+
+% A noteworthy distinction between \gls{ns} and \gls{ca} lies in their foundational roots.
+% \gls{ns} is a product of computer science research, is built upon formal theories and
+% principles that are derived from rigorous scientific investigation. Although \gls{ns} is
+% mentioned as  
+% can be considdered as a computer science it self. \gls{ca} can be considdered as a desing
+% phylosophy, incorporating years of experience in a set of principles and best practices.
+% Some of those principles also hav their foundation in science.
+
+% both approaches share 
+% shared emphasis on modularity, separation of concerns, and the reduction of dependencies
+% between system components. Both approaches advocate for the creation of modular systems,
+% with Clean Architecture focusing on the encapsulation of business logic within discrete
+% use cases, and Normalized Systems emphasizing the separation of evolving and stable
+% elements to enable incremental evolution. By adhering to these principles, developers can
+% create software systems that are more maintainable, adaptable, and extensible, better
+% equipped to cope with the ever-changing demands of the digital landscape.
+
+
+%  The
+% primary goal of NS is to create adaptable and maintainable software systems by addressing
+% the combinatorial effects of system changes. NS principles are backed by mathematical
+% models, enabling developers to systematically analyze and design software systems with a
+% focus on modularity, scalability, and adaptability.
+
+
+% The primary objective of this research has been to
+% understand how integrating the principles of Clean Architecture and Normalized Systems can
+% lead to the creation of adaptable, maintainable, and extensible software systems. Through
+% a comprehensive examination of the underlying principles and design patterns, as well as
+% practical implementation, this thesis has demonstrated that these two methodologies can
+% indeed be harmonized to deliver enhanced benefits in software development, albeit with
+% some considerations regarding state management.
+
+
+
+% shedding light on the commonalities, differences, and synergies between these two
+% approaches to software design. The primary objective of this research has been to
+% understand how integrating the principles of Clean Architecture and Normalized Systems can
+% lead to the creation of adaptable, maintainable, and extensible software systems. Through
+% a detailed examination of the underlying principles and design patterns, this thesis has
+% demonstrated that these two methodologies can indeed be harmonized to deliver enhanced
+% benefits in software development, albeit with some considerations regarding state
+% management.
+
+% The convergence of Clean Architecture and Normalized Systems can be observed in their
+% shared emphasis on modularity, separation of concerns, and the reduction of dependencies
+% between system components. Both approaches advocate for the creation of modular systems,
+% with Clean Architecture focusing on the encapsulation of business logic within discrete
+% use cases, and Normalized Systems emphasizing the separation of evolving and stable
+% elements to enable incremental evolution. By adhering to these principles, developers can
+% create software systems that are more maintainable, adaptable, and extensible, better
+% equipped to cope with the ever-changing demands of the digital landscape.
+
+% A key difference between Clean Architecture and Normalized Systems lies in their approach
+% to handling state. Clean Architecture does not explicitly address state management, while
+% Normalized Systems provide the principle of Separation of State to ensure the proper
+% handling of state changes within the system. This principle can be crucial in the
+% development of scalable and high-performance systems, as it allows for the isolation of
+% state changes from the rest of the system, reducing the impact of state-related
+% dependencies and side effects.
+
+% Incorporating the Separation of State principle from Normalized Systems into the Clean
+% Architecture approach can enhance the overall software design by providing a more
+% comprehensive solution to state management. By doing so, developers can create software
+% systems that are not only modular and adaptable but also scalable and resilient. This
+% holistic approach allows developers to capitalize on the strengths of each methodology
+% while minimizing their limitations.
+
+% Throughout this research, we have examined specific areas of alignment between Clean
+% Architecture and Normalized Systems principles, such as the Interface Segregation
+% Principle (ISP) and Action Version Transparency (AVT). We have established that these
+% principles, while addressing different aspects of software design, can be combined to
+% promote modularity and adaptability, resulting in a more robust software system. The
+% Interface Segregation Principle encourages the creation of focused interfaces tailored to
+% specific client needs, while Action Version Transparency allows for the coexistence of
+% multiple versions of an action without affecting overall system behavior.
+
+% In summary, the convergence of Clean Architecture and Normalized Systems offers a
+% promising avenue for the development of software systems that are adaptable, maintainable,
+% and extensible. By integrating the principles and practices of these two methodologies,
+% including the Separation of State principle from Normalized Systems, developers can create
+% robust software systems capable of addressing the complex and evolving needs of today's
+% digital landscape. This thesis has provided a solid foundation for understanding the
+% synergies between Clean Architecture and Normalized Systems, paving the way for further
+% research and practical application of these approaches in real-world software development
+% projects.
+
+% As the field of software engineering continues to evolve, it is crucial for developers and
+% researchers alike to explore new avenues for collaboration and integration between
+% different methodologies. By embracing the convergence of Clean Architecture and Normalized
+% Systems, including the proper handling of state, we can further advance the state of the
+% art in software development, fostering the creation of innovative, resilient, and
+% adaptable software systems that stand the test of time.
+
+% \begin{enumerate}
+%     \color{red}
+
+%     \item \textbf{Literature Review}
+%     \begin{itemize}
+%         \item Ca offers structure, principles and guidelines on how to build something. On top
+%         of that, NST also offers guidelines in order to apply actual changes.
+%         \\gls{ca} has a strong emphasis on testability of code. Coupling is an important
+%         aspect on this.
+%         \item \gls{srp} differs fundamentally from \gls{soc} in definition, although in
+%         the artifact not that much (further explain). Komt vooral door verschillende
+%         definities in granulariteit.
+%     \end{itemize}
+    
+%     \item \textbf{Architectural Desing}
+%     \begin{itemize}
+%         \item 
+%     \end{itemize}
+
+%     \item \textbf{Artifact Development}
+%     \begin{itemize}
+%         \item 
+%     \end{itemize}
+%     \begin{enumerate}[label*={\arabic*.}]
+        
+%         \item \textbf{The Code Generator and Clean Architecture Expander}
+%         \begin{itemize}
+%             \item 
+%         \end{itemize}
+        
+%         \item \textbf{Expanded Clean Architecture artifact}
+%         \begin{itemize}
+%             \item 
+%         \end{itemize}
+        
+%     \end{enumerate}
+    
+%     \item \textbf{Convergence Analysis:}
+%     \begin{itemize}
+%         \item 
+%     \end{itemize}
+%     \begin{enumerate}[label*={\arabic*.}]
+        
+%         \item An analysis per principle of \gls{ca}, compared with each of the principles
+%         of \gls{ns}, indicating each level of convergence per principle
+        
+%         \item An analysis per element of \gls{ca}, compared with each of the elements of
+%         \gls{ns}, indicating each level of convergence per principle
+    
+%     \end{enumerate}
+% \end{enumerate}

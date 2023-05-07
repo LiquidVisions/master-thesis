@@ -1,25 +1,21 @@
 \subsection{The Presenter Element}
 
-\evaluateElementTable{Presenter}{tab_convergence_presenter}{
-    \addEvalRow{Data & \noAlignment &  The Presenter and Data element are not convergent. However, Data
-        elements might be transformed into a suitable format for the user inter interface
-        by \gls{ca}'s Presenter element.}
+\evaluateElementTable{Presenter}{tab_convergence_presenter}{ \addEvalRow{Data &
+    \noAlignment &  There is no alignment between the Presenter and the Task Element of
+    \gls{ns}.}
 
-    \addEvalRow{Task & \noAlignment &  The Presenter and Task elements are not convergent. The
-    Presenter element is focused on transforming output data to the user interface,
-    while the Task element of \gls{ns} executes business logic.}
+    \addEvalRow{Task & \partialAlignment &  The Presenter is responsible for in preparing the
+    Response and ViewModel on behalf of the Controller and can be considdered a Task Element with a
+    very specialized job. Code Listing \ref{list_createentitypresenter} illustrated the
+    inner workings of a Presenter \parencite{koks_createentitypresenter_2023}}
 
-    \addEvalRow{Flow & \noAlignment & The Presenter and Flow element are not convergent. The Flow
-        element of \gls{ns} represents the orchestration between Tasks, while the
-        Presenter element in \gls{ca} is responsible for transforming output data to the
-        user interface.}
+    \addEvalRow{Flow & \partialAlignment & Presenters can handle multiple Tasks when this
+    is required. in this case there is also some alignment between the Presenter Element
+    of \gls{ca} with the Flow Element of \gls{ns}.}
 
-    \addEvalRow{Connector & \noAlignment & The Presenter and Connector elements are not convergent.
-        Although the Presenter element of \gls{ca} might rely on Connector elements of
-        \gls{ns} to communicate with other components in the system.}
+    \addEvalRow{Connector & \noAlignment & There is no alignment between the Presenter
+    and the Connector Element of \gls{ns}.}
     
-    \addEvalRow{Trigger & \noAlignment & The Presenter and Trigger elements are not convergent, as the
-        Triggers element in \gls{ns} is about event-based execution of Tasks, while
-        presenters in \gls{ca} are responsible for transforming output data on behalf of
-        the user interface.}
+    \addEvalRow{Trigger & \noAlignment & There is no alignment between the Presenter
+    and the Trigger Element of \gls{ns}.}
 }
