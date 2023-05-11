@@ -1,27 +1,27 @@
 \subsection{Interface Segregation Principle}
 
-\evaluatePrincipleTable{\gls{isp}}{table_isp_alignment}{ 
+\evaluatePrincipleTable{\gls{isp}}{table_isp_convergence}{ 
     
-\addEvalRow{\gls{soc} & \fullAlignment & The \gls{isp} strongly aligns with the \gls{soc}
+\addEvalRow{\gls{soc} & \fullConvergence & The \gls{isp} strongly converges with the \gls{soc}
 principle, as both emphasize the importance of modularity and the separation of concerns.
 \gls{isp} states that clients should not be forced to depend on implementation they do not
 use, promoting the creation of smaller, focused interfaces. In Listing
 \ref{list_ispexample}, you can see that each \gls{crud} operation has its own interface
 \parencite{koks_crudgateways_2023}.}
     
-\addEvalRow{\gls{dvt} & \noAlignment & The \gls{isp} does not relate to the \gls{dvt}
-principle. The alignment of both principles is weak, and no manifestations are found in
+\addEvalRow{\gls{dvt} & \noConvergence & The \gls{isp} does not relate to the \gls{dvt}
+principle. The convergence of both principles is weak, and no manifestations are found in
 the artifacts.}
     
-\addEvalRow{\gls{avt} & \partialAlignment & The alignment between \gls{isp} and \gls{avt}
+\addEvalRow{\gls{avt} & \npartialConvergence & The convergence between \gls{isp} and \gls{avt}
 arises from the emphasis of \gls{isp} on creating targeted interfaces that are tailored to
 specific needs. Smaller interfaces can enhance modularity and minimize unwanted side
 effects when modifying Actions in the software system, positively impacting the
 implementation of the \gls{avt}. For example, modifications in Actions are likely to have a
 limited impact. However, adhering to \gls{isp} is not a guarantee for \gls{avt}.} 
     
-\addEvalRow{\gls{sos} & \noAlignment & The \gls{isp} does not relate to the \gls{sos}
-principle. The alignment of both principles is weak, and no manifestations are found in
+\addEvalRow{\gls{sos} & \noConvergence & The \gls{isp} does not relate to the \gls{sos}
+principle. The convergence of both principles is weak, and no manifestations are found in
 the artifacts.} 
 
 }

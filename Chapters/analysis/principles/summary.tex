@@ -1,21 +1,30 @@
-\subsection{The Principles Alignment Overview}
-    
-The following table offers a brief overview of the alignment of all principles from both
-\gls{ca} and \gls{ns}.
+\subsection{The Principles Convergence Overview}
 
-\begin{table}[!ht]
+By cross-referencing these principles, we aim to uncover the degree of convergence between
+\gls{ca} and \gls{ns}. Our observations drawn from this comparative analysis provide a
+nuanced understanding of how these principles interact and highlight areas of strong
+convergence as well as potential gaps. Table \ref{tab_convergence_principles_summarized}
+offers a brief overview of this convergence.
+
+\begin{table}[H]
+\renewcommand{\arraystretch}{1.5}
 \centering
-\begin{tabular}{lcccc}
-\toprule
-& SoC & DVT & AVT & SoS \\
+\begin{tabular}{r|llll}
+
+    \textbf{\acrlong{ca}   } \textbf{   \rotatebox[origin=l]{90}{\acrlong{ns}}} & 
+    \rotatebox[origin=l]{90}{\acrlong{soc}} & \rotatebox[origin=l]{90}{\acrlong{dvt}} &
+    \rotatebox[origin=l]{90}{\acrlong{avt}} & \rotatebox[origin=l]{90}{\acrlong{sos}} \\
 \midrule
-SRP & \fullAlignment & \partialAlignment & \partialAlignment & \noAlignment \\
-OCP & \fullAlignment & \noAlignment & \fullAlignment & \noAlignment \\
-LSP & \fullAlignment & \noAlignment & \partialAlignment & \noAlignment \\
-ISP & \fullAlignment & \noAlignment & \partialAlignment & \noAlignment \\
-DIP & \fullAlignment & \noAlignment & \partialAlignment & \noAlignment \\
+
+
+\acrlong{srp} & \fullConvergence & \npartialConvergence & \npartialConvergence & \noConvergence \\
+\acrlong{ocp} & \fullConvergence & \noConvergence & \fullConvergence & \noConvergence \\
+\acrlong{lsp} & \fullConvergence & \noConvergence & \npartialConvergence & \noConvergence \\
+\acrlong{isp} & \fullConvergence & \noConvergence & \npartialConvergence & \noConvergence \\
+\acrlong{dip} & \fullConvergence & \noConvergence & \npartialConvergence & \noConvergence \\
 \bottomrule
 \end{tabular}
-\caption{An overview of the alignment of all \gls{ca} and \gls{ns} principles}
+\caption{An overview of the convergence of all \gls{ca} and \gls{ns} principles}
 \label{tab_convergence_principles_summarized}
 \end{table}
+

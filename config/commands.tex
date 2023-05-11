@@ -1,3 +1,6 @@
+\newcommand*{\appendixmore}{%
+  \addtocontents{toc}{\protect\DeclareTOCStyleEntry[numwidth=4em]{section}{section}}%
+}
 %----------------------------------------------------------------------------------------
 %	RANDOM COMMANDS USED IN THE THESIS
 %----------------------------------------------------------------------------------------
@@ -11,13 +14,15 @@
 %----------------------------------------------------------------------------------------
 %	FONT ICON COMMANDS
 %----------------------------------------------------------------------------------------
-\newcommand{\fullAlignment}{\faPlus \faPlus}
-\newcommand{\noAlignment}{\faMinus}
-\newcommand{\partialAlignment}{\faPlus}
+\newcommand{\fullConvergence}{\faPlus \faPlus}
+\newcommand{\noConvergence}{\faMinus}
+\newcommand{\npartialConvergence}{\faPlus}
 
 \usepackage{array}
 \usepackage{ragged2e}
 \newcolumntype{P}[1]{>{\RaggedRight\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\hspace{0pt}}c{#1}}
+
 
 \usepackage{etoolbox}
 \preto\tabular{\setcounter{magicrownumbers}{0}}
@@ -44,11 +49,11 @@
 }
 
 \newcommand{\evaluatePrincipleTable}[3]{%
-  \evalTable{The alignment of #1 with the \gls{ns} principles}{#2}{#3 \hline}
+  \evalTable{The convergence of #1 with the \gls{ns} principles}{#2}{#3 \hline}
 }
 
 \newcommand{\evaluateElementTable}[3]{%
-  \evalTable{The alignment of the Element #1 with the elements of \gls{ns}}{#2}{#3 \hline}
+  \evalTable{The convergence of the Element #1 with the elements of \gls{ns}}{#2}{#3 \hline}
 } 
 
 \newcommand{\requirement}[3]{%

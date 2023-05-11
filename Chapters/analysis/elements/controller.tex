@@ -1,18 +1,18 @@
 \subsection{The Controller Element} \label{converging_controller_element}
 
 \evaluateElementTable{Controller}{tab_convergence_controller}{ \addEvalRow{Data &
-    \noAlignment & There is no alignment between the Controller element of \gls{ca} and
+    \noConvergence & There is no convergence between the Controller element of \gls{ca} and
     the Data element of \gls{ns} and no manifestations are found in the Artifact.}
 
-    \addEvalRow{Task & \noAlignment &  There is no alignment between the Controller
+    \addEvalRow{Task & \noConvergence &  There is no convergence between the Controller
     element of \gls{ca} and the Task element of \gls{ns} and no manifestations are found
     in the Artifact.}
 
-    \addEvalRow{Flow & \noAlignment &  There is no alignment between the Controller
+    \addEvalRow{Flow & \noConvergence &  There is no convergence between the Controller
     element of \gls{ca} and the Flow element of \gls{ns} and no manifestations are found
     in the Artifact.}
 
-    \addEvalRow{Connector & \partialAlignment & Although the Controller of \gls{ca}
+    \addEvalRow{Connector & \npartialConvergence & Although the Controller of \gls{ca}
     supports the intent of the Connector element of \gls{ns}, they are only partially
     interchangeable. While both elements are involved in the interaction between
     components, the Controller element from \gls{ca} primarily intends to interact with
@@ -21,7 +21,7 @@
     \ref{list_entitycontroller}. \parencite{koks_entitycontroller_2023}. In this example,
     the Controller exposes a Restful interface.}
     
-    \addEvalRow{Trigger & \partialAlignment & Although the Controller of \gls{ca} supports
+    \addEvalRow{Trigger & \npartialConvergence & Although the Controller of \gls{ca} supports
     the intent of the Trigger element of \gls{ns}, they are only partially interchangeable.
     While both elements are involved in receiving events from external systems, a Controller
     is also able to initiate communication with the same external systems using specific
