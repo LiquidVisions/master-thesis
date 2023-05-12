@@ -1,14 +1,14 @@
 \subsubsection{The Dependency Inversion Principle} \label{subsubsec_dip} 
 
-The \gls{dip} prescribes that high-level modules should not depend on low-level modules
-and that both should depend on abstractions. The principle emphasizes that the
-architecture should be designed so that the flow of control between the different objects,
-layers, and components is always from higher-level implementations to lower-level details.
-In other words, high-level implementations, like business rules, should not be concerned
-about low-level implementations, such as how the data is stored or presented to the end
-user. Additionally, both the high-level and low-level implementations should only depend
-on abstractions or interfaces that define a contract for how they should interact with
-each other \parencite[91]{robert_c_martin_clean_2018}. 
+The \gls{dip} prescribes that high-level modules should not depend on low-level modules,
+and both should depend on abstractions. The principle emphasizes that the architecture
+should be designed so that the flow of control between the different objects, layers, and
+components is always from higher-level implementations to lower-level details. In other
+words, high-level implementations, like business rules, should not be concerned about
+low-level implementations, such as how the data is stored or presented to the end user.
+Additionally, high-level and low-level implementations should only depend on abstractions
+or interfaces that define a contract for how they should interact with each other
+\parencite[91]{robert_c_martin_clean_2018}. 
 
 This approach allows for great flexibility and a modular architecture. Modifications in
 the low-level implementations will not affect the high-level implementations as long as

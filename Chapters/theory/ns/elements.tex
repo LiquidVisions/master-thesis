@@ -6,31 +6,31 @@ chosen when implementing the software and its components. For Object Oriented Pr
 Languages like Java, the following Normalized Elements have been proposed
 \parencite[363-398]{mannaert_normalized_2016}. It is essential to recognize that different
 programming languages may necessitate alternative constructs
-\parencite[364]{mannaert_normalized_2016}. The table describing each of the elements uses
-the definition from \textcite{mannaert_towards_2012}.
+\parencite[364]{mannaert_normalized_2016}. The table describing each element uses the
+definition from \textcite{mannaert_towards_2012}.
 
 \begin{table}[H]
     \begin{tabular}{ p{0.15\linewidth} p{0.75\linewidth}}
         \hline
         \textbf{Element} & \textbf{Description} \\ 
         \hline
-        Data & Based on gls{dvt}, data elements have get- and set-methods for wide-sense
-        data version transparency, or marshal- and parse-methods for strict-sense data
+        Data & Based on \gls{dvt}, data elements have get- and set-methods for wide-sense
+        data version transparency, or marshal -and parse- methods for strict-sense data
         version transparency. Supporting tasks can be added in a way which is consistent
-        with the principles gls{soc} and gls{dvt}.\\
+        with the principles \gls{soc} and \gls{dvt}.\\
         \midrule
 
         Task & Based on \gls{soc}, the core action entity can only contain a single
         functional task, and not multiple tasks. Based on \gls{avt}, arguments and
         parameters must be encapsulated data entities. Based on \gls{soc} and \gls{sos},
         workflows need to be separated from action entities, and will therefore be
-        encapsulated in a workflow elements. Based on \gls{avt}, tasks need to be
+        encapsulated in a workflow element. Based on \gls{avt}, tasks need to be
         encapsulated in such a way that a separate action entity wraps the action entities
         representing task versions. Supporting tasks can be added in a way which is
         consistent with \gls{soc} and \gls{avt}.\\
         \midrule
 
-        WorkFlow & Based on \gls{soc}, workflow elements cannot contain other functional
+        Workflow & Based on \gls{soc}, workflow elements cannot contain other functional
         tasks, as they are generally considered a separate change driver, often
         implemented in an external technology. Based on \gls{sos}, workflow elements must
         be stateful. This state is required for every instance of use of the action

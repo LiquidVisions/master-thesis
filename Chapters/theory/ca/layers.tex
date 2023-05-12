@@ -1,16 +1,16 @@
-\subsection{Component architecture} \label{subsec_layers}
+\subsection{Component Architecture} \label{subsec_layers}
 
-\gls{ca} organizes their components into distinct layers. This architecture promotes the
+\gls{ca} organizes its components into distinct layers. This architecture promotes the
 separation of concerns, maintainability, testability, and adaptability. The following
-section is a short description of each layer \parencite{robert_c_martin_clean_2018}.
+section briefly describes each layer \parencite{robert_c_martin_clean_2018}.
 
-\subsubsection{Domain layer}
+\subsubsection{Domain Layer}
 This layer contains the application's core business objects, rules, and domain logic. Entities
 represent the fundamental concepts and relationships in the problem domain and are indepen-
 dent of any specific technology or framework. The domain layer focuses on encapsulating the
 essential complexity of the system and should be kept as pure as possible.
 
-\subsubsection{Application layer}
+\subsubsection{Application Layer}
 This layer contains the use cases or application-specific business rules orchestrating the
 interaction between entities and external systems. Use cases define the application's
 behavior regarding the actions users can perform and the expected outcomes. This layer is
@@ -18,7 +18,7 @@ responsible for coordinating the flow of data between the domain layer and the
 presentation or infrastructure layers while remaining agnostic to the specifics of the
 user interface or external dependencies.
 
-\subsubsection{Presentation layer}
+\subsubsection{Presentation Layer}
 This layer translates data and interactions between the use cases and external actors,
 such as users or external systems. Interface adapters include controllers, view models,
 presenters, and data mappers, which handle user input, format data for display, and
@@ -26,7 +26,7 @@ convert data between internal and external representations. The presentation lay
 be as thin as possible, focusing on the mechanics of user interaction and deferring
 application logic to the use cases.
 
-\subsubsection{Infrastructure layer}
+\subsubsection{Infrastructure Layer}
 This layer contains the technical implementations of external systems and dependencies,
 such as databases, web services, file systems, or third-party libraries. The
 infrastructure layer provides concrete implementations of the interfaces and abstractions

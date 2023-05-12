@@ -1,4 +1,4 @@
-\chapter{The Entity Relationship Diagram of the Meta Mode} \label{appendix_metamodel_description}  
+\chapter{The Entity Relationship Diagram of the meta-model} \label{appendix_metamodel_description}  
 
 \section{The App entity}
 
@@ -19,17 +19,17 @@ perform the expandsion of a software system.
         generation process. \\
         Entities & List of Entities & The Entities that are applicable for the Generated artifact. \\
         ConnectionStrings & List of ConnectionStrings & The ConnectionString to the
-        database that is used by the Generator Artifact. \\
+        database that is used by the Generator artifact. \\
         \hline
     \end{tabular}
     \caption{The fields of the App entity}
     \label{table:app_entity}
 \end{table}
 
-\section{The Component entity}
+\section{The component entity}
 
-The Component entity represents a software component that can be part of an application.
-Based on this entity the Generator Artifact can make design time on where to place certain
+The component entity represents a software component that can be part of an application.
+Based on this entity the Generator artifact can make design time on where to place certain
 elements  
 
 \begin{table}[H]
@@ -45,7 +45,7 @@ Packages & List of Package & The Packages that should be applied to the componen
 Expander & Expander & Navigation property to the Expander entity. \\
 \hline
 \end{tabular}
-\caption{The fields of the Component entity}
+\caption{The fields of the component entity}
 \label{table:component_entity}
 \end{table}
 
@@ -103,7 +103,7 @@ IsForeignEntityOf & List of Relationships & List of relationships where this ent
 \section{The Expander entity}
 
 The Expander entity represents an expander, which is responsible for generating code for
-an application. The Generator Artifact attempts to execute all expanders that are related
+an application. The Generator artifact attempts to execute all expanders that are related
 to the selected App.
 
 \begin{table}[H]

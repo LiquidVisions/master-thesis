@@ -1,24 +1,24 @@
 \subsection{Component Architecture Requirements} \label{component_requirements}
  
-The following requirements are applied to the Component Architecture of both the Generator
-Artifact and the Generated Artifact.
+The following requirements are applied to the component Architecture of both the Generator
+artifact and the Generated artifact.
 
-\requirement{The Component Architecture}{table_component_requirements}{
+\requirement{The component Architecture}{table_component_requirements}{
     \addEvalRow{The solution is organized into separate Visual Studio projects for the Domain,
     Application, Infrastructure, and Presentation layers of the component. A detailed
     description of these layers can be found in Section \fullref{subsec_layers}}
 
     \addEvalRow{The Visual Studio projects representing the component layers comply with the naming
-    conventions outlined in the appendix \fullref{appendix_component_naming_convention}}
+    conventions outlined in Appendix \fullref{appendix_component_naming_convention}}
 
     \addEvalRow{The dependencies between the component layers must follow an inward direction towards
-    the higher-level components as illustrated in Figure \ref{fig_modulair_components}
+    the higher-level components as, illustrated in Figure \ref{fig_modulair_components}
     schematically, and cannot skip layers.}
 }
 
-\requirement{Technology Expander}{table_technology}{
-    \addEvalRow{The Domain and Application layers have no dependencies on any infrastructure technologies, like web- or database
-    technologies. }
+\requirement{Technology Expander}{table_technology}{ \addEvalRow{The Domain and
+    Application layers have no dependencies on infrastructure technologies, like web- or
+    database technologies. }
 
     \addEvalRow{The Presentation Layer relies on various infrastructure technologies for
     facilitating end-user interaction. Examples of such technologies include Command
@@ -30,7 +30,7 @@ Artifact and the Generated Artifact.
     databases or filesystems. Each infrastructure dependency is isolated and managed in
     separate Visual Studio Projects to promote stability and evolvability.}
 
-    \addEvalRow{All Component Layers utilize the C\# programming language, explicitly targeting the
+    \addEvalRow{All component Layers utilize the C\# programming language, explicitly targeting the
     .NET 7.0 framework.}
 
     \addEvalRow{Reusing existing functionality or technology (packages) is permitted only when

@@ -1,16 +1,16 @@
 \subsection{Expander Framework \& Clean Architecture Expander Requirements} \label{expander_framework_requirements}
 
 In addition to the more generic requirements of previous sections, the following
-requirements are specific for Clean Architecture Exander \& Expander Framework Artifact.
+requirements are specific for Clean Architecture Exander \& Expander Framework artifact.
 
 \requirement{Expander Framework}{table_requirements_expanderframework}{
     \addEvalRow{The Expander Framework enables interaction with the Clean Architecture Expander via a
-    \gls{cli}. The \gls{cli} is implemented in the Presentation Layer of the
+    \gls{cli}. The \gls{cli} is implemented in the Presentation layer of the
     Expander Framework.}
 
-    \addEvalRow{The Expander Framework retrieves the model from a \gls{mssql} using the
+    \addEvalRow{The Expander Framework retrieves the model from an \gls{mssql} using the
     EntityFramework ORM technology. The EntityFramework technology is implemented in the
-    Infrastructure Layer of the Expander Framework.}
+    Infrastructure layer of the Expander Framework.}
 
     \addEvalRow{The Expander Framework loads and executes the configured Expanders. In the case of
     this research, only the Clean Architecture Expander is applied.}
@@ -21,19 +21,19 @@ requirements are specific for Clean Architecture Exander \& Expander Framework A
     \addEvalRow{The Expander Framework supports generic template handling, which can be used or
     extended by the Expanders using the \gls{ocp} principle. }
 
-    \addEvalRow{The Expander framework adheres to this chapter's Component and Software Requirements
+    \addEvalRow{The Expander framework adheres to this chapter's component and software Requirements
     specified in Sections \ref{component_requirements} and \ref{software_requirements}.}
 }
 
 \requirement{Clean Architecture Expander}{table_requirements_expander}{
     \addEvalRow{The Clean Architecture Expander generates a C\# net7.0 RESTful service that provides an
-    HTTP interface on top of the metamodel of the Expander Framework, allowing the basic
+    HTTP interface on top of the meta-model of the Expander Framework, allowing the basic
     \gls{crud} operations.}
 
-    \addEvalRow{The Clean Architecture Expander consists solely of an Application Layer and reuses
-    the Domain Layer of the Expander Framework.}
+    \addEvalRow{The Clean Architecture Expander consists solely of an Application layer and reuses
+    the Domain layer of the Expander Framework.}
 
-    \addEvalRow{The Clean Architecture Expander adheres to this chapter's Component and Software
+    \addEvalRow{The Clean Architecture Expander adheres to this chapter's component and software
     Requirements specified in Sections \ref{component_requirements} and
     \ref{software_requirements}.}
 }
