@@ -2,9 +2,10 @@
 
 \section{Component Layer Naming Conventions} \label{appendix_component_naming_convention}
 
-\textbf{[\gls{prod}]} is defined as \textit{\glsdesc{prod}} \newline 
-\textbf{[\gls{comp}]} is defined as \textit{\glsdesc{comp}} \newline 
-\textbf{[\gls{tech}]} is defined as \textit{\glsdesc{tech}} 
+\textbf{[PROD]} is defined as \textit{The name of the product of the software.} \newline 
+\textbf{[COMP]} is defined as \textit{The name of the Company that is considdered the owner of the software. If
+there is no company involved, this can be left blank.} \newline 
+\textbf{[TECH]} is defined as \textit{The primary technology that is used by the component layer.} 
 
 \begin{table}[H]
     \footnotesize
@@ -12,10 +13,10 @@
     \hline
     \textbf{Layer} & \textbf{Project name} & \textbf{Package name} \\ 
     \hline
-    Domain & [\gls{prod}].Domain & [\gls{comp}].[\gls{prod}].Domain \\
-    Application & [\gls{prod}].Application & [\gls{comp}].[\gls{prod}].Application \\
-    Presentation & [\gls{prod}].Presentation.[\gls{tech}] & [\gls{comp}].[\gls{prod}].Presentation.[\gls{tech}] \\
-    Infrastructure & [\gls{prod}].Infrastructure.[\gls{tech}] & [\gls{comp}].[\gls{prod}].Infrastructure.[\gls{tech}]
+    Domain & [PROD].Domain & [COMP].[PROD].Domain \\
+    Application & [PROD].Application & [COMP].[PROD].Application \\
+    Presentation & [PROD].Presentation.[TECH] & [COMP].[PROD].Presentation.[TECH] \\
+    Infrastructure & [PROD].Infrastructure.[TECH] & [COMP].[PROD].Infrastructure.[TECH]
     \\ \hline
     \end{tabular}
 \caption{Naming convention component layers}
@@ -24,33 +25,33 @@
 
 \section{Element Naming Conventions} \label{appendix_element_naming_convention}
 
-\textbf{[\gls{verb}]} is defined as \textit{\glsdesc{verb}} \newline 
-\textbf{[\gls{noun}]} is defined as \textit{\glsdesc{noun}} 
+\textbf{[Verb]} is defined as \textit{The primary action that that class or interface is assosiated with.} \newline 
+\textbf{[Noun]} is defined as \textit{The primary subject or object that that class or interface is assosiated with.} 
 
 \begin{table}[H]
   \footnotesize
   \begin{tabular}{ l p{0.24\linewidth} p{0.09\linewidth} p{0.37\linewidth} }
   \hline
   \textbf{Layer name} & \textbf{Element} & \textbf{Type} & \textbf{Naming Convention} \\ \hline
-  Presentation & Controller & class & [\textit{\gls{noun}}]Controller \\
-  & ViewModelMapper & class & [\textit{\gls{noun}}]ViewModelMapper \\
-  & Presenter & class & [\textit{\gls{verb}}][\textit{\gls{noun}}]Presenter \\
-  & ViewModel & class & [\textit{\gls{noun}}]ViewModel \\
+  Presentation & Controller & class & [\textit{Noun}]Controller \\
+  & ViewModelMapper & class & [\textit{Noun}]ViewModelMapper \\
+  & Presenter & class & [\textit{Verb}][\textit{Noun}]Presenter \\
+  & ViewModel & class & [\textit{Noun}]ViewModel \\
 
-  Application & Boundary & class & [\textit{\gls{verb}\gls{noun}}]Boundary \\
+  Application & Boundary & class & [\textit{VerbNoun}]Boundary \\
   & Boundary  & interface & IBoundary \\
-  & Gateway  & interface & I[\textit{\gls{verb}}]Gateway \\
-  & Interactor  & interface & I[\textit{\gls{verb}}]Interactor \\
-  & Interactor & class & [\textit{\gls{verb}}][\textit{\gls{noun}}]Interactor \\
+  & Gateway  & interface & I[\textit{Verb}]Gateway \\
+  & Interactor  & interface & I[\textit{Verb}]Interactor \\
+  & Interactor & class & [\textit{Verb}][\textit{Noun}]Interactor \\
   & Mapper  & interface & IMapper \\
-  & RequestModelMapper & class & [\textit{\gls{verb}}][\textit{\gls{noun}}]RequestModelMapper \\
+  & RequestModelMapper & class & [\textit{Verb}][\textit{Noun}]RequestModelMapper \\
   & Presenter  & interface & IPresenter \\
   & Validator  & interface & IValidator \\
-  & Validator & class & [\textit{\gls{verb}}][\textit{\gls{noun}}]Validator \\
+  & Validator & class & [\textit{Verb}][\textit{Noun}]Validator \\
   
-  Infrastructure & Gateway & class & [\textit{\gls{noun}}]Repository \\
+  Infrastructure & Gateway & class & [\textit{Noun}]Repository \\
 
-  Domain & Data Entity & class & [\textit{\gls{noun}}] \\ \hline
+  Domain & Data Entity & class & [\textit{Noun}] \\ \hline
 
   \end{tabular}
   \caption{Naming convention of recurring elements}

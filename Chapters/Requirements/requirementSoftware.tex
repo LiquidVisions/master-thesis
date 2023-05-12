@@ -156,10 +156,10 @@ requirements specific to each element.
     \addEvalRow{The Domain and Application layers have no dependencies on any infrastructure technologies, like web- or database
     technologies. }
 
-    \addEvalRow{The \textit{[\gls{verb}]Gateway} interface establishes the contract for its derived Gateway
+    \addEvalRow{The \textit{[Verb]Gateway} interface establishes the contract for its derived Gateway
     implementations, which are typically implemented in the Infrastructure Layer.}
 
-    \addEvalRow{The \textit{[\gls{verb}]}Gateway interface has a public scope within the system.}
+    \addEvalRow{The \textit{[Verb]}Gateway interface has a public scope within the system.}
 
     \addEvalRow{Each task is represented in the naming convention of the interface. As an example, the
     basic \gls{crud} actions result in a total of five IGateway interfaces: ICreateGateway,
@@ -199,14 +199,14 @@ requirements specific to each element.
 
 \requirement{Gateway Implementation}{table_requirements_gatewayimplementation}{
 
-    \addEvalRow{The [\textit{\gls{verb}}]Gateway Implementation derives from the I[\textit{\gls{verb}}]Gateway interface
+    \addEvalRow{The [\textit{Verb}]Gateway Implementation derives from the I[\textit{Verb}]Gateway interface
     and adheres to the specified implementation.}
 
-    \addEvalRow{The [\textit{\gls{verb}}]Gateway Implementation is responsible for the interaction
+    \addEvalRow{The [\textit{Verb}]Gateway Implementation is responsible for the interaction
     associated with the specific task, utilizing the infrastructure technology of the
     specific layer (e.g., a SQL database or a filesystem).}
 
-    \addEvalRow{The [\textit{\gls{verb}}]Gateway Implementation has an internal scope and cannot be
+    \addEvalRow{The [\textit{Verb}]Gateway Implementation has an internal scope and cannot be
     instantiated outside of the Layer.}
 }
 
