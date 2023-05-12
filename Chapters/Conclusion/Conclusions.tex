@@ -1,10 +1,10 @@
 \chapter{Conclusions and discussion} \label{chap_conclusions}
 
-This thesis embodies a multidimensional exploration into the convergence of \gls{ca} with
-\gls{ns}. We have drawn upon the author's firsthand experience in designing software
-Architectures used rigorous theoretical research. Additionally We created practical and
+This thesis embodies a multidimensional exploration of the convergence of \gls{ca} with
+\gls{ns}. We have drawn upon the author's firsthand experience designing software
+architectures using rigorous theoretical research. Additionally we created practical and
 working software Artifacts. The primary objective was to study the convergence between
-\gls{ca} and \gls{ns}, by analyzing their principles and design elements through theory
+\gls{ca} and \gls{ns} by analyzing their principles and design elements through theory
 and practice. This chapter will summarize the findings into a research conclusion.
 
 \section{Conclusion}
@@ -15,27 +15,27 @@ principles derived from rigorous scientific investigation. Although, throughout 
 thesis, \gls{ns} is referred to as a development approach, it is actually a part of
 Computer Science.
 
-Stability and evolvability are concepts not directly referenced in the literature of
-\gls{ca}, but this design approach very much alings with the goal of
-\textcite[31]{mannaert_normalized_2016}. Clearly depicted in Table
-\ref{tab_convergence_principles_summarized} The attentive reader surely observes the
+Stability and evolvability are concepts not directly referenced in the literature on
+\gls{ca}, but this design approach aligns with the goal of
+\textcite[31]{mannaert_normalized_2016}. As depicted in Table
+\ref{tab_convergence_principles_summarized}, the attentive reader surely observes the
 shared emphasis on modularity and the separation of concerns, as all SOLID principles have
-a stong convergence with \gls{soc}. Both approaches attempt to achieve low coupling and
-high cohesion. In addition, \gls{ca} add the dimensions of dependency management as
-usefull measure to improve maintainability and manage dependencies in a modular
+a strong convergence with \gls{soc}. Both approaches attempt to achieve low coupling and
+high cohesion. In addition, \gls{ca} adds the dimensions of dependency management as
+useful measures to improve maintainability and manage dependencies in a modular
 architecture.
 
 The Transparency of Data versions appears to be underrepresented in the SOLID principles
 of \gls{ca}. \gls{dvt} is primarily supported by the \gls{srp} of \gls{ca}, as evidenced
 by the presence of ViewModels, RequestModels, ResponseModels, and Entities in the
-artifact. It is worth noting this separation of concerns on an ontological level is an
+artifact. It is worth noting that this separation of concerns on an ontological level is an
 integral part of the design elements of \gls{ca}. While \gls{ca} does address \gls{dvt}
 through the \gls{srp}, a more comprehensive representation of the underlying idea of
 \gls{dvt} within the principles of \gls{ca} will likely improve the convergence of
 \gls{ca} with \gls{ns}, potentially improving the stability and evolvability of software
 Systems based on \gls{ca}.
 
-As described in sections \fullref{combinatorics}, the underrepresentation of \gls{dvt} has
+As described in section \ref{combinatorics}, the underrepresentation of \gls{dvt} has
 led to significant combinatorial effects in some parts of the artifacts. These
 combinatorial effects are also be attributed to the author's inexperience in creating
 systems that enable code generation through expansion while maintaining stability on
@@ -43,22 +43,22 @@ templates and craftings. When Data Version Transparency was better represented i
 principles of \gls{ca}, the severity of the combinatorial effects would have most likely
 been less.
 
-As indicated in Table \ref{tab_convergence_elements_summarized}, \gls{ca} seems to lack a
-strong foundation for receiving external triggers in it's desing phylosophy. This is
-partially represented by the Controller element, however this element tends to be use for
-web enabled environments like websites and Restful APIs. This may result in a less
+As indicated in Table \ref{tab_convergence_elements_summarized}, \gls{ca} lacks a strong
+foundation for receiving external triggers in its design philosophy. This is partially
+represented by the Controller element. However, this element tends to be used for
+web-enabled environments like websites and Restful APIs. This may result in a less
 comprehensive approach to receiving external triggers across various technologies or
 systems.
 
-The most notable difference between \gls{ca} and \gls{ns} lies in their approach to
-handling state. \gls{ca} does not explicitly address state management in its principles or
-design elements. At the same time, \gls{ns} provides the principle of Separation of State,
+The most notable difference between \gls{ca} and \gls{ns} is their approach to handling
+state. \gls{ca} does not explicitly address state management in its principles or design
+elements. At the same time, \gls{ns} provides the principle of Separation of State,
 ensuring that state changes within a software system are stable and evolvable. This
 principle can be crucial in developing scalable and high-performance systems, as it
 isolates state changes from the rest of the system, reducing the impact of state-related
 dependencies and side effects. 
 
-The findings can only leads to the conclusion that the convergence between \gls{ca} and
+The findings can only lead to the conclusion that the convergence between \gls{ca} and
 \gls{ns} is incomplete because \gls{ca} needs specific state management principles. As a
 result, \gls{ca} cannot fully ensure stable and evolvable software artifacts as defined by
 \gls{ns}.
