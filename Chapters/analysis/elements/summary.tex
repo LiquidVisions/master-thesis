@@ -3,23 +3,50 @@
 The following table offers a brief overview of the convergence of all elements from both
 \gls{ca} and \gls{ns}.
 
-\begin{table}[!ht]
-    \centering
-    \begin{tabular}{lccccc}
-    \toprule
-        & Data & Task & Flow & Connector & Trigger \\
-        \midrule
-    Entity & \fullConvergence & \noConvergence & \noConvergence & \noConvergence & \noConvergence \\
-    Interactor & \noConvergence & \fullConvergence & \fullConvergence & \noConvergence & \noConvergence \\
-    RequestModel & \fullConvergence & \noConvergence & \noConvergence & \noConvergence & \noConvergence \\ 
-    ResponseModel & \fullConvergence & \noConvergence & \noConvergence & \noConvergence & \noConvergence \\
-    ViewModel & \fullConvergence & \noConvergence & \noConvergence & \noConvergence & \noConvergence \\
-    Controller & \noConvergence & \noConvergence & \noConvergence & \npartialConvergence & \npartialConvergence \\
-    Gateway & \noConvergence & \noConvergence & \noConvergence & \fullConvergence & \noConvergence \\
-    Presenter & \noConvergence & \npartialConvergence & \npartialConvergence & \noConvergence & \noConvergence \\
-    Boundary & \noConvergence & \noConvergence & \noConvergence & \fullConvergence & \noConvergence \\ \bottomrule
+% \begin{table}[!ht]
+%     \centering
+%     \begin{tabular}{lccccc}
+%     \toprule
+%         & Data & Task & Flow & Connector & Trigger \\
+%         \midrule
+%     Entity & \fullConvergence & \noConvergence & \noConvergence & \noConvergence & \noConvergence \\
+%     Interactor & \noConvergence & \fullConvergence & \fullConvergence & \noConvergence & \noConvergence \\
+%     RequestModel & \fullConvergence & \noConvergence & \noConvergence & \noConvergence & \noConvergence \\ 
+%     ResponseModel & \fullConvergence & \noConvergence & \noConvergence & \noConvergence & \noConvergence \\
+%     ViewModel & \fullConvergence & \noConvergence & \noConvergence & \noConvergence & \noConvergence \\
+%     Controller & \noConvergence & \noConvergence & \noConvergence & \npartialConvergence & \npartialConvergence \\
+%     Gateway & \noConvergence & \noConvergence & \noConvergence & \fullConvergence & \noConvergence \\
+%     Presenter & \noConvergence & \npartialConvergence & \npartialConvergence & \noConvergence & \noConvergence \\
+%     Boundary & \noConvergence & \noConvergence & \noConvergence & \fullConvergence & \noConvergence \\ \bottomrule
     
-    \end{tabular}
-    \label{tab_convergence_elements_summarized}
-    \caption{An overview of the convergence of all \gls{ca} and \gls{ns} elements}
-    \end{table}
+%     \end{tabular}
+%     \label{tab_convergence_elements_summarized}
+%     \caption{An overview of the convergence of all \gls{ca} and \gls{ns} elements}
+%     \end{table}
+
+    \begin{table}[H]
+        \renewcommand{\arraystretch}{1.5}
+        \centering
+        \begin{tabular}{r|lllll}
+        
+            \textbf{\acrlong{ca}   } \textbf{   \rotatebox[origin=l]{90}{\acrlong{ns}}} & 
+            \rotatebox[origin=l]{90}{Data Elements} & \rotatebox[origin=l]{90}{Task Element} &
+            \rotatebox[origin=l]{90}{Flow Element} & \rotatebox[origin=l]{90}{Connector
+            Element} & \rotatebox[origin=l]{90}{Trigger Element} \\
+        \midrule
+        
+        
+        Entity Element & \fullConvergence & \noConvergence & \noConvergence & \noConvergence & \noConvergence \\
+        Interactor Element & \noConvergence & \fullConvergence & \fullConvergence & \noConvergence & \noConvergence \\
+        RequestModel Element & \fullConvergence & \noConvergence & \noConvergence & \noConvergence & \noConvergence \\ 
+        ResponseModel Element & \fullConvergence & \noConvergence & \noConvergence & \noConvergence & \noConvergence \\
+        ViewModel Element & \fullConvergence & \noConvergence & \noConvergence & \noConvergence & \noConvergence \\
+        Controller Element & \noConvergence & \noConvergence & \noConvergence & \npartialConvergence & \npartialConvergence \\
+        Gateway Element & \noConvergence & \noConvergence & \noConvergence & \fullConvergence & \noConvergence \\
+        Presenter Element & \noConvergence & \npartialConvergence & \npartialConvergence & \noConvergence & \noConvergence \\
+        Boundary Element & \noConvergence & \noConvergence & \noConvergence & \fullConvergence & \noConvergence \\ \bottomrule
+        \bottomrule
+        \end{tabular}
+        \caption{An overview of the convergence of all \gls{ca} and \gls{ns} elements}
+        \label{tab_convergence_elements_summarized}
+        \end{table}
