@@ -1,0 +1,61 @@
+\section{Analysis on Combinatorial Effects}
+
+Besides the theoretical analysis by comparing the principles in section
+\ref{sec_converging_principles} and elements in section \ref{sec_converging_elements}, we
+have also analyzed the combinatorial effects on the artifacts. To ensure clarity, we have
+divided the analysis into the following change dimension, which we will describe in
+successive sections.
+
+\subsection{The Mirror World}
+\textcite[137]{mannaert_normalized_2016} uses the term \enquote*{Mirror world} as an
+analogy that refers to the activation of the technology of the information system. 
+
+The analysis of the both artifacts did not show immediate combinatorial effects, aside
+from the analysis described in the next section of Combinatorics in the templates.
+However, table \ref{tab_convergence_principles_summarized} clearly shows that \gls{sos} is
+not represented by any of the design principles of \gls{ca}. Therefore, artifacts solely
+based on \gls{ca} principle will potentially lack stability and evolvability when
+implementing stateful solutions. Nevertheless, we could not detect any combinatorial
+effects due to the underrepresentation of \acrlong{sos} in \gls{ca}, which might have been
+influenced due to the absence of complex stateful implementations, aside from Interactors
+handling multiple actions similarly as how this is prescribed by the Workflow element of
+\gls{ns}.
+
+As indicated in table \ref{tab_convergence_elements_summarized}, there also seems to be a
+lack of a strong foundation for receiving external triggers in the design philosophy of
+\gls{ca}. The Controller element partially represents this. This feature is typically
+utilized for web-based platforms like websites and Restful APIs. However, this approach
+may not be as thorough regarding receiving external triggers from different technologies
+or systems. Also here we could not detect any combined effect which might have been
+influenced due to the absence handling external triggers.
+
+\subsection{The Templates}
+Using templates in the Clean Architecture Expander has led to some notable Combinatorial
+effects when changing the names of Entities, Attributes, and Namespaces or naming
+conventions of certain pre- and postfixes. These combinatorial effects are attributed to
+the lack of support for the Data Version Transparency principle in the \gls{ca}
+principles.
+
+\subsection{Technologies and frameworks}
+We did not observe or find any combinatorial effects using frameworks and technologies
+that are part of the functionality. The Artifacts uses several frameworks for data
+persistence (EntityFramework with Microsoft Azure SQL), Logging (NLog), and Template
+rendering engine (Scriban). Each of these technologies is implemented adhering to the
+\gls{lsp} principle. We have found that replacing them is an anticipated change and a
+relatively simple task when adhering to the contracts that separate the implementation of
+the technology from its use.
+
+However, we observe a combinatorial effect when requirements dictate that the programming
+language is replaced, for example, using Java instead of C\#. When the requirement only
+applies to the generated artifact, a new expander should be created, impacting the uses of
+frameworks and templates. In this case, the impact of combinatorial effects is moved from
+the generated artifact to the expander.
+
+
+\subsection{The Craftings}
+Implementing the Harvesting and Injection process has led to some minor instabilities.
+Currently, there is a lack of support for re-injecting craftings on elements moved to a
+different target folder. In addition, changing the names of placeholders in the templates
+also leads to failures when re-injecting craftings. These combinatorial effects are
+attributed to the lack of support for the Data Version Transparency principle in the
+\gls{ca} principles.

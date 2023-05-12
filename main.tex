@@ -22,7 +22,9 @@
     \pagenumbering{roman}				%	Set pagenumbering to roman
     \include{pages/acknowledgements}
     \include{pages/toc}
-    
+    \include{pages/lot}
+    \include{pages/lof}
+
     \pagenumbering{arabic}	
     \include{chapters/introduction/introduction}
     \include{chapters/theory/theory}
@@ -32,8 +34,6 @@
     \include{chapters/conclusion/conclusions}
     
     \include{pages/bibliography}
-    \include{pages/lof}
-    \include{pages/lot}
     \include{pages/abbreviations}
     \include{pages/glossary}
 	
@@ -41,7 +41,6 @@
     \begin{appendices}
     
         \include{appendices/listings}
-        %\include{appendices/instructions}
         \include{appendices/metamodel}
         \include{appendices/architectures}
         \include{appendices/cohesion}
