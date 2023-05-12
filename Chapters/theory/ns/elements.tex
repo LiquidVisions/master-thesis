@@ -1,37 +1,51 @@
 \subsection{Normalized Elements} \label{subsec_ns_elements} 
 
-In the context of the \gls{ns} Theory approach, the goal is to design evolvable software,
-independent of the underlying technology. Nevertheless, when implementing the software and
-its components, a particular technology must be chosen. For Object Oriented Programming
+In the context of the \gls{ns} Theory approach, the goal is to design evolvable software
+independent of the underlying technology. Nevertheless, a particular technology must be
+chosen when implementing the software and its components. For Object Oriented Programming
 Languages like Java, the following Normalized Elements have been proposed
-\parencite[363-398]{mannaert_normalized_2016}.It is essential to recognize that different
+\parencite[363-398]{mannaert_normalized_2016}. It is essential to recognize that different
 programming languages may necessitate alternative constructs
-\parencite[364]{mannaert_normalized_2016}.
+\parencite[364]{mannaert_normalized_2016}. The table describing each of the elements uses
+the definition from \textcite{mannaert_towards_2012}.
 
 \begin{table}[H]
     \begin{tabular}{ p{0.15\linewidth} p{0.75\linewidth}}
         \hline
         \textbf{Element} & \textbf{Description} \\ 
         \hline
-        Data & This object represents a piece of data in the system. Data elements are
-        used to pass information between processing functions and other objects. In
-        \gls{ns}, data elements are typically standardized to ensure consistency across
-        the system.\\ \midrule
+        Data & Based on gls{dvt}, data elements have get- and set-methods for wide-sense
+        data version transparency, or marshal- and parse-methods for strict-sense data
+        version transparency. Supporting tasks can be added in a way which is consistent
+        with the principles gls{soc} and gls{dvt}.\\
+        \midrule
 
-        Task & This object represents a specific task or action in the system. Tasks can
-        be composed of one or more processing functions and can be used to represent
-        complex operations within the system.\\ \midrule
+        Task & Based on \gls{soc}, the core action entity can only contain a single
+        functional task, and not multiple tasks. Based on \gls{avt}, arguments and
+        parameters must be encapsulated data entities. Based on \gls{soc} and \gls{sos},
+        workflows need to be separated from action entities, and will therefore be
+        encapsulated in a workflow elements. Based on \gls{avt}, tasks need to be
+        encapsulated in such a way that a separate action entity wraps the action entities
+        representing task versions. Supporting tasks can be added in a way which is
+        consistent with \gls{soc} and \gls{avt}.\\
+        \midrule
 
-        Connector & This object is used to connect different parts of the system.
-        Connectors can link processing functions, data elements, and other objects to work
-        together seamlessly.\\ \midrule
+        WorkFlow & Based on \gls{soc}, workflow elements cannot contain other functional
+        tasks, as they are generally considered a separate change driver, often
+        implemented in an external technology. Based on \gls{sos}, workflow elements must
+        be stateful. This state is required for every instance of use of the action
+        element, and therefore needs to be part of, or linked to, the instance of the data
+        element that serves as argument.\\ \midrule
 
-        Flow & This object represents the flow of control through the system.
-        It determines the order in which processing functions are executed and can be used
-        to handle error conditions or other exceptional cases.\\ \midrule
+        Connector & Based on Theorem \gls{sos}, connector elements must ensure that
+        external systems can interact with data elements, but that they cannot call an
+        action element in a stateless way. Supporting tasks can be added in a way which is
+        consistent with \gls{soc} and \gls{avt}.\\ \midrule
 
-        Trigger & A trigger represents an object that reacts to specific events or changes in the system
-        by executing predefined actions.\\
+        Trigger & Based on \gls{soc}, trigger elements need to control the separated —both
+        error and non- errorstates, and check whether an action element has to be
+        triggered. Supporting tasks can be added in a way which is consistent with
+        \gls{soc} and \gls{avt}.\\
 
         \bottomrule
     \end{tabular}
