@@ -5,6 +5,7 @@ functionality while adhering to the requirements outlined in chapter
 \ref{chap_requirements}. Two different artifacts are used to support this study. Figure
 \ref{fig_overview_design} is a schematical overview of both these artifacts.
 
+\section{The Research Artifacts}
 The first artifact consists of two main components: the Clean Architecture Expander and
 the Expander framework. The name of the Expander Framework, Pantha Rhei, was inspired by
 the Greek philosopher \emph{Heraclitus}, who famously stated that \enquote{life is flux.}
@@ -14,7 +15,26 @@ stable and evolvable manner. Users can interact with the Expander Framework usin
 \ref{appendix_run_flux}, yprovides a comprehensive guide on using this command, including
 all available options and parameters.
 
+As illustrated in Figure \ref{fig_overview_design}, the main task of the first artifact or
+\enquote*{expand} the second artifact. By entering the correct command, the Expander
+Framework loads the model being instantiated during the expansion process. Then, the
+required expanders are prepared based on information available through the model. In the
+case of this study, the Clean Architecture Expander. The Clean Architecture Expander
+consists of a set of tasks and templates. When the Expander Framework executes the Clean
+Architecture Expander, the model is instantiated into the generated artifact with the aid
+of the templates.
 
+The model is an instance of the meta-model. Consequently, the model can represent any
+application as long as the meta-model is respected. In the case of this study, the model
+represents the entities, attributes, relationships, and other characteristics of the
+meta-model.
+
+As a result, the second artifact (artifact II) allows a user to modify or maintain the
+model used by the Expander Framework by exposing a Restful interface. This method
+approaches the meta-circularity process, where an expansion process is used to update the
+meta-model. Although not fully compliant with the theory of \gls{ns}, the Expander
+Framework consists of the required tasks to update its own meta-model. This is illustrated
+in Figure \ref{fig_overview_design} by the \enquote*{updates} arrow.
 
 \begin{figure}[H]
     \centering
@@ -22,27 +42,6 @@ all available options and parameters.
     \caption[Schematic overview of the Artifacts]{Schematic overview of the Artifacts}
     \label{fig_overview_design}
   \end{figure}
-
-  As illustrated in Figure \ref{fig_overview_design}, the main task of the first artifact
-  or \enquote*{expand} the second artifact. By entering the correct command, the Expander
-  Framework loads the model being instantiated during the expansion process. Then, the
-  required expanders are prepared based on information available through the model. In the
-  case of this study, the Clean Architecture Expander. The Clean Architecture Expander
-  consists of a set of tasks and templates. When the Expander Framework executes the Clean
-  Architecture Expander, the model is instantiated into the generated artifact with the
-  aid of the templates.
-
-  The model is an instance of the meta-model. Consequently, the model can represent any
-  application as long as the meta-model is respected. In the case of this study, the model
-  represents the entities, attributes, relationships, and other characteristics of the
-  meta-model.
-  
-  As a result, the second artifact (artifact II) allows a user to modify or maintain the
-  model used by the Expander Framework by exposing a Restful interface. This method
-  approaches the meta-circularity process, where an expansion process is used to
-  update the meta-model. Although not fully compliant with the theory of \gls{ns}, the
-  Expander Framework consists of the required tasks to update its own meta-model. This is
-  illustrated in Figure \ref{fig_overview_design} by the \enquote*{updates} arrow.
 
 \input{chapters/artifacts/name}
 \input{chapters/artifacts/metamodel}

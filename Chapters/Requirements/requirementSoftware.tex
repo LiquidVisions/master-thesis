@@ -1,4 +1,4 @@
-\subsection{software Architecture Requirements} \label{software_requirements}
+\subsection{Software Architecture Requirements} \label{software_requirements}
 
 Figure \ref{fig_design} illustrates the generic software Architecture of the Artifacts.
 Each instantiated element adheres to the Element Naming Convention outlined in Appendix
@@ -12,7 +12,7 @@ specific to each element.
     \label{fig_design}
 \end{figure}
 
-\requirement{Technology}{table_requirements_viewmodel}{
+\requirement{The ViewModel}{table_requirements_viewmodel}{
     
     \addEvalRow{The ViewModel consists of data attributes representing fields from the
     corresponding Entity. In addition, it may contain information specific to the user
@@ -22,7 +22,7 @@ specific to each element.
     architecture.}
 }
 
-\requirement{Presenter}{table_requirements_presenter}{
+\requirement{The Presenter}{table_requirements_presenter}{
 
     \addEvalRow{The Presenter Implementation is derived from the IPresenter interface and follows the
     specified implementation. The IPresenter interface can be found in the Application
@@ -39,7 +39,7 @@ specific to each element.
     Presentation layer.} }
 
 
-\requirement{ViewModelMapper}{table_requirements_viewModelMapper}{
+\requirement{The ViewModelMapper}{table_requirements_viewModelMapper}{
 
     \addEvalRow{The ViewModelMapper is derived from the IMapper interface and follows the specified
     implementation. The IMapper interface can be found in the Application layer.}
@@ -50,7 +50,7 @@ specific to each element.
     \addEvalRow{The ViewModelMapper has an internal scope and cannot be instantiated
     outside the Presentation layer.} }
 
-\requirement{Controller}{table_requirements_controlle}{
+\requirement{The Controller}{table_requirements_controlle}{
 
     \addEvalRow{The Controller is responsible for receiving external requests and forwarding the
     request to the appropriate Boundary within the Application layer.}
@@ -59,17 +59,17 @@ specific to each element.
     implementations of the IBoundary interface.}
 }
 
-\subsubsection*{Application Layer}
+\subsubsection*{The Application Layer}
 
 
-\requirement{IBoundary}{table_requirements_iboundary}{
+\requirement{The IBoundary}{table_requirements_iboundary}{
 
     \addEvalRow{The IBoundary interface establishes the contract for its derived Boundary implementations.}
 
     \addEvalRow{The IBoundary interface has public scope within the system.}
 }
 
-\requirement{Boundary Implementation}{table_requirements_boundary}{
+\requirement{The Boundary Implementation}{table_requirements_boundary}{
 
     \addEvalRow{A Boundary implementation is derived from the IBoundary interface and follows the
     specified implementation.}
@@ -83,7 +83,7 @@ specific to each element.
     Application layer.}
 }
 
-\requirement{IInteractor}{table_requirements_iinteractor}{
+\requirement{The IInteractor}{table_requirements_iinteractor}{
 
     \addEvalRow{The IInteractor interface establishes the contract for its derived Interactor
     implementations.}
@@ -92,7 +92,7 @@ specific to each element.
     layer.}
 }
 
-\requirement{Interactor Implementation}{table_requirements_interactor}{
+\requirement{The Interactor Implementation}{table_requirements_interactor}{
 
     \addEvalRow{An Interactor implementation is derived from the IInteractor interface and follows the
     specified implementation.}
@@ -110,14 +110,14 @@ specific to each element.
     the Application layer.}
 }
 
-\requirement{IMapper}{table_requirements_imapper}{
+\requirement{The IMapper}{table_requirements_imapper}{
 
     \addEvalRow{The IMapper interface establishes the contract for its derived Mapper implementations.}
 
     \addEvalRow{The IMapper interface has a public scope within the system.}
 }
 
-\requirement{RequestModelMapper}{table_requirements_requestmodelmapper}{
+\requirement{The RequestModelMapper}{table_requirements_requestmodelmapper}{
 
     \addEvalRow{The RequestModelMapper is derived from the IMapper interface and follows the specified
     implementation.}
@@ -129,7 +129,7 @@ specific to each element.
     the Application layer.}
 }
 
-\requirement{ResponseModelMapper}{table_requirements_responsemodelmapper}{
+\requirement{The ResponseModelMapper}{table_requirements_responsemodelmapper}{
 
     \addEvalRow{The RequestModelMapper is derived from the IMapper interface and follows the specified
     implementation.}
@@ -141,7 +141,7 @@ specific to each element.
     Application layer.}
 }
 
-\requirement{IPresenter}{table_requirements_ipresenter}{
+\requirement{The IPresenter}{table_requirements_ipresenter}{
 
     \addEvalRow{The IPresenter interface establishes the contract for its derived Presenter
     implementations, typically implemented as part of the Presentation layer.}
@@ -149,7 +149,7 @@ specific to each element.
     \addEvalRow{The IPresenter interface has a public scope within the system.}
 }
 
-\requirement{Gateway}{table_requirements_IGateway}{ \addEvalRow{The Domain and Application
+\requirement{The Gateway}{table_requirements_IGateway}{ \addEvalRow{The Domain and Application
     layers have no dependencies on infrastructure technologies, like web- or database
     technologies. }
 
@@ -162,7 +162,7 @@ specific to each element.
     example, the basic CRUD actions result in five IGateway interfaces:  ICreateGateway,
     IGetGateway, IGetByIdGateway, IUpdateGateway, and IDeleteGateway.} }
 
-\requirement{ResponseModel}{table_requirements_responsemodel}{
+\requirement{The ResponseModel}{table_requirements_responsemodel}{
 
     \addEvalRow{The ResponseModel consists primarily of data attributes representing the fields of the
     corresponding Entity. Additionally, the ResponseModel may contain data specific to the
@@ -171,7 +171,7 @@ specific to each element.
     \addEvalRow{The ResponseModel does not depend on external objects within the architecture.}
 }
 
-\requirement{RequestModel}{table_requirements_requestmodel}{
+\requirement{The RequestModel}{table_requirements_requestmodel}{
 
     \addEvalRow{The RequestModel consists primarily of data attributes representing the fields of the
     corresponding Entity. Additionally, the RequestModel may contain data specific to the
@@ -180,8 +180,8 @@ specific to each element.
     \addEvalRow{The RequestModel does not depend on external objects within the architecture.}
 }
 
-\subsubsection*{Domain Layer}
-\requirement{Data Entity}{table_requirements_data_entity}{
+\subsubsection*{The Domain Layer}
+\requirement{The Data Entity}{table_requirements_data_entity}{
 
     \addEvalRow{The Data Entity consists solely of attributes representing the corresponding data
     fields.}
@@ -193,7 +193,7 @@ specific to each element.
 
 \subsubsection*{The Infrastructure Layer}
 
-\requirement{Gateway Implementation}{table_requirements_gatewayimplementation}{
+\requirement{The Gateway Implementation}{table_requirements_gatewayimplementation}{
 
     \addEvalRow{The [\textit{Verb}]Gateway Implementation derives from the I[\textit{Verb}]Gateway interface
     and adheres to the specified implementation.}
@@ -206,6 +206,10 @@ specific to each element.
     instantiated outside the layer.}
 }
 
-\subsubsection*{design Principles Compliance}
-Each architectural pattern adheres to at least one of the SOLID principles to ensure that
-none of the implementations violate these principles.
+\subsubsection*{Design Principles Compliance}
+
+\requirement{The Design Principles}{table_design_principles}{
+
+    \addEvalRow{Each architectural pattern adheres to at least one of the SOLID principles to ensure that
+    none of the implementations violate these principles.}
+}

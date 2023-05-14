@@ -1,21 +1,13 @@
 \subsection{Dependency Inversion Principle}
 
-\evaluatePrincipleTable{\gls{dip}}{table_dip_convergence}{ 
+\evaluatePrincipleTable{\acrshort{dip}}{table_dip_convergence}{ 
     
-\addEvalRow{\gls{soc} & \npartialConvergence & \gls{dip} states that high-level modules should
-not depend on low-level modules.  By adhering to
-\gls{dip} correctly, the architecture promotes modular architectures and the use of
-component layers, as described in \fullref{subsec_dependency_rule}
-\parencite{koks_layers_2023}. Managing Dependencies inheritly promotes \gls{soc},
-therefore \gls{dip} converges with \gls{soc} to some extend. However, adhering to \gls{soc}
-does not guarantee \gls{soc}.}
-    
-\gls{dip} states that high-level modules should not depend on low-level modules. By
-adhering to \gls{dip} correctly, the architecture promotes modular architectures and
-component layers, as described in 2.3.4 The Dependency rule \parencite{koks_layers_2023}.
-Managing dependencies inherently promotes \gls{soc}. Therefore \gls{dip} converges with
-\gls{soc} to some extent. However, adhering to \gls{dip} does not guarantee \gls{soc}.
-    
+\addEvalRow{\gls{soc} & \npartialConvergence & \gls{dip} states that high-level modules
+should not depend on low-level modules. By adhering to \gls{dip} correctly, the
+architecture promotes modular architectures and the use of component layers, as described
+in section \fullref{subsec_dependency_rule} \parencite{koks_layers_2023}. Managing Dependencies
+inheritly promotes \gls{soc}, therefore \gls{dip} converges with \gls{soc} to some extend.
+However, adhering to \gls{soc} does not guarantee \gls{soc}.}
 
 \addEvalRow{\gls{dvt} & \noConvergence & The \gls{dip} does not relate to the \gls{dvt}
 principle. The convergence of both principles is weak, and no manifestations are found in
