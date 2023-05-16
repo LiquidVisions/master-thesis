@@ -1,6 +1,6 @@
-\chapter{The entity relationship diagram of the meta-model} \label{appendix_metamodel_description}  
+\chapter{The Entity Relationship Diagram of the Meta-Model} \label{appendix_metamodel_description}  
 
-\section{The App entity}
+\section{The App Entity}
 
 The App entity represents the application and is regarded as the entry point for the
 model. The App Entity and the subsequent entities contain all the information required to
@@ -26,7 +26,7 @@ perform the expandsion of a software system.
     \label{table:app_entity}
 \end{table}
 
-\section{The component entity}
+\section{The Component Entity}
 
 The component entity represents a software component that can be part of an application.
 Based on this entity the Generator artifact can make design time on where to place certain
@@ -45,11 +45,11 @@ Packages & List of Package & The Packages that should be applied to the componen
 Expander & Expander & Navigation property to the Expander entity. \\
 \hline
 \end{tabular}
-\caption{The fields of the component entity}
+\caption{The fields of the Component entity}
 \label{table:component_entity}
 \end{table}
 
-\section{The ConnectionString entity}
+\section{The ConnectionString Entity}
 
 The ConnectionString entity represents a ConnectionString used by an application to
 connect to a database or other external system.
@@ -70,7 +70,7 @@ App & App & Navigation property to the App entity \\
 \label{table:connectionstring_entity}
 \end{table}
 
-\section{The Entity entity}
+\section{The Entity Entity}
 
 The Entity entity represents an entity in the application's data model. 
 
@@ -100,7 +100,7 @@ IsForeignEntityOf & List of Relationships & List of relationships where this ent
 \label{table:entity_entity}
 \end{table}
 
-\section{The Expander entity}
+\section{The Expander Entity}
 
 The Expander entity represents an expander, which is responsible for generating code for
 an application. The Generator artifact attempts to execute all expanders that are related
@@ -124,7 +124,7 @@ Components & List of Components & List of components associated with the expande
 \label{table:expander_entity}
 \end{table}
 
-\section{The Field entity}
+\section{The Field Entity}
 
 The Field entity represents a field or property of an entity in an application's data
 model. Each field has a unique ID, name, and other properties such as its return type,
@@ -161,7 +161,7 @@ IsForeignEntityKeyOf & List of Relationships & List of relationships to the fiel
 \label{table:field_entity}
 \end{table}
 
-\section{The Package entity}
+\section{The Package Entity}
 
 The Package entity represents a software package that can be used by a component. This
 could either be a Nuget package in the case of .NET projects, or for example npm packages
@@ -183,7 +183,7 @@ Component & Component & Component associated with the package \\
 \label{table:package_entity}
 \end{table}
 
-\section{The Relationship entity}
+\section{The Relationship Entity}
 
 The Relationship entity represents a relationship between two entities in the App's data
 model. The Relationship entity has proper cardinality support. Relationships are
