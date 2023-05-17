@@ -22,6 +22,7 @@
         "**/*.glsdefs": true,
         "**/*.alg": true,
         "**/*.dvi": true,
+        "**/main.pdf": true,
       },
     "rewrap.autoWrap.enabled": true,
     "rewrap.autoWrap.notification": "icon",
